@@ -1,0 +1,15 @@
+.forInput{
+    height: 40px;
+}
+.forInput > div{
+    height: 100%;
+}
+
+.forInput input{
+    color: white;
+    height: 100%;
+}
+
+.cheackInput svg{
+    color: white;
+}

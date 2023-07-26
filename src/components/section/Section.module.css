@@ -1,0 +1,21 @@
+.title {
+    font-size: 48px;
+    color: white !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 106px;
+    letter-spacing: 0.04em;
+}
+
+.paragragh {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.uk {
+    color: white;
+    font-size: 16px;
+    margin: 3px 0 0 7px !important;
+}

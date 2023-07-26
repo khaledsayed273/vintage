@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+
+@media (max-width:889px) {
+  .currentCard {
+    flex-direction: row !important;
+  }
+
+  .currentCard-text {
+    align-items: start !important;
+  }
+}
+
+@media (min-width:900px) {
+  .currentCard {
+    flex-direction: column !important;
+  }
+
+  .currentCard-text {
+    align-items: center !important;
+    text-align: center;
+  }
+}
+
+@media (min-width:992px) {
+  .currentCard {
+    flex-direction: row !important;
+  }
+
+  .currentCard-text {
+    text-align: start !important;
+    align-items: start !important;
+  }
+
+  .swiper-button-next {
+    right: 250px !important;
+  }
+
+  .swiper-button-prev {
+    left: 250px !important;
+  }
+}
+
+.font {
+  font-family: 'Playfair Display';
+}
+
+body {
+  background: linear-gradient(90.37deg, #444436 -27.95%, #1A1615 132.36%);
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink.active {
+  color: #D69D66;
+}
+
+.navlink .linkText {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.navlink:hover {
+  color: #D69D66 !important;
+}
+
+/*collapse*/
+
+#more[class="collapse"] {
+  display: none !important;
+}
+
+/*swiper*/
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 550px !important;
+  position: absolute !important;
+  color: white !important;
+  border: 1px solid white;
+  padding: 20px;
+  user-select: none;
+}
+
+
+
+/*select Form*/
+
+.form svg {
+  color: white !important;
+}
+
+/*footer*/
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+footer ul li a {
+  color: #FFFCF7;
+  font-size: 16px;
+  text-decoration: none;
+}
