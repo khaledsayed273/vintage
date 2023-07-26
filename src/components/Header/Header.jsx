@@ -116,7 +116,9 @@ function Header() {
                                     }}>
                                         <Typography variant='div' component="div" sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                                             <Typography variant='div' component="div">
-                                                <Image src={item.icon} alt={item.icon ? "logo" : ""} />
+                                                {item.icon ? (<Image src={item.icon} alt={item.icon ? "logo" : ""} />) : ""}
+                                                
+
                                             </Typography>
                                             <Typography className='linkText font' variant='div' component="div">
                                                 {item.name}
