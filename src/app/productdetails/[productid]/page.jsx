@@ -7,14 +7,13 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import style from "./details.module.css"
 import Image from 'next/image';
 import { lazy, useState } from 'react';
+import MoreDetails from "../components/Suggest/moreDetails/MoreDetails"
+import CardMore from "../components/Suggest/moreDetails/MoreDetails"
+import Nav from "../components/Nav/Nav"
+import Suggest from "../components/Suggest/Suggest"
 
-const MoreDetails = lazy(() => import("../components/Suggest/moreDetails/MoreDetails"))
-const CardMore = lazy(() => import("../components/CardMore/CardMore"))
-const Nav = lazy(() => import("../components/Nav/Nav"))
-const Suggest = lazy(() => import("../components/Suggest/Suggest"))
 
-
-function page() {
+function Page() {
 
   const data =
   {
@@ -274,4 +273,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
