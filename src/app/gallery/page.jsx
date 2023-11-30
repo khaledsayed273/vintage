@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client"
 import { Grid, Typography } from '@mui/material'
 
@@ -51,7 +50,7 @@ function Page() {
                     <p style={{ fontSize: "16px", lineHeight: "26px" }}>
                         After opening a rare contemporary gallery in Singapore in 1987, the owner, Akio
                         Tamura, moved to Tokyo in 1991 and started an art gallery. He has two galleries in Japan and has also proposed exhibitions to external galleries. The main
-                        concept of his activities is to propose "Art works that make you want to look at them with empathy again and again in your daily life." With empathy as a keyword,
+                        concept of his activities is to propose &apos; Art works that make you want to look at them with empathy again and again in your daily life.&apos; With empathy as a keyword,
                         we will continue our activities to find artists who are worth introducing to the world today from the perspective of Kyoto. After opening a rare contemporary gallery in Singapore in 1987, the owner,
                         Akio Tamura, moved to Tokyo in 1991 and started an art gallery. He has two galleries in Japan and has also
                     </p>
