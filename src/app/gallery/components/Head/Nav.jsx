@@ -1,8 +1,12 @@
+"use client"
 import { List, ListItemButton, Typography } from '@mui/material'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 function Nav() {
+
+    const pathName = usePathname()
 
     const navItems = [
         {
@@ -47,23 +51,28 @@ function Nav() {
                     justifyContent: "space-between",
                     borderBottom: "1px solid white"
                 }}>
-                    {navItems.map((item) => (
-                        <Typography variant='div' component="div" key={item.id}>
-                            <Link href={item.path} className="navlink mx-2">
-                                <ListItemButton sx={{
-                                    padding: "0",
-                                    margin: item.margin ? item.margin : "10px 0 0 30px",
-                                    "&:hover": {
-                                        background: "none"
-                                    }
-                                }}>
-                                    <Typography className='linkText font' variant='div' component="div">
-                                        {item.name}
-                                    </Typography>
-                                </ListItemButton>
-                            </Link>
-                        </Typography>
-                    ))}
+                    {navItems.map((item) => {
+
+                        const isActive = pathName === item.path
+
+                        return (
+                            <li key={item.id}>
+                                <Link href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
+                                    <ListItemButton sx={{
+                                        padding: "0",
+                                        margin: item.margin ? item.margin : "10px 0 0 30px",
+                                        "&:hover": {
+                                            background: "none"
+                                        }
+                                    }}>
+                                        <Typography className='linkText font' variant='div' component="div">
+                                            {item.name}
+                                        </Typography>
+                                    </ListItemButton>
+                                </Link>
+                            </li>
+                        )
+                    })}
                 </List>
             </Typography>
 

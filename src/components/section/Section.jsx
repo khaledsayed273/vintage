@@ -1,3 +1,4 @@
+
 import { Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import img from "../../images/all img/image 21.png"
@@ -25,7 +26,7 @@ function Section() {
 
                             <Typography variant='div' component="div" className='d-flex align-items-center p-2 px-3'>
                                 <Typography variant='div' component="div" >
-                                    <Image className='w-100 h-100' src={ukLogo} alt="" />
+                                    <Image className='w-100 h-100'  src={ukLogo} alt="" />
                                 </Typography>
 
                                 <Typography className={`font ${style.uk}`} variant='div' component="div">
@@ -64,7 +65,7 @@ function Section() {
                         <Typography className='my-5 my-md-0' variant='div' component="div">
 
                             <Typography variant='div' component="div" sx={{ width: { lg: "450px", xs: "auto" } }}>
-                                <Image className='w-100 h-100' src={img} alt="img" />
+                                <Image className='w-100 h-100' loading="eager" src={img} alt="img" />
                             </Typography>
                         </Typography>
                     </Grid>

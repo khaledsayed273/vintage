@@ -1,14 +1,18 @@
+"use client"
 import { Button, Grid, Typography } from '@mui/material'
 import img from "../../../images/all img/Frame 148.png"
 import img2 from "../../../images/all img/Frame 147.png"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import style from "./details.module.css"
-import MoreDetails from '../components/Suggest/moreDetails/MoreDetails';
-import CardMore from '../components/CardMore/CardMore';
-import Nav from '../components/Nav/Nav';
-import Suggest from '../components/Suggest/Suggest';
 import Image from 'next/image';
+import { lazy, useState } from 'react';
+
+const MoreDetails = lazy(() => import("../components/Suggest/moreDetails/MoreDetails"))
+const CardMore = lazy(() => import("../components/CardMore/CardMore"))
+const Nav = lazy(() => import("../components/Nav/Nav"))
+const Suggest = lazy(() => import("../components/Suggest/Suggest"))
+
 
 function page() {
 
@@ -31,7 +35,31 @@ function page() {
     InternationalShipping: "400"
   }
 
+  const images = [
+    {
+      id: 1,
+      src: img
+    },
+    {
+      id: 2,
+      src: img2
+    },
+    {
+      id: 3,
+      src: img
+    },
+  ]
+
+  const [imge, setImg] = useState(images[0].src)
+
+  const handleImg = (img10) => {
+    setImg(img10)
+  }
+
+
   return (
+
+
     <>
       <div className='container font text-white'>
         <Grid container spacing={{ xs: 2, md: 5, xl: 20 }}>
@@ -45,11 +73,11 @@ function page() {
                   height: { xl: "650px", lg: "620px", md: "620px" }
                 }}
               >
-                <Image className='w-100 h-100' src={img} alt="img" />
+                <Image className='w-100 h-100 object-fit-cover' src={imge} alt="img" />
               </Typography>
 
               <Typography variant='div' component="div">
-                <MoreDetails />
+                <MoreDetails images={images} handleImg={handleImg} />
               </Typography>
 
 

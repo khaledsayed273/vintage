@@ -1,18 +1,17 @@
 const { createAsyncThunk, createSlice } = require("@reduxjs/toolkit");
 const { default: BaseURL } = require("../BaseURL");
 
-export const AsyncDiscover = createAsyncThunk("discover/data", async () => {
-
+export const AsyncDiscover = createAsyncThunk("discover/data", async ( _ , {rejectWithValue}) => {
 
     try {
-        const res = await BaseURL.get("discover")
+        const res = await BaseURL.get("discover", { headers: { Accept: "application/json" } })
 
-        const data = res.data.data
+        const data = await res.data.data
 
         return data
 
     } catch (e) {
-        return e.error
+        return rejectWithValue(e.message)
     }
 })
 
@@ -28,18 +27,18 @@ const DiscoverSlice = createSlice({
     name: "discover",
     initialState,
     extraReducers: (builder) => {
-        builder.addCase(AsyncDiscover.pending , (state ) => {
+        builder.addCase(AsyncDiscover.pending, (state) => {
             state.loading = true
         })
-        builder.addCase(AsyncDiscover.fulfilled , (state , action) => {
+        builder.addCase(AsyncDiscover.fulfilled, (state, action) => {
             state.loading = false
             state.error = null
             state.data = action.payload
         })
-        builder.addCase(AsyncDiscover.rejected , (state , action) => {
+        builder.addCase(AsyncDiscover.rejected, (state, action) => {
             state.loading = false
             state.data = []
-            state.error = action.error
+            state.error = action.payload
         })
     }
 })

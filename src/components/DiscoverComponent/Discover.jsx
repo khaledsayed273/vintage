@@ -1,51 +1,20 @@
 "use client"
-
 import { Button, FormControl, Grid, NativeSelect, Typography } from '@mui/material'
-
 import img1 from "../../images/all img/world.png"
-import img2 from "../../images/all img/Frame 151.png"
-import img3 from "../../images/all img/Frame 152.png"
-import img4 from "../../images/all img/Frame 153.png"
 import Image from 'next/image'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { AsyncDiscover } from '@/store/slices/DiscoverSlice'
+import { AsyncDiscover } from '../../store/slices/DiscoverSlice'
 import Link from 'next/link'
-
 
 function Discover() {
 
     const dispatch = useDispatch()
-
-
     useEffect(() => {
         dispatch(AsyncDiscover())
     }, [])
 
-    const data = useSelector(store => store.DiscoverSlice.data)
-
-    console.log(data);
-
-    // const data = [
-    //     {
-    //         id: 1,
-    //         img: img2,
-    //         title: "Ideas Depot & More | Tate",
-    //         discreb: "Liverpool, United Kingdom"
-    //     },
-    //     {
-    //         id: 2,
-    //         img: img3,
-    //         title: "Paris Collection - Greek Collection - Cyprus Collection | A. G. Leventis Gallery",
-    //         discreb: "Nicosia, Cyprus"
-    //     },
-    //     {
-    //         id: 3,
-    //         img: img4,
-    //         title: "Museum of Modern and Contemporary Art Nice | MAMAC | Permanent Collection",
-    //         discreb: "Nice, France"
-    //     },
-    // ]
+    const data = useSelector(store => store.DiscoverSlice)
 
 
 
@@ -123,7 +92,8 @@ function Discover() {
                                             fontWeight: "400",
                                             textTransform: "uppercase"
                                         }}
-                                    >current</p>
+                                    >current
+                                    </p>
                                     <Button className='mt-3'
                                         sx={{
                                             border: "2px solid white",
@@ -131,53 +101,61 @@ function Discover() {
                                             padding: "7px 35px",
                                             textTransform: "none"
                                         }}
-                                    >See more ...</Button>
+                                    >See more ...
+                                    </Button>
                                 </div>
 
-                                <div className='d-flex flex-column align-items-start justify-content-between mt-5'
-                                    style={{
-                                        overflow: "auto",
-                                        maxHeight: "650px"
-                                    }}
-                                >
-                                    {data.map((item) => {
-                                        return (
-                                            <Link style={{ textDecoration: "none", color: "white" }} href={`exhibition/${item.slug}`}>
-                                                <div key={item.id} className='currentCard d-flex justify-content-between align-items-center w-100 my-3'>
-                                                    <Typography variant='div' component="div"
-                                                        sx={{
-                                                            width: "198px",
-                                                            height: "148px",
-                                                            borderRadius: "130px",
-                                                            overflow: "hidden"
-                                                        }}
-                                                    >
-                                                        <Image style={{ objectFit: "cover" }} width={198} height={148} src={item.image} alt="img" />
-                                                    </Typography>
-                                                    <div className='currentCard-text d-flex flex-column align-items-start p-3 ' style={{
-                                                        flex: 2
-                                                    }}>
-                                                        <div style={{
-                                                            fontSize: "16px",
-                                                            fontWeight: "400"
-                                                        }}>
-                                                            {item.name}
-                                                        </div>
-                                                        <div className='mt-3'
-                                                            style={{
-                                                                color: "#CCCCCC",
-                                                                fontSize: "14px",
-                                                                textTransform: "uppercase"
-                                                            }}
-                                                        >
-                                                            {item.country}
-                                                        </div>
+                                {
+
+                                    data?.data.length > 0 ? (
+                                        data.data.map((item) => {
+                                            return (
+                                                <div key={item.id} className='d-flex flex-column align-items-start justify-content-between mt-5'
+                                                    style={{
+                                                        overflow: "auto",
+                                                        maxHeight: "650px"
+                                                    }}
+                                                >
+                                                    <div className="w-100"  >
+                                                        <Link className='currentCard d-flex justify-content-between align-items-center w-100 my-3' style={{ textDecoration: "none", color: "white" }} href={`exhibition/${item.slug}`}>
+                                                            <Typography variant='div' component="div"
+                                                                sx={{
+                                                                    width: "198px",
+                                                                    height: "148px",
+                                                                    borderRadius: "130px",
+                                                                    overflow: "hidden"
+                                                                }}
+                                                            >
+                                                                <Image style={{ objectFit: "cover" }} width={198} height={148} src={item.image} alt="img" />
+                                                            </Typography>
+                                                            <div className='currentCard-text d-flex flex-column align-items-start p-3 ' style={{
+                                                                flex: 2
+                                                            }}>
+                                                                <div style={{
+                                                                    fontSize: "16px",
+                                                                    fontWeight: "400"
+                                                                }}>
+                                                                    {item.name}
+                                                                </div>
+                                                                <div className='mt-3'
+                                                                    style={{
+                                                                        color: "#CCCCCC",
+                                                                        fontSize: "14px",
+                                                                        textTransform: "uppercase"
+                                                                    }}
+                                                                >
+                                                                    {item.country}
+                                                                </div>
+                                                            </div>
+                                                        </Link>
                                                     </div>
                                                 </div>
-                                            </Link>
-                                        )
-                                    })}
-                                </div>
+                                            )
+                                        })) :
+                                        <div className='d-flex justify-content-center align-items-center mt-5'>
+                                            <h6 className='font text-white text-center'>Sorry There is no data</h6>
+                                        </div>
+                                }
                             </div>
                         </Grid>
                     </Grid>

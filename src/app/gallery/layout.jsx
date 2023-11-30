@@ -1,20 +1,23 @@
 
 import React, { Suspense } from 'react'
-import Head from './components/Head/Head'
-import Nav from './components/Head/Nav'
-import Loading from './loading'
+
+import Head from "./components/Head/Head"
+import Nav from "./components/Head/Nav"
+import Loading from "./loading"
 
 export const metadata = {
     title: "gallery",
-    description: "gallery"
+    description: "gallery description",
+    keywords: "gallery keywords"
 
 }
-function layout({ children }) {
+export default function layout({ children }) {
+    
     return (
         <>
             <Head />
             <Nav />
-            <Suspense fallback={<Loading/>}>
+            <Suspense fallback={<Loading />}>
                 {children}
             </Suspense>
 
@@ -22,4 +25,7 @@ function layout({ children }) {
     )
 }
 
-export default layout
+
+
+
+

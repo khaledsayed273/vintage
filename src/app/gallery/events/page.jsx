@@ -1,12 +1,14 @@
-
+"use client"
 import { Button, Grid, Typography } from '@mui/material'
 
 import img1 from "../../../images//all img/Frame 152.png"
 import img2 from "../../../images//all img/Frame 151.png"
 
 import style from "./Events.module.css"
-import PastExhibition from './PastExhibition'
 import Image from 'next/image'
+import { lazy } from 'react'
+
+const PastExhibition = lazy(() => import("./PastExhibition"))
 
 function Events() {
 

@@ -1,3 +1,4 @@
+"use client"
 import { Grid, Typography } from '@mui/material'
 
 import img1 from "../../images/all img/Frame 153.png"
@@ -5,6 +6,7 @@ import img2 from "../../images/all img/Frame 151.png"
 import img3 from "../../images/all img/Frame 152.png"
 import Link from 'next/link'
 import Image from 'next/image'
+
 function page() {
 
     const data = [
@@ -88,7 +90,7 @@ function page() {
                     <Grid container spacing={{ md: 5, lg: 10 }}>
                         {data.map((item) => (
 
-                            <Grid item xs={12} md={4} className='my-3 d-flex justify-content-center'>
+                            <Grid key={item.id} item xs={12} md={4} className='my-3 d-flex justify-content-center'>
                                 <Typography className='d-flex align-items-center flex-column justify-content-center' variant='div' component="div" key={item.id} >
 
                                     <Typography variant='div' component="div" sx={{

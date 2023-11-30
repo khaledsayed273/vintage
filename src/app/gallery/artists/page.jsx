@@ -1,3 +1,4 @@
+"use client"
 import { Typography } from '@mui/material'
 import React from 'react'
 
@@ -12,13 +13,13 @@ function Artists() {
             id: 1,
             img: img,
             name: "Juan Díaz",
-            path: ""
+            path: "1"
         },
         {
             id: 2,
             img: img,
             name: "Francisco Farreras",
-            path: ""
+            path: "2"
         },
         {
             id: 3,
@@ -92,7 +93,6 @@ function Artists() {
             name: "Diego Moya",
             path: ""
         },
-
 
 
         {
@@ -388,7 +388,7 @@ function Artists() {
                                 }}
                             >
                                 <Link
-                                    href={item.path}
+                                    href={`/artist/${item.id}`}
                                     style={{
                                         textDecoration: 'none',
                                         color: "white"
@@ -437,7 +437,7 @@ function Artists() {
                                 }}
                             >
                                 <Link
-                                    href={item.path}
+                                    href={`/artist/${item.id}`}
                                     style={{
                                         textDecoration: 'none',
                                         color: "white"
@@ -485,7 +485,7 @@ function Artists() {
                                 }}
                             >
                                 <Link
-                                    href={item.path}
+                                    href={`/artist/${item.id}`}
                                     style={{
                                         textDecoration: 'none',
                                         color: "white"
@@ -533,7 +533,7 @@ function Artists() {
                                 }}
                             >
                                 <Link
-                                    href={item.path}
+                                    href={`/artist/${item.id}`}
                                     style={{
                                         textDecoration: 'none',
                                         color: "white"

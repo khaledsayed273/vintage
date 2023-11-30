@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
-
-
 @media (max-width:889px) {
   .currentCard {
     flex-direction: row !important;
@@ -50,6 +47,7 @@ body {
   min-height: 100vh;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 .navlink {
@@ -91,7 +89,6 @@ body {
 }
 
 
-
 /*select Form*/
 
 .form svg {
@@ -115,3 +112,75 @@ footer ul li a {
   font-size: 16px;
   text-decoration: none;
 }
+
+
+/*paymen*/
+
+.Mui-completed {
+  color: rgb(175 170 170 / 87%) !important
+}
+
+.Mui-active {
+  color: rgb(220 187 151 / 87%) !important
+}
+
+.css-1vyamtt-MuiStepLabel-labelContainer {
+  color: white
+}
+
+/* text inside circle */
+.css-117w1su-MuiStepIcon-text{
+  fill: black !important
+}
+
+.input-payment::before {
+  border-bottom: 0 !important
+}
+
+.input-payment::after {
+  border-bottom: 0 !important
+}
+
+.phone-payment {
+  background: #282015!important;
+}
+
+.input-payment-select #mui-component-select-age {
+  padding: 5px !important;
+  border: 0
+}
+
+.input-payment-select .MuiOutlinedInput-notchedOutline{
+   border: 0;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list{
+  padding: 0;
+}
+
+.cart-payment{
+  background: var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%)) ;
+}
+
+.MuiSvgIcon-root{
+  color: white;
+}
+
+
+/*input profile page*/
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
+  color: white;
+}
+.MuiInputLabel-sizeSmall{
+  color: white;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: white ;
+}
+
+.css-11qfo8z-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+  border-color: white !important;
+
+}
+
