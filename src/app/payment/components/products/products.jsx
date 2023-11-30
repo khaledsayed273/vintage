@@ -27,7 +27,7 @@ function Products() {
         <div style={{ borderRadius: "40px" }} key={item.id} className='cart-payment p-3 pt-5 mb-5 text-white'>
           <div style={{borderBottom: "1px solid white"}}>
             <div>
-              <Image height={56} width={48} src={item.img} />
+              <Image alt={`${item.name}`} height={56} width={48} src={item.img} />
             </div>
             <div className="mt-3 d-flex flex-wrap">
               <div className="me-5">
