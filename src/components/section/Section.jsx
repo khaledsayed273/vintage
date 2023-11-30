@@ -17,7 +17,7 @@ function Section() {
                             <h1 className={`font px-3 ${style.title}`}>Art is an expression of the soul.</h1>
                             <Typography variant='div' component="div" className='px-3'>
                                 <p className={`mt-5 mb-1 font ${style.paragragh}`}>
-                                    You've come to the perfect location if art is
+                                    You&apos;ve come to the perfect location if art is
                                 </p>
                                 <p className={`font ${style.paragragh}`}>
                                     your passion or your job.
