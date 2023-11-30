@@ -49,7 +49,8 @@ function Nav() {
                     display: "flex",
                     padding: "0",
                     justifyContent: "space-between",
-                    borderBottom: "1px solid white"
+                    borderBottom: "1px solid white",
+                    flexDirection: {xs: "column" , md: "row"}
                 }}>
                     {navItems.map((item) => {
 
