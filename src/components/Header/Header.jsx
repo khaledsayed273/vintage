@@ -120,7 +120,6 @@ function Header() {
                     /* **********************************************/
                 }}
 
-
                 >
                     <List sx={{
                         transition: "600ms",
@@ -145,7 +144,7 @@ function Header() {
                         {navItems.map(item =>
                             item.path ? (
                                 <li key={item.id} data-bs-toggle="collapse" data-bs-target={`#${item.id}`}>
-                                    <Link href={`${item.path}`} className="navlink mx-2" >
+                                    <Link onClick={() => setShowNav(false)} href={`${item.path}`} className="navlink mx-2" >
                                         <ListItemButton onClick={() => handleItemClick(item.id)} sx={{
                                             padding: "0",
                                             margin: { lg: item.margin ? item.margin : "10px 0 0 30px" },

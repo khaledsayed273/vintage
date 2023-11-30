@@ -3,6 +3,7 @@ import { Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import img from "../../images/all img/Frame 155.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Center() {
     return (
@@ -77,24 +78,27 @@ function Center() {
                                     sx={{
                                         background: "white",
                                         color: 'black',
-                                        padding: '8px 40px',
                                         border: "1px solid white",
                                         width: "178px",
                                         "&:hover": {
-                                            color: "white"
+                                            opacity: "0.7",
+                                            background: "white",
                                         }
                                     }}
-                                >Sign Up</Button>
+                                >
+                                   <Link className="w-100 h-100" style={{color: "black" , textDecoration: "none" , padding: '2px 40px'}} href="sign-up">Sign Up</Link> 
+                                </Button>
                                 <Button
                                     sx={{
                                         background: "transparent",
                                         color: 'white',
-                                        padding: '8px 40px',
                                         border: "1px solid white",
                                         width: "178px"
                                     }}
 
-                                >Log In</Button>
+                                >
+                                   <Link className="w-100 h-100" href="login" style={{color: "white" , textDecoration: "none" , padding: '2px 40px'}}>Log In</Link> 
+                                </Button>
                             </Typography>
 
                         </Typography>
