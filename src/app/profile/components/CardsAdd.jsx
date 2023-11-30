@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import { Typography, Button  } from '@mui/material'
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
