@@ -63,7 +63,7 @@ function Nav() {
                                 <Link  href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
                                     <ListItemButton sx={{
                                         padding: "0",
-                                        margin: item.margin ? item.margin : "10px 0 0 30px",
+                                        margin: item.margin ? {md:item.margin} : {md:"10px 0 0 30px"},
                                         "&:hover": {
                                             background: "none"
                                         }
