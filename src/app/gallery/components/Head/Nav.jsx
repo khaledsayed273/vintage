@@ -49,8 +49,10 @@ function Nav() {
                     display: "flex",
                     padding: "0",
                     justifyContent: "space-between",
+                    alignItems: "center",
                     borderBottom: "1px solid white",
                     flexDirection: {xs: "column" , md: "row"}
+                    
                 }}>
                     {navItems.map((item) => {
 
@@ -58,7 +60,7 @@ function Nav() {
 
                         return (
                             <li key={item.id}>
-                                <Link href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
+                                <Link  href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
                                     <ListItemButton sx={{
                                         padding: "0",
                                         margin: item.margin ? item.margin : "10px 0 0 30px",
@@ -66,7 +68,7 @@ function Nav() {
                                             background: "none"
                                         }
                                     }}>
-                                        <Typography className='linkText font' variant='div' component="div">
+                                        <Typography sx={{fontSize: {md:"20px"}}}  className='linkTextGallery font' variant='div' component="div">
                                             {item.name}
                                         </Typography>
                                     </ListItemButton>

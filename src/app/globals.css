@@ -65,6 +65,11 @@ body {
   margin-top: 5px;
   text-transform: capitalize;
 }
+.navlink .linkTextGallery {
+  text-decoration: none;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
 
 .navlink:hover {
   color: #D69D66 !important;

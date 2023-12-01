@@ -62,7 +62,7 @@ function Head() {
                         background: "white",
                         color: "black",
                         border: "1px solid white",
-                        padding: "8px 50px",
+                        padding: {xs:"4px 30px" , md:"8px 50px"},
                         borderRadius: "50px",
                         fontSize: "16px",
                         fontWeight: "500",

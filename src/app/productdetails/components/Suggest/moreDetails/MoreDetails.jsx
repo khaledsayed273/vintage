@@ -1,3 +1,4 @@
+"use client"
 import { Typography } from '@mui/material'
 
 import Image from 'next/image'
@@ -7,7 +8,7 @@ function MoreDetails({ images , handleImg }) {
     return (
         <div className='d-flex justify-content-center me-5 mt-4  align-items-center'>
 
-            {images.map(item => (
+            {images?.map(item => (
                 <Typography  onClick={() => handleImg(item.src)} key={item.id} variant='div' component="div"
                     sx={{
                         width: "127px",
