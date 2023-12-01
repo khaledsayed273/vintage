@@ -5,6 +5,7 @@ import img1 from "../../../../images/all img/Frame 153.png"
 import img2 from "../../../../images/all img/Frame 152.png"
 import img3 from "../../../../images/all img/Frame 151.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 function Suggest() {
@@ -46,30 +47,36 @@ function Suggest() {
             }}
         >
             {data.map((item) => (
-                <div key={item.id} className='font position-relative'
-                    style={{
-                        margin: "0 40px 20px 0"
-                    }}
-                >
-                    <div style={{
-                        height: "298px",
-                        width: "228px",
-                        borderRadius: "131px",
-                        overflow: "hidden",
-                        border: "1px solid #D29F1B",
-                        marginBottom: "20px",
+                <Link className='m-3' style={{textDecoration: "none" , color: "white"}} key={item.id} href={`${item.id}`} >
+                    <Typography variant='div' component="div" className='font position-relative'
+                    sx={{"&:hover": {
+                        transform: "scale(1.1)",
+                    },
+                    transition: "300ms"
+                }}
 
-                    }}>
-                        <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={item.img} alt="img" />
-                    </div>
+                        
+                    >
+                        <div style={{
+                            height: "290px",
+                            width: "210px",
+                            borderRadius: "131px",
+                            overflow: "hidden",
+                            border: "1px solid #D29F1B",
+                            marginBottom: "20px",
 
-                    <div className='text-center'>
-                        <p style={{ fontSize: "16px" }}>{item.title}</p>
-                        {/* <p style={{ fontSize: "12px" }}>{item.name}</p> */}
-                        <p style={{ fontSize: "14px" }}>$ {item.price}</p>
-                    </div>
-                    
-                </div>
+                        }}>
+                            <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={item.img} alt="img" />
+                        </div>
+
+                        <div className='text-center'>
+                            <p style={{ fontSize: "16px" }}>{item.title}</p>
+                            {/* <p style={{ fontSize: "12px" }}>{item.name}</p> */}
+                            <p style={{ fontSize: "14px" }}>$ {item.price}</p>
+                        </div>
+
+                    </Typography>
+                </Link>
             ))}
         </Typography>
     )
