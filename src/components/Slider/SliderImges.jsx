@@ -34,7 +34,7 @@ function SliderImges() {
    return (
       <aside className='my-5'>
          <div className='d-flex flex-column align-items-center font text-white'>
-            <h4>BUY AND SELL ART COMMISSION-FREE</h4>
+            <Typography variant="h4" component="h4" sx={{fontSize: {xs: "18px" , md: "20px"}}}>BUY AND SELL ART COMMISSION-FREE</Typography>
             <p className='my-2' style={{
                textTransform: "uppercase",
                fontSize: "18px",
@@ -93,7 +93,7 @@ function SliderImges() {
 
                         {data?.data.length > 0 ?
                            data.data.map((item) => (
-                              <SwiperSlide key={item.id} style={{ display: "flex", justifyContent: "center", padding: "0 15px" }}>
+                              <SwiperSlide key={item.id} style={{ display: "flex", justifyContent: "center", padding: "0 15px" , height: "405px" }}>
                                  <Typography variant='div' key={item.id} className='font position-relative' sx={{
 
                                     "&:hover": {
@@ -104,7 +104,7 @@ function SliderImges() {
                                     transition: "200ms"
                                  }}>
                                     <div>
-                                       <Link href={`productdetails/${item.id}`} style={{ textDecoration: "none", color: "white" }}>
+                                       <Link href={`productdetails/${item.id}`} style={{ textDecoration: "none", color: "white" , height: "100%"}}>
                                           <div style={{
                                              height: "300px",
                                              width: "230px",

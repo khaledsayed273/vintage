@@ -92,6 +92,13 @@ body {
   padding: 20px;
   user-select: none;
 }
+:root {
+  --swiper-navigation-size: 22px !important;
+  --swiper-navigation-sides-offset: 45px !important;
+  
+}
+
+
 
 
 /*select Form*/

@@ -38,11 +38,16 @@ function Header() {
 
     const navItems = [
         {
+            id: "home",
+            name: "home",
+            path: "/",
+            margin: "0 30px 0 0",
+        },
+        {
             id: "signin",
             name: "sign Up",
             path: "/sign-up",
-            margin: "0 30px 0 0",
-
+            margin: "0 30px ",
         },
         {
             id: "login",
@@ -76,11 +81,6 @@ function Header() {
                 </div>,
             icon: moreIcon,
             more: [
-                {
-                    id: "home",
-                    name: "home",
-                    path: "/",
-                },
                 {
                     id: "about",
                     name: "about",

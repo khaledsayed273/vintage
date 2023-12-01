@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 function page() {
     return (
-        <div className='container mx-auto d-flex justify-content-center '>
+        <div className='container mx-auto d-flex justify-content-center font'>
             <Typography className="py-3" variant='div' component="div" sx={{
                 background: "white",
                 width: { xs: "95%", sm: "80%", md: "70%", lg: "50%", xl: "45%" },
@@ -96,7 +96,7 @@ function page() {
                                 <Button className="w-100" sx={{
                                     background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                     color: "white",
-                                    padding: "15px",
+                                    padding: "8px",
                                     fontSize: "16px",
                                     borderRadius: "25px",
                                     ":hover":{
@@ -111,13 +111,7 @@ function page() {
                             By creating an account, you agree to the Terms of use and Privacy Policy.
                             </div>
                         </Grid>
-
-
-
                     </Grid>
-
-
-
                 </form>
             </Typography >
         </div >

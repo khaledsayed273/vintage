@@ -24,11 +24,11 @@ function Discover() {
                 margin: "100px 0"
             }}>
             <div className='container'>
-                <h4 style={{
-                    fontSize: "28px",
+                <Typography variant='h4' component="h4"  sx={{
+                    fontSize: {xs: "16px",md:"20px"},
                     fontWeight: "400"
                 }}>DISCOVER WORLDWIDE EXHIBITIONS
-                </h4>
+                </Typography>
 
                 <div className='mt-5 '>
                     <Grid container spacing={{ lg: 15, md: 5 }}>
