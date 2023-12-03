@@ -5,6 +5,10 @@
     line-height: 27px;
 }
 
-.addToCart:hover p {
+.addToCart:hover p , .addToCart:hover svg {
     color: white !important;
+}
+
+.addToCart svg{
+    color: black
 }

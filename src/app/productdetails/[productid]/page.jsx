@@ -6,9 +6,9 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import style from "./details.module.css"
 import Image from 'next/image';
-import { lazy, useState } from 'react';
+import { useState } from 'react';
 import MoreDetails from "../components/Suggest/moreDetails/MoreDetails"
-import CardMore from "../components/Suggest/moreDetails/MoreDetails"
+import CardMore from "../components/CardMore/CardMore"
 import Nav from "../components/Nav/Nav"
 import Suggest from "../components/Suggest/Suggest"
 
@@ -64,12 +64,12 @@ function Page() {
         <Grid container spacing={{ xs: 2, md: 5, xl: 20 }}>
           <Grid item xs={12} lg={6}>
             <Typography variant='div' component="div" className='my-4 my-lg-0'>
-              <Typography variant='div' component="div"
+              <Typography className="mx-auto ms-xl-0" variant='div' component="div"
                 sx={{
                   borderRadius: "282.5px",
                   overflow: "hidden",
-                  width: { xl: "465px", xs: "90%", md: "100%" },
-                  height: { xl: "650px", lg: "620px", md: "620px" }
+                  width: { xs: "90%", lg: "465px"  },
+                  height: { sm: "420px",  md: "450px" , lg: "620px" , xl: "650px"}
                 }}
               >
                 <Image className='w-100 h-100 object-fit-cover' src={imge} alt="img" />
@@ -200,7 +200,8 @@ function Page() {
                         borderRadius: "15px",
                         border: "1px solid white",
                         "&:hover": {
-                          color: 'white'
+                          color: 'white',
+                          
                         }
                       }}>
                         <ShoppingCartIcon color='black' />
