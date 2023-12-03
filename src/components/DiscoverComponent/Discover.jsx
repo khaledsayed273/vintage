@@ -19,12 +19,12 @@ function Discover() {
 
 
     return (
-        <article className='font text-white'
+        <article className='font text-white font'
             style={{
                 margin: "100px 0"
             }}>
             <div className='container'>
-                <Typography variant='h4' component="h4"  sx={{
+                <Typography  variant='h4' component="h4"  sx={{
                     fontSize: {xs: "16px",md:"20px"},
                     fontWeight: "400"
                 }}>DISCOVER WORLDWIDE EXHIBITIONS

@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 function Section() {
     return (
-        <section className='mt-5'>
+        <section className='mt-5 font'>
             <div className='container'>
 
                 <Grid className=' d-flex justify-content-center' container>

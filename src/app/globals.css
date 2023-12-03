@@ -42,11 +42,25 @@
   font-family: 'Playfair Display';
 }
 
+
+
 body {
   background: linear-gradient(90.37deg, #444436 -27.95%, #1A1615 132.36%);
   min-height: 100vh;
   margin: 0;
   box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+div,
+span{
+  font-family: 'Playfair Display' !important;
 
 }
 
