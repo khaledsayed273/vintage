@@ -1,14 +1,11 @@
 "use client"
 import { Button, Typography } from '@mui/material'
-import img from "../../../../images/all img/GalleryImg.png"
-import img2 from "../../../../images/all img/Frame 148.png"
+import img from "../../../images/all img/GalleryImg.png"
+import img2 from "../../../images/all img/Frame 148.png"
 import Image from 'next/image'
-
-function Head() {
-    return (
-        <div className='container font' style={{
-            borderBottom: "1px solid rgba(255, 255, 255, 0.25)"
-        }}>
+const HeadGalleries = () => {
+    return(
+        <div className='container font'>
 
             <Typography variant='div' component="div"
 
@@ -83,4 +80,5 @@ function Head() {
     )
 }
 
-export default Head
+
+export default HeadGalleries

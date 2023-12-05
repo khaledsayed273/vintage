@@ -6,7 +6,7 @@ import { Playfair_Display } from 'next/font/google';
 import Header from "../components/Header/Header"
 
 const inter = Playfair_Display({
-  subsets: ['latin'],
+  subsets: ['latin']
 });
 
 export const metadata = {

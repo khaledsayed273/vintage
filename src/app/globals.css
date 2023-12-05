@@ -51,7 +51,7 @@ body {
   box-sizing: border-box;
 }
 
-*{
+* {
   font-family: 'Playfair Display' !important;
 }
 
@@ -70,6 +70,7 @@ body {
   margin-top: 5px;
   text-transform: capitalize;
 }
+
 .navlink .linkTextGallery {
   text-decoration: none;
   margin-top: 5px;
@@ -97,13 +98,40 @@ body {
   padding: 20px;
   user-select: none;
 }
+
 :root {
   --swiper-navigation-size: 22px !important;
   --swiper-navigation-sides-offset: 45px !important;
-  
+  --swiper-theme-color: #96999c !important
+
 }
 
+/*mySwiper2*/
 
+.mySwiper2 {
+  height: 100% !important
+}
+
+.swiper-pagination-progressbar {
+  width: 75% !important;
+  left: 50% !important;
+  top: 20px !important;
+  right: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.mySwiper2 .swiper-button-next{
+  top: 15px !important;
+  right: 5px !important;
+  padding: 15px !important;
+  
+}
+.mySwiper2 .swiper-button-prev{
+  top: 15px  !important;
+  left: 5px !important;
+  padding: 15px !important;
+
+}
 
 
 /*select Form*/
@@ -146,7 +174,7 @@ footer ul li a {
 }
 
 /* text inside circle */
-.css-117w1su-MuiStepIcon-text{
+.css-117w1su-MuiStepIcon-text {
   fill: black !important
 }
 
@@ -159,7 +187,7 @@ footer ul li a {
 }
 
 .phone-payment {
-  background: #282015!important;
+  background: #282015 !important;
 }
 
 .input-payment-select #mui-component-select-age {
@@ -167,37 +195,37 @@ footer ul li a {
   border: 0
 }
 
-.input-payment-select .MuiOutlinedInput-notchedOutline{
-   border: 0;
+.input-payment-select .MuiOutlinedInput-notchedOutline {
+  border: 0;
 }
 
-.css-6hp17o-MuiList-root-MuiMenu-list{
+.css-6hp17o-MuiList-root-MuiMenu-list {
   padding: 0;
 }
 
-.cart-payment{
-  background: var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%)) ;
+.cart-payment {
+  background: var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%));
 }
 
-.MuiSvgIcon-root{
+.MuiSvgIcon-root {
   color: white;
 }
 
 
 /*input profile page*/
-.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
   color: white;
 }
-.MuiInputLabel-sizeSmall{
+
+.MuiInputLabel-sizeSmall {
   color: white;
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-  border-color: white ;
+  border-color: white;
 }
 
-.css-11qfo8z-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+.css-11qfo8z-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
   border-color: white !important;
 
 }
-
