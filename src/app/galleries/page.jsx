@@ -1,11 +1,11 @@
 import HeadGalleries from "./components/HeadGalleries"
-import SwiperGalleries from './components/SwiperGalleries';
+import Galleries from './components/Galleries';
 
 const page = () => {
     return(
         <>
         <HeadGalleries/>
-        <SwiperGalleries/>
+        <Galleries/>
         </>
     )
 

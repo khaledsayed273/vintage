@@ -11,8 +11,9 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const HeadGalleries = () => {
-    return(
+
+const HeadExhibitions = () => {
+    return (
         <div className='container font mb-5'>
             <Swiper
                 spaceBetween={30}
@@ -254,6 +255,7 @@ const HeadGalleries = () => {
                     </Typography>
                 </SwiperSlide>
 
+
             </Swiper>
 
 
@@ -263,4 +265,4 @@ const HeadGalleries = () => {
 }
 
 
-export default HeadGalleries
+export default HeadExhibitions

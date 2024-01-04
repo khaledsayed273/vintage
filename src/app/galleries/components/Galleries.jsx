@@ -17,7 +17,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button, Typography } from '@mui/material';
 
-export default function SwiperGalleries() {
+export default function Galleries() {
 
     const data = [
         {
@@ -86,81 +86,57 @@ export default function SwiperGalleries() {
             title: "sadf fwerwerwerwe"
         },
         {
-            id: 13,
+            id: 14,
             image: img,
             title: "dsfsdaf fsrferwf"
         },
         {
-            id: 14,
+            id: 15,
             image: img,
             title: "fdg fdgergferw "
         },
         {
-            id: 15,
+            id: 16,
             image: img,
             title: "gdfg dfgege "
         },
         {
-            id: 16,
+            id: 17,
             image: img,
             title: "Dark"
         },
         {
-            id: 17,
+            id: 18,
             image: img,
             title: "Game"
         },
-        
+
     ]
 
 
     return (
         <div className='container my-5'>
-            <Swiper
-                grid={{
-                    rows: 4,
-                    fill: "row",
-                }}
-                pagination={{
-                    clickable: true,
-                    type: 'progressbar',
 
-                }}
-                navigation={true}
-                modules={[Pagination, Navigation, Grid]}
-                className="mySwiper2 px-md-5"
-                breakpoints={{
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 50,
-                    },
-                    580: {
-                        slidesPerView: 2,
-                        spaceBetween: 45,
-                    },
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 25,
-                    },
-                }}
-            >
+            <div className="row">
                 {data.map((item) => (
-                    <SwiperSlide key={item.id} className="mt-5  px-2 px-lg-3 px-xl-4" style={{ display: "flex", justifyContent: "center", height: "290px", width: "320px", userSelect: "none" }}>
+                    <div  className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
                         <Typography variant='div' component="div" className='font position-relative' sx={{
                             marginTop: '30px',
-                            transition: "200ms"
+                            transition: "200ms",
+                            width: "364px",
                         }}>
                             <div style={{ textDecoration: "none", color: "white", height: "100%" }}>
 
-                                <div style={{
-                                    height: "200px",
+                                <Typography variant='div' component="div" sx={{
+                                    height: {xs: "145px", sm:"188px"},
                                     width: "100%",
-                                    borderRadius: "131px",
+                                    borderRadius: "88px",
                                     overflow: "hidden",
-                                    marginBottom: "20px"
+                                    marginBottom: "20px",
+                                    position: "relative"
                                 }}>
-                                    <Image style={{ objectFit: "cover" }} width={230} height={300} className='w-100 h-100' src={item.image} alt="img" />
-                                </div>
+                                    <Image style={{ objectFit: "cover" }}  sizes="(max-width: 768px) 100vw" priority fill className='w-100 h-100' src={item.image} alt="img" />
+                                </Typography>
 
                                 <div className='text-center d-flex justify-content-between align-items-center'>
                                     <p className="ms-3" style={{ fontSize: "16px" }}>{item.title}</p>
@@ -182,13 +158,11 @@ export default function SwiperGalleries() {
 
                             </div>
                         </Typography>
+                    </div>
 
-                    </SwiperSlide>
                 )
                 )}
-
-
-            </Swiper>
+            </div>
         </div>
     );
 }

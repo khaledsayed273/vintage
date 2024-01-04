@@ -55,6 +55,11 @@ body {
   font-family: 'Playfair Display' !important;
 }
 
+.inputBg {
+  background: var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%)) !important;
+}
+
+
 .navlink {
   color: white;
   text-decoration: none;
@@ -89,8 +94,8 @@ body {
 
 /*swiper*/
 
-.swiper-button-next,
-.swiper-button-prev {
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
   top: 550px !important;
   position: absolute !important;
   color: white !important;
@@ -99,12 +104,24 @@ body {
   user-select: none;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute !important;
+  color: white !important;
+  border: 1px solid white;
+  padding: 20px;
+  user-select: none;
+}
+
+
+
+
 :root {
   --swiper-navigation-size: 22px !important;
   --swiper-navigation-sides-offset: 45px !important;
   --swiper-theme-color: #96999c !important
-
 }
+
 
 /*mySwiper2*/
 
@@ -120,19 +137,106 @@ body {
   transform: translateX(-50%) !important;
 }
 
-.mySwiper2 .swiper-button-next{
+.mySwiper2 .swiper-button-next {
   top: 15px !important;
   right: 5px !important;
   padding: 15px !important;
-  
+
 }
-.mySwiper2 .swiper-button-prev{
-  top: 15px  !important;
+
+.mySwiper2 .swiper-button-prev {
+  top: 15px !important;
   left: 5px !important;
   padding: 15px !important;
 
 }
 
+
+/*swiper3*/
+
+
+@media (min-width:1200px) {
+  .mySwiper3 {
+    height: 620px;
+  }
+
+  .mySwiper3 .swiper-pagination-progressbar {
+    top: 530px !important;
+  }
+
+  .mySwiper3 .swiper-button-next,
+  .mySwiper3 .swiper-button-prev {
+    top: 570px !important;
+  }
+}
+
+@media (max-width:1199px) {
+  .mySwiper3 {
+    height: 540px;
+  }
+
+  .mySwiper3 .swiper-pagination-progressbar {
+    top: 460px !important;
+  }
+
+  .mySwiper3 .swiper-button-next,
+  .mySwiper3 .swiper-button-prev {
+    top: 500px !important;
+  }
+}
+
+@media (max-width:898px) {
+  .mySwiper3 {
+    height: 450px;
+  }
+
+  .mySwiper3 .swiper-pagination-progressbar {
+    top: 370px !important;
+  }
+
+  .mySwiper3 .swiper-button-next,
+  .mySwiper3 .swiper-button-prev {
+    top: 410px !important;
+  }
+}
+
+@media (max-width:387px) {
+  .mySwiper3 {
+    height: 500px;
+  }
+
+  .mySwiper3 .swiper-pagination-progressbar {
+    top: 420px !important;
+  }
+
+  .mySwiper3 .swiper-button-next,
+  .mySwiper3 .swiper-button-prev {
+    top: 460px !important;
+  }
+}
+
+
+.mySwiper3 .swiper-slide {
+  opacity: 0 !important;
+}
+
+.mySwiper3 .swiper-slide-active {
+  opacity: 1 !important;
+}
+
+
+.mySwiper3 .swiper-button-next,
+.mySwiper3 .swiper-button-prev {
+  position: absolute !important;
+  color: white !important;
+  border: 1px solid white;
+  padding: 20px;
+  user-select: none;
+}
+
+/* .mySwiper3 .swiper-pagination-progressbar{
+  top: 300px !important;
+} */
 
 /*select Form*/
 
@@ -227,5 +331,11 @@ footer ul li a {
 
 .css-11qfo8z-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
   border-color: white !important;
+}
 
+
+/*input exhibition page*/
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
 }
