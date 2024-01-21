@@ -3,32 +3,25 @@
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-
-
-
 import { Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { AsyncSlider } from '../../store/slices/SliderSlice';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { useEffect } from 'react';
+// import { AsyncSlider } from '../../store/slices/SliderSlice';
 import Loading from '../../app/gallery/loading';
 
-function SliderImges() {
+function SliderImges({data}) {
 
-   const data = useSelector(store => store.SliderSlice)
+   // const data = useSelector(store => store.SliderSlice)
 
-   const dispatch = useDispatch()
+   // const dispatch = useDispatch()
 
-   useEffect(() => {
-      dispatch(AsyncSlider())
-   }, [])
-
-
+   // useEffect(() => {
+   //    dispatch(AsyncSlider())
+   // }, [])
 
 
    return (
@@ -48,7 +41,7 @@ function SliderImges() {
          }}>
 
             {
-               data.loading ?
+               data?.loading ?
                   (
                      <Loading />
                   )

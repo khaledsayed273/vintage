@@ -65,6 +65,9 @@ body {
   text-decoration: none;
 }
 
+.active {
+  color: #D69D66;
+}
 .navlink.active {
   color: #D69D66;
 }
@@ -339,3 +342,8 @@ footer ul li a {
 .MuiOutlinedInput-notchedOutline {
   border: none !important;
 }
+
+
+/* .css-smkl36-MuiCollapse-wrapper .css-8cxq1v-MuiList-root{
+  display: none;
+} */
