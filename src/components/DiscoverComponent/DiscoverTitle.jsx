@@ -1,12 +1,12 @@
 "use client"
-import { Typography } from '@mui/material'
+import Typography  from '@mui/material/Typography'
 import React from 'react'
 
 function DiscoverTitle() {
     return (
         <Typography
-            variant="h4"
-            component="h4"
+            variant="h1"
+            component="h1"
             sx={{
                 fontSize: { xs: "16px", md: "20px" },
                 fontWeight: "400",

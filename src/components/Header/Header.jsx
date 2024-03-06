@@ -1,5 +1,12 @@
 "use client"
-import { List, ListItem, ListItemButton, ListItemText, Typography, Collapse, Button, ListItemAvatar, Avatar } from '@mui/material'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import Typography from '@mui/material/Typography'
+import Collapse from '@mui/material/Collapse'
+import Button from '@mui/material/Button'
+import ListItemAvatar from '@mui/material/ListItemAvatar'
 import logo from "../../images/logo.png"
 import artWorksIcon from "../../images/artworks.png"
 import moreIcon from "../../images/more.png"

@@ -1,5 +1,5 @@
 "use client"
-import {Grid } from '@mui/material'
+import Grid  from '@mui/material/Grid'
 import React from 'react'
 import LeftDiscover from "./LeftDiscover";
 import RightDiscover from "./RightDiscover";

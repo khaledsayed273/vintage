@@ -1,5 +1,8 @@
+"use client"
 
-import { Button, Grid, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import React from 'react'
 import img from "../../images/all img/Frame 155.png"
 import Image from 'next/image'
@@ -86,7 +89,7 @@ function Center() {
                                         }
                                     }}
                                 >
-                                   <Link className="w-100 h-100" style={{color: "black" , textDecoration: "none" , padding: '2px 40px'}} href="sign-up">Sign Up</Link> 
+                                    <Link className="w-100 h-100" style={{ color: "black", textDecoration: "none", padding: '2px 40px' }} href="sign-up">Sign Up</Link>
                                 </Button>
                                 <Button
                                     sx={{
@@ -97,7 +100,7 @@ function Center() {
                                     }}
 
                                 >
-                                   <Link className="w-100 h-100" href="login" style={{color: "white" , textDecoration: "none" , padding: '2px 40px'}}>Log In</Link> 
+                                    <Link className="w-100 h-100" href="login" style={{ color: "white", textDecoration: "none", padding: '2px 40px' }}>Log In</Link>
                                 </Button>
                             </Typography>
 

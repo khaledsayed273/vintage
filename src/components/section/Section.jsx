@@ -1,5 +1,8 @@
+"use client"
 
-import { Button, Grid, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import React from 'react'
 import img from "../../images/all img/image 21.png"
 import style from "./Section.module.css"
@@ -15,7 +18,7 @@ function Section() {
                 <Grid className='d-flex justify-content-center' container>
                     <Grid item className='d-flex align-items-flex-start mb-5 mb-lg-0' lg={8} md={7} sx={{ marginTop: { md: "60px" } }} >
                         <Typography variant='div' component="div">
-                            <Typography variant="h1" component="h1" sx={{
+                            <Typography variant="div" component="div" sx={{
                                 fontSize: { xs: "25px", md: "38px", lg: "48px" }, lineHeight: { md: "80px", lg: "106px" }
                             }} className={`font px-3 ${style.title}`}>Art is an expression of the soul.
                             </Typography>
@@ -30,7 +33,7 @@ function Section() {
 
                             <Typography variant='div' component="div" className='d-flex align-items-center p-2 px-3'>
                                 <Typography variant='div' component="div" >
-                                    <Image className='w-100 h-100' src={ukLogo} alt="" />
+                                    <Image priority className='w-100 h-100' src={ukLogo} alt="" />
                                 </Typography>
 
                                 <Typography className={`font ${style.uk}`} variant='div' component="div">
@@ -74,7 +77,7 @@ function Section() {
                         <Typography className='my-5 my-md-0' variant='div' component="div">
 
                             <Typography variant='div' component="div" sx={{ width: {xs: "auto" , lg: "390px", xl: "430px"} }}>
-                                <Image className='w-100 h-100' loading="eager" src={img} alt="img" />
+                                <Image className='w-100 h-100' priority src={img} alt="img" />
                             </Typography>
                         </Typography>
                     </Grid>

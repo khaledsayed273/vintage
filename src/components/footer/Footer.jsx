@@ -1,5 +1,7 @@
+"use client"
 
-import { Grid, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
 
@@ -16,7 +18,7 @@ function Footer() {
                 <Grid container>
 
                     <Grid item xs={12} sm={6} md={3} lg={2} className='d-flex justify-content-md-center justify-content-lg-start'>
-                        <Typography variant='div'>
+                        <Typography component="div" variant='div'>
                             <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
                                 <h1 style={{
                                     color: "#FFFCF7",
@@ -41,7 +43,7 @@ function Footer() {
                     </Grid>
 
                     <Grid item xs={12} sm={6} md={3} lg={4} className='d-flex justify-content-md-center'>
-                        <Typography variant='div'>
+                        <Typography component="div" variant='div'>
                             <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
                                 <h1 style={{
                                     color: "#FFFCF7",
@@ -66,7 +68,7 @@ function Footer() {
                     </Grid>
 
                     <Grid item xs={12} sm={6} md={3} lg={3} className='d-flex justify-content-md-center'>
-                        <Typography variant='div'>
+                        <Typography component="div" variant='div'>
                             <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
                                 <h1 style={{
                                     color: "#FFFCF7",

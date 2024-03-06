@@ -2,7 +2,10 @@
 import Image from 'next/image'
 import React from 'react'
 import img1 from "../../images/all img/world.png";
-import { FormControl, Grid, NativeSelect, Typography } from '@mui/material';
+import FormControl from '@mui/material/FormControl';
+import Grid from '@mui/material/Grid';
+import NativeSelect from '@mui/material/NativeSelect';
+import Typography from '@mui/material/Typography';
 function LeftDiscover() {
     return (
         <Grid item xs={12} md={6} lg={7}>

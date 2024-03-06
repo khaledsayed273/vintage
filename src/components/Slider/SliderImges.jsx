@@ -5,7 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import { Button, Typography } from '@mui/material';
+import  Button from '@mui/material/Button';
+import  Typography  from '@mui/material/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
 // import { useDispatch, useSelector } from 'react-redux';
@@ -27,7 +28,7 @@ function SliderImges({data}) {
    return (
       <aside className='my-5'>
          <div className='d-flex flex-column align-items-center font text-white'>
-            <Typography variant="h4" component="h4" sx={{fontSize: {xs: "18px" , md: "20px"}}}>BUY AND SELL ART COMMISSION-FREE</Typography>
+            <Typography variant="div" component="div" sx={{fontSize: {xs: "18px" , md: "20px"}}}>BUY AND SELL ART COMMISSION-FREE</Typography>
             <p className='my-2' style={{
                textTransform: "uppercase",
                fontSize: "18px",

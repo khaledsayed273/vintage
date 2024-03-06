@@ -1,8 +1,9 @@
 
-import ParentDiscover from "./ParentDiscover"
-import DiscoverTitle from "./DiscoverTitle"
 import BaseURL from "../../store/BaseURL";
 
+import dynamic from 'next/dynamic'
+const DiscoverTitle = dynamic(() => import('./DiscoverTitle'), { ssr: false })
+const ParentDiscover = dynamic(() => import('./ParentDiscover'), { ssr: false })
 
 async function getData() {
 	try {
