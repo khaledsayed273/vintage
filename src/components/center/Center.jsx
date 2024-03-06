@@ -1,4 +1,3 @@
-"use client"
 
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
