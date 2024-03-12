@@ -3,8 +3,11 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Playfair_Display } from "next/font/google";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
+import dynamic from "next/dynamic";
 
-import Header from "../components/Header/Header";
+const Header = dynamic(() => import("../components/Header/Header") , {
+  ssr: true,
+})
 import ProviderContext from "../store/Context";
 
 const inter = Playfair_Display({
