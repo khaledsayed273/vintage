@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify'
 import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("../components/Header/Header") , {
-  ssr: true,
+  ssr: false,
 })
 import ProviderContext from "../store/Context";
 
