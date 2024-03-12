@@ -38,7 +38,7 @@ const HeadGalleries = () => {
                     >
                         <Image
                             priority
-                            className='w-100 h-100'
+                            fill
                             src={img} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />

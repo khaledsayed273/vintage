@@ -1,21 +1,11 @@
-"use client"
 import React from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/grid';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 import img from "../../../images/all img/GalleryImg.png"
 
-// import required modules
-import { Pagination, Navigation, Grid } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export default function Galleries() {
 
@@ -119,7 +109,7 @@ export default function Galleries() {
 
             <div className="row">
                 {data.map((item) => (
-                    <div  className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
+                    <div className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
                         <Typography variant='div' component="div" className='font position-relative' sx={{
                             marginTop: '30px',
                             transition: "200ms",
@@ -128,14 +118,14 @@ export default function Galleries() {
                             <div style={{ textDecoration: "none", color: "white", height: "100%" }}>
 
                                 <Typography variant='div' component="div" sx={{
-                                    height: {xs: "145px", sm:"188px"},
+                                    height: { xs: "145px", sm: "188px" },
                                     width: "100%",
                                     borderRadius: "88px",
                                     overflow: "hidden",
                                     marginBottom: "20px",
                                     position: "relative"
                                 }}>
-                                    <Image style={{ objectFit: "cover" }}  sizes="(max-width: 768px) 100vw" priority fill className='w-100 h-100' src={item.image} alt="img" />
+                                    <Image style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw" priority fill src={item.image} alt="img" />
                                 </Typography>
 
                                 <div className='text-center d-flex justify-content-between align-items-center'>
