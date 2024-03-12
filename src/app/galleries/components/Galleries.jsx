@@ -1,7 +1,5 @@
 import React from 'react';
-
 import img from "../../../images/all img/GalleryImg.png"
-
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
