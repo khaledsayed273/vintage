@@ -1,14 +1,11 @@
-"use client"
-import { Button, Grid, Typography } from '@mui/material'
-
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import img1 from "../../../images//all img/Frame 152.png"
 import img2 from "../../../images//all img/Frame 151.png"
-
 import style from "./Events.module.css"
 import Image from 'next/image'
-import { lazy } from 'react'
-
-const PastExhibition = lazy(() => import("./PastExhibition"))
+import PastExhibition from "./PastExhibition"
 
 function Events() {
 
@@ -132,7 +129,7 @@ function Events() {
                 </Typography>
             ))}
 
-            <PastExhibition/>
+            <PastExhibition />
 
         </div>
     )

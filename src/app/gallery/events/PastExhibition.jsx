@@ -1,5 +1,7 @@
 "use client"
-import { Button, Grid, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import React, { useState } from 'react'
 import img from "../../../images/all img/Frame 153.png"
 import img2 from "../../../images/all img/Frame 152.png"
@@ -9,7 +11,7 @@ import Image from 'next/image'
 function PastExhibition() {
 
 
-    const [view , setView] = useState(false)
+    const [view, setView] = useState(false)
 
 
     const data = [
@@ -80,7 +82,7 @@ function PastExhibition() {
 
                 <Grid container spacing={5}>
 
-                    {data.slice(0,view === false? 6 : data.length).map((item) => (
+                    {data.slice(0, view === false ? 6 : data.length).map((item) => (
                         <Grid key={item.id} item xs={12} md={6} lg={4} >
                             <Typography variant='div' component="div" className='d-flex flex-column justify-content-center align-items-center'>
                                 <Typography variant='div' component="div"
@@ -89,10 +91,11 @@ function PastExhibition() {
                                         width: "298.678px",
                                         height: "398.571px",
                                         borderRadius: "131px",
-                                        border: "2px solid var(--solid-gold, #D69D66)"
+                                        border: "2px solid var(--solid-gold, #D69D66)",
+                                        position: "relative"
                                     }}
                                 >
-                                    <Image className='w-100 h-100' src={item.img} alt="" />
+                                    <Image sizes='(max-width:992px), 100vw' fill src={item.img} alt="" />
                                 </Typography>
 
                                 <div className='mt-3'
@@ -122,8 +125,8 @@ function PastExhibition() {
                     ))}
 
                     <div className='d-flex justify-content-center w-100 mt-5'>
-                        <Button 
-                        onClick={handleViewMore}
+                        <Button
+                            onClick={handleViewMore}
                             sx={{
                                 color: "white",
                                 border: "1px solid var(--solid-gold, #D69D66)"
