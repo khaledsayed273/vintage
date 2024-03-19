@@ -1,6 +1,5 @@
-"use client"
-import { Grid, Typography } from '@mui/material'
-
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import img1 from "../../images/all img/Frame 153.png"
 import img2 from "../../images/all img/Frame 151.png"
 import img3 from "../../images/all img/Frame 152.png"
