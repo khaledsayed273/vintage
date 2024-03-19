@@ -1,5 +1,5 @@
-"use client"
-import { Button, Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import img from "../../../../images/all img/GalleryImg.png"
 import img2 from "../../../../images/all img/Frame 148.png"
 import Image from 'next/image'
@@ -17,13 +17,16 @@ function Head() {
                     border: "1px solid var(--solid-gold, #D69D66)",
                     overflow: "hidden",
                     maxHeight: '389px',
+                    position: "relative",
+                    height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
 
                 }}
             >
                 <Image
-                    className='w-100 h-100'
+                    fill
+                    sizes='(max-width:992px) , 100vw'
                     src={img} alt="img_gallery"
-                    style={{ objectFit: "", transform: "scale(1.01)" }}
+                    style={{ transform: "scale(1.01)" }}
                 />
 
             </Typography>
@@ -35,19 +38,20 @@ function Head() {
                         borderRadius: "131px",
                         height: "70px",
                         width: '60px',
-                        overflow: "hidden"
+                        overflow: "hidden",
+                        position: "relative"
                     }}>
-                        <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={img2} alt="logo" />
+                        <Image sizes='(max-width:992px), 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
 
                     </Typography>
 
                     <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                        <Typography variant='div' component="div" 
-                        sx={{
-                            fontSize: {xs: "20px", sm: "25px", md:"38px"},
-                            letterSpacing: "0.4px",
-                            color: "white"
-                        }}>
+                        <Typography variant='div' component="div"
+                            sx={{
+                                fontSize: { xs: "20px", sm: "25px", md: "38px" },
+                                letterSpacing: "0.4px",
+                                color: "white"
+                            }}>
                             Arte Contemporary
                         </Typography>
                         <p className='text-white'>
@@ -58,21 +62,21 @@ function Head() {
                 </div>
 
                 <div>
-                    <Button 
-                    sx={{
-                        background: "white",
-                        color: "black",
-                        border: "1px solid white",
-                        padding: {xs:"4px 30px" , md:"8px 50px"},
-                        borderRadius: "50px",
-                        fontSize: "16px",
-                        fontWeight: "500",
-                        textTransform: "capitalize",
-                        marginTop: "12px",
-                        "&:hover":{
-                            color: "white"
-                        }
-                    }}
+                    <Button
+                        sx={{
+                            background: "white",
+                            color: "black",
+                            border: "1px solid white",
+                            padding: { xs: "4px 30px", md: "8px 50px" },
+                            borderRadius: "50px",
+                            fontSize: "16px",
+                            fontWeight: "500",
+                            textTransform: "capitalize",
+                            marginTop: "12px",
+                            "&:hover": {
+                                color: "white"
+                            }
+                        }}
                     >
                         Follow
                     </Button>

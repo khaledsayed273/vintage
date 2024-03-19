@@ -1,5 +1,7 @@
 "use client"
-import { List, ListItemButton, Typography } from '@mui/material'
+import List from '@mui/material/List'
+import ListItemButton from '@mui/material/ListItemButton'
+import Typography from '@mui/material/Typography'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -51,8 +53,8 @@ function Nav() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     borderBottom: "1px solid white",
-                    flexDirection: {xs: "column" , md: "row"}
-                    
+                    flexDirection: { xs: "column", md: "row" }
+
                 }}>
                     {navItems.map((item) => {
 
@@ -60,15 +62,15 @@ function Nav() {
 
                         return (
                             <li key={item.id}>
-                                <Link  href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
+                                <Link href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
                                     <ListItemButton sx={{
                                         padding: "0",
-                                        margin: item.margin ? {md:item.margin} : {md:"10px 0 0 30px"},
+                                        margin: item.margin ? { md: item.margin } : { md: "10px 0 0 30px" },
                                         "&:hover": {
                                             background: "none"
                                         }
                                     }}>
-                                        <Typography sx={{fontSize: {md:"20px"}}}  className='linkTextGallery font' variant='div' component="div">
+                                        <Typography sx={{ fontSize: { md: "20px" } }} className='linkTextGallery font' variant='div' component="div">
                                             {item.name}
                                         </Typography>
                                     </ListItemButton>
