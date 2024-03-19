@@ -95,9 +95,10 @@ function Page() {
                                         overflow: "hidden",
                                         borderRadius: "80px",
                                         height: "200px",
-                                        width: { xs: "300px", md: "200px", lg: "300px" }
+                                        width: { xs: "300px", md: "200px", lg: "300px" },
+                                        position: "relative"
                                     }}>
-                                        <Image className='w-100 h-100' src={item.img} alt="img" />
+                                        <Image sizes='(max-width:992px) , 100vw' fill src={item.img} alt="img" />
                                     </Typography>
                                     <div className='my-4' style={{
                                         fontSize: "18px",

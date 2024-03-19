@@ -190,16 +190,16 @@ body {
 
 @media (max-width:898px) {
   .mySwiper3 {
-    height: 450px;
+    height: 500px;
   }
 
   .mySwiper3 .swiper-pagination-progressbar {
-    top: 370px !important;
+    top: 400px !important;
   }
 
   .mySwiper3 .swiper-button-next,
   .mySwiper3 .swiper-button-prev {
-    top: 410px !important;
+    top: 450px !important;
   }
 }
 
