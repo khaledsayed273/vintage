@@ -23,6 +23,7 @@ function Head() {
                 }}
             >
                 <Image
+                    priority
                     fill
                     sizes='(max-width:992px) , 100vw'
                     src={img} alt="img_gallery"
