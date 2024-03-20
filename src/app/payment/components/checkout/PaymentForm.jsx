@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Button, Checkbox, FormControlLabel, Input } from '@mui/material';
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Input from '@mui/material/Input';
 import visaImg from "../../../../images/visa.png"
 import mastercard from "../../../../images/mastercard.png"
 import payment3 from "../../../../images/payment3.png"
@@ -38,7 +41,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         inputValue = inputValue.slice(0, -1);
       }
     } else {
-      
+
       if (inputValue.length === 3 && inputValue.indexOf('/') === -1) {
         inputValue = inputValue.substring(0, 2) + '/' + inputValue.substring(2);
       }
@@ -55,7 +58,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         <Grid item xs={12} >
           <div className="d-flex align-items-start">
             <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Pay on Delivery" name="Payment method" value="Pay on Delivery" defaultChecked />
-            <label style={{ fontSize: "13px", userSelect: "none" , cursor: "pointer" }} htmlFor="Pay on Delivery" >
+            <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Pay on Delivery" >
               Pay on Delivery
               <div>Pay with cash on delivery</div>
             </label>
@@ -66,7 +69,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
           <div className='d-flex justify-content-between align-items-center'>
             <div className="d-flex align-items-start">
               <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Credit/Debit Cards" name="Payment method" value={showCardPayment} />
-              <label style={{  fontSize: "13px", userSelect: "none" , cursor: "pointer" }} htmlFor="Credit/Debit Cards" >
+              <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Credit/Debit Cards" >
                 Credit/Debit Cards
                 <div>Pay with cash on delivery</div>
               </label>
@@ -103,7 +106,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
               <Grid className="mx-auto" sx={{ width: "90%" }} container >
                 <Grid item xs={12} md={6}>
                   <Input
-                  placeholder='MM/YY'
+                    placeholder='MM/YY'
                     type="text"
                     id="dateInput"
                     className="my-2 py-1 px-2 input-payment"
@@ -121,7 +124,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
                     variant="standard"
                     value={cardNumber}
                     onChange={handleChange}
-                    inputProps={{maxLength: 5}}
+                    inputProps={{ maxLength: 5 }}
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -141,7 +144,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
                     fullWidth
                     variant="standard"
                     type='text'
-                    inputProps={{maxLength: 3}}
+                    inputProps={{ maxLength: 3 }}
                   />
                 </Grid>
 
@@ -155,7 +158,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         <Grid item xs={12} >
           <div className="d-flex align-items-start">
             <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Direct Bank Transfer" name="Payment method" value="Direct Bank Transfer" />
-            <label style={{ fontSize: "13px", userSelect: "none" , cursor: "pointer" }} htmlFor="Direct Bank Transfer" >
+            <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Direct Bank Transfer" >
               Direct Bank Transfer
               <div>Make payment directly through bank account.</div>
             </label>
@@ -166,7 +169,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
           <div className='d-flex justify-content-between align-items-center'>
             <div className="d-flex align-items-start">
               <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Other Payment Methods" name="Payment method" value="Other Payment Methods" />
-              <label style={{ fontSize: "13px", userSelect: "none" , cursor: "pointer" }} htmlFor="Other Payment Methods" >
+              <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Other Payment Methods" >
                 Other Payment Methods
                 <div>Make payment through Gpay, Paypal, Paytm etc</div>
               </label>

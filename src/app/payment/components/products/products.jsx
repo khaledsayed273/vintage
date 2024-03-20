@@ -1,6 +1,5 @@
 import React from 'react'
 import img from "../../../../images/all img/Frame 150.png"
-import { Typography } from '@mui/material';
 import Image from 'next/image';
 
 function Products() {
