@@ -1,7 +1,5 @@
-"use client"
-import { Typography } from '@mui/material'
+import  Typography  from '@mui/material/Typography'
 import React from 'react'
-
 import img from "../../../images/all img/Frame 152.png"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -402,10 +400,11 @@ function Artists() {
                                                 height: "25.291px",
                                                 borderRadius: "131px",
                                                 border: "1px solid #D29F1B",
-                                                overflow: "hidden"
+                                                overflow: "hidden",
+                                                position: "relative"
                                             }}
                                         >
-                                            <Image className='w-100 h-100 object-fit-cover' src={item.img} alt="" />
+                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
                                         </Typography>
 
                                         <Typography className='ms-2' variant='div' component="div"
@@ -451,10 +450,11 @@ function Artists() {
                                                 height: "25.291px",
                                                 borderRadius: "131px",
                                                 border: "1px solid #D29F1B",
-                                                overflow: "hidden"
+                                                overflow: "hidden",
+                                                position: "relative"
                                             }}
                                         >
-                                            <Image className='w-100 h-100 object-fit-cover' src={item.img} alt="" />
+                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
                                         </Typography>
 
                                         <Typography className='ms-2' variant='div' component="div"
@@ -499,10 +499,11 @@ function Artists() {
                                                 height: "25.291px",
                                                 borderRadius: "131px",
                                                 border: "1px solid #D29F1B",
-                                                overflow: "hidden"
+                                                overflow: "hidden",
+                                                position: "relative"
                                             }}
                                         >
-                                            <Image className='w-100 h-100 object-fit-cover' src={item.img} alt="" />
+                                            <Image sizes='(max-width:992px) , 100vw' style={{objectFit: "cover"}} fill src={item.img} alt="" />
                                         </Typography>
 
                                         <Typography className='ms-2' variant='div' component="div"
@@ -547,10 +548,11 @@ function Artists() {
                                                 height: "25.291px",
                                                 borderRadius: "131px",
                                                 border: "1px solid #D29F1B",
-                                                overflow: "hidden"
+                                                overflow: "hidden",
+                                                position: "relative"
                                             }}
                                         >
-                                            <Image className='w-100 h-100 object-fit-cover' src={item.img} alt="" />
+                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}}  src={item.img} alt="" />
                                         </Typography>
 
                                         <Typography className='ms-2' variant='div' component="div"
