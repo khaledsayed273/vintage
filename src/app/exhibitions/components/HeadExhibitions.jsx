@@ -43,7 +43,6 @@ const HeadExhibitions = () => {
                             sizes='(max-width:992px) , 100vw'
                             fill
                             src={img} alt="img_gallery"
-                            style={{ transform: "scale(1.01)" }}
                         />
 
                     </Typography>
@@ -121,7 +120,6 @@ const HeadExhibitions = () => {
                             sizes='(max-width:992px) , 100vw'
                             fill
                             src={img2} alt="img_gallery"
-                            style={{ transform: "scale(1.01)" }}
                         />
 
                     </Typography>
@@ -200,7 +198,6 @@ const HeadExhibitions = () => {
                             fill
                             sizes='(max-width:992px) , 100vw'
                             src={img} alt="img_gallery"
-                            style={{ transform: "scale(1.01)" }}
                         />
 
                     </Typography>
