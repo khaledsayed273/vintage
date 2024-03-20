@@ -6,7 +6,7 @@ import SearchExhibitions from './components/SearchExhibitions';
 function page() {
     return (
         <>
-            <HeadExhibitions />
+            {/* <HeadExhibitions /> */}
             <SearchExhibitions/>
             <Exhibitions/>
         </>
