@@ -1,6 +1,5 @@
-import { Typography } from '@mui/material'
+import  Typography  from '@mui/material/Typography'
 import React from 'react'
-
 import img1 from "../../../../images/all img/Frame 153.png"
 import img2 from "../../../../images/all img/Frame 152.png"
 import img3 from "../../../../images/all img/Frame 151.png"
@@ -53,9 +52,7 @@ function Suggest() {
                         transform: "scale(1.1)",
                     },
                     transition: "300ms"
-                }}
-
-                        
+                }} 
                     >
                         <div style={{
                             height: "290px",
@@ -64,9 +61,10 @@ function Suggest() {
                             overflow: "hidden",
                             border: "1px solid #D29F1B",
                             marginBottom: "20px",
+                            position: "relative"
 
                         }}>
-                            <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={item.img} alt="img" />
+                            <Image sizes='(max-width:992px) , 100vw' style={{ objectFit: "cover" }} fill src={item.img} alt="img" />
                         </div>
 
                         <div className='text-center'>

@@ -1,5 +1,7 @@
 "use client"
-import { Button, Grid, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import img from "../../../../images/all img/Frame 148.png"
 import img2 from "../../../../images/all img/Frame 147.png"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -12,7 +14,7 @@ import { Context } from '../../../../store/Context'
 
 function Details({ data }) {
 
-    const {addToCart} = useContext(Context)
+    const { addToCart } = useContext(Context)
 
     const images = [
         {
@@ -35,7 +37,7 @@ function Details({ data }) {
         setImg(img10)
     }
 
-    
+
 
     return (
         <Grid container spacing={{ xs: 2, md: 5, xl: 20 }}>
@@ -46,10 +48,11 @@ function Details({ data }) {
                             borderRadius: "282.5px",
                             overflow: "hidden",
                             width: { xs: "90%", lg: "465px" },
-                            height: { sm: "420px", md: "450px", lg: "620px", xl: "650px" }
+                            height: { sm: "420px", md: "450px", lg: "620px", xl: "650px" },
+                            position: "relative"
                         }}
                     >
-                        <Image className='w-100 h-100 object-fit-cover' src={imge} alt="img" />
+                        <Image priority sizes='(max-width:992px) , 100vw' fill src={imge} alt="img" />
                     </Typography>
 
                     <Typography variant='div' component="div">
@@ -90,10 +93,11 @@ function Details({ data }) {
                                         height: "32px",
                                         overflow: "hidden",
                                         borderRadius: "50px",
-                                        marginRight: "10px"
+                                        marginRight: "10px",
+                                        position: "relative"
                                     }}
                                     variant='div' component="div">
-                                    <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={data.userImg} alt="img" />
+                                    <Image sizes='(max-width:992px) , 100vw' style={{ objectFit: "cover" }} fill src={data.userImg} alt="img" />
                                 </Typography>
                                 <h5 className='m-0'
                                     style={{
@@ -226,13 +230,9 @@ function Details({ data }) {
                                         Add to Wishlist
                                     </p>
                                 </Button>
-
                             </Typography>
                         </div>
-
                     </Typography>
-
-
                 </Typography>
             </Grid>
 

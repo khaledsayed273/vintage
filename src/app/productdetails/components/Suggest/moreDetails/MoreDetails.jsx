@@ -1,5 +1,4 @@
-"use client"
-import { Typography } from '@mui/material'
+import Typography  from '@mui/material/Typography'
 
 import Image from 'next/image'
 
@@ -18,11 +17,12 @@ function MoreDetails({ images , handleImg }) {
                         borderRadius: '50%',
                         border: "1px solid #D29F1B",
                         margin: "0 10px",
-                        cursor: "pointer"
+                        cursor: "pointer",
+                        position: "relative"
                     }}
                 >
 
-                    <Image style={{ transform: "scale(1.1)" }} className='w-100 h-100 object-fit-cover' src={item.src} alt="img" />
+                    <Image style={{ transform: "scale(1.1)" , objectFit: "cover" }} sizes='(max-width:992px) , 100vw' fill src={item.src} alt="img" />
                 </Typography>
             ))}
             </Typography>

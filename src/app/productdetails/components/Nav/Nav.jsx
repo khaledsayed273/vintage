@@ -1,5 +1,4 @@
-"use client"
-import { Typography } from '@mui/material'
+import  Typography  from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
 
@@ -33,7 +32,7 @@ function Nav() {
                         textAlign: "center"
                     }}
                 >
-                    <Typography sx={{fontSize: {xs: "14px" , md: "16px"}}} variant="span" component="span">
+                    <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }} variant="span" component="span">
 
                         More like this
                     </Typography>
@@ -50,7 +49,6 @@ function Nav() {
                     style={{
                         background: "white",
                         color: "black",
-                        // padding: '10px 10px 7px ',
                         textDecoration: "none",
                         width: "100%",
                         height: "100%",
@@ -59,10 +57,10 @@ function Nav() {
                         textAlign: "center"
                     }}
                 >
-                    <Typography sx={{fontSize: {xs: "14px" , md: "16px"}}} variant="span" component="span">
+                    <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }} variant="span" component="span">
 
-                    About THIS ARTIST
-</Typography>
+                        About THIS ARTIST
+                    </Typography>
                 </Link>
             </Typography>
             <Typography variant="div" component="div">
@@ -85,10 +83,10 @@ function Nav() {
                         textAlign: "center"
                     }}
                 >
-                    <Typography sx={{fontSize: {xs: "14px" , md: "16px"}}} variant="span" component="span">
+                    <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }} variant="span" component="span">
 
-                    Shipping Policy
-</Typography>
+                        Shipping Policy
+                    </Typography>
                 </Link>
             </Typography>
 
