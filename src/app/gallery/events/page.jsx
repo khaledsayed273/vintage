@@ -64,9 +64,9 @@ function Events() {
                             <Grid item xs={12} md={6} lg={8}>
 
                                 <Typography variant='div' component="div" className='pe-md-5 my-3 my-md-0'>
-                                    <h5 className={style.text}>
+                                    <h1 className={style.text}>
                                         {item.titleCard}
-                                    </h5>
+                                    </h1>
 
                                     <Typography variant='div' component="div" className='mt-5 mb-3'>
                                         <div

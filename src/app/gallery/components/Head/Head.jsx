@@ -42,7 +42,7 @@ function Head() {
                         overflow: "hidden",
                         position: "relative"
                     }}>
-                        <Image sizes='(max-width:992px), 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
+                        <Image priority sizes='(max-width:992px), 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
 
                     </Typography>
 

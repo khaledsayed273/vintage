@@ -1,5 +1,5 @@
-"use client"
-import { Grid, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import Typography  from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
 
@@ -31,8 +31,9 @@ function Right({data}) {
                                         overflow: "hidden",
                                         border: "1px solid #D29F1B",
                                         marginBottom: "20px",
+                                        position: "relative"
                                     }}>
-                                        <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={item.img} alt="img" />
+                                        <Image style={{ objectFit: "cover" }} fill src={item.img} alt="img" />
                                     </div>
 
                                     <div className='text-center'>
@@ -61,8 +62,8 @@ function Right({data}) {
                         </Grid>
                     ))}
                 </Grid>
-            </Typography >
-        </Grid >
+            </Typography>
+        </Grid>
     )
 }
 

@@ -1,6 +1,6 @@
-"use client"
 
-import { Grid, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import Typography  from '@mui/material/Typography'
 import img1 from "../../../../images/all img/Frame 146.png"
 import img2 from "../../../../images/all img/Frame 147.png"
 import img3 from "../../../../images/all img/Frame 148.png"
@@ -11,7 +11,6 @@ import img7 from "../../../../images/all img/Frame 152.png"
 import img8 from "../../../../images/all img/Frame 153.png"
 import img9 from "../../../../images/all img/Frame 154.png"
 import img10 from "../../../../images/all img/Frame 155.png"
-import { lazy } from 'react'
 
 // const Left = lazy(() => import("./left/Left"))
 // const Right = lazy(() => import("./right/Right"))

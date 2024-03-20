@@ -1,7 +1,3 @@
-"use client"
-
-import { lazy } from 'react'
-
 
 import ArtWorksComp from "./components/ArtWorksComp"
 
