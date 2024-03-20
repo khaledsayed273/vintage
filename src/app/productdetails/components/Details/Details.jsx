@@ -48,7 +48,7 @@ function Details({ data }) {
                             borderRadius: "282.5px",
                             overflow: "hidden",
                             width: { xs: "90%", lg: "465px" },
-                            height: { sm: "420px", md: "450px", lg: "620px", xl: "650px" },
+                            height: {xs: "320px", sm: "420px", md: "450px", lg: "620px", xl: "650px" },
                             position: "relative"
                         }}
                     >
