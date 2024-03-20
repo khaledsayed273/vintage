@@ -6,7 +6,9 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-import { FormControl, MenuItem, Select } from '@mui/material';
+import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 export default function SearchExhibitions() {
 

@@ -1,5 +1,6 @@
 "use client"
-import { Button, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import  Typography  from '@mui/material/Typography'
 import img from "../../../images/all img/GalleryImg.png"
 import img2 from "../../../images/all img/Frame 148.png"
 import Image from 'next/image'
@@ -39,7 +40,8 @@ const HeadExhibitions = () => {
                     >
                         <Image
                             priority
-                            className='w-100 h-100'
+                            sizes='(max-width:992px) , 100vw'
+                            fill
                             src={img} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />
@@ -56,7 +58,7 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={img} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) , 100vw' fill src={img} alt="logo" />
 
                             </Typography>
 
@@ -116,7 +118,8 @@ const HeadExhibitions = () => {
                     >
                         <Image
                             priority
-                            className='w-100 h-100'
+                            sizes='(max-width:992px) , 100vw'
+                            fill
                             src={img2} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />
@@ -134,7 +137,7 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={img2} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} fill sizes='(max-width:992px) , 100vw' src={img2} alt="logo" />
 
                             </Typography>
 
@@ -194,7 +197,8 @@ const HeadExhibitions = () => {
                     >
                         <Image
                             priority
-                            className='w-100 h-100'
+                            fill
+                            sizes='(max-width:992px) , 100vw'
                             src={img} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />
@@ -211,7 +215,7 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} className='w-100 h-100' src={img} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} fill src={img} alt="logo" />
 
                             </Typography>
 
