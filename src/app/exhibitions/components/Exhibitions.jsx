@@ -73,7 +73,7 @@ function Exhibitions() {
                                     marginBottom: "20px",
                                     position: "relative"
                                 }}>
-                                    <Image priority style={{ objectFit: "cover" }} sizes='(max-width:992px) , 100vw' fill src={item.image} alt="img" />
+                                    <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) , 100vw' fill src={item.image} alt="img" />
                                 </div>
                                 <div className='text-center '>
                                     <p className='mx-auto' style={{ fontSize: "16px", width: "50%" }}>{item.title}</p>
