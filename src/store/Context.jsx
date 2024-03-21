@@ -1,10 +1,11 @@
 "use client";
-const { createContext, useEffect, useState, useCallback } = require("react");
-
+const { createContext, useEffect, useState } = require("react");
 import ToastifyComponent from "../Shared/ToastifyComponent";
+
 export const Context = createContext();
 
 export default function ProviderContext({ children }) {
+
     const { success, error } = ToastifyComponent()
 
     const [cartsData, setCartsData] = useState([]);
@@ -15,8 +16,6 @@ export default function ProviderContext({ children }) {
             setCartsData(storedCarts ? JSON.parse(storedCarts) : []);
         }
     }, []);
-
-
 
     const addToCart = (item) => {
         const cartExists = cartsData.find(data => data.id === item.id);
@@ -34,13 +33,10 @@ export default function ProviderContext({ children }) {
         const newCarts = cartsData.filter((items) => {
             return items.id !== item.id
         })
-        console.log(newCarts);
         setCartsData(newCarts);
         localStorage.setItem("carts", JSON.stringify(newCarts));
         success("Item deleted successfully");
     }
-
-
 
     // const addToCart = (item) => {
     //     const cartExists = cartsData.find(data => data.id === item.id);
@@ -54,7 +50,5 @@ export default function ProviderContext({ children }) {
     //     }
     // };
 
-
-
-    return <Context.Provider value={{ addToCart , deleteFromCart , cartsData }}>{children}</Context.Provider>;
+    return <Context.Provider value={{ addToCart, deleteFromCart, cartsData }}>{children}</Context.Provider>;
 }

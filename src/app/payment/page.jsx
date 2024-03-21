@@ -7,7 +7,6 @@ function page() {
             <div className="row">
                 <Checkout />
             </div>
-
         </div>
     )
 }

@@ -23,13 +23,9 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { usePathname } from 'next/navigation'
 import { Context } from '../../store/Context'
 
-
-
 function Header() {
 
     const { deleteFromCart, cartsData } = useContext(Context)
-
-    console.log(cartsData);
 
     const pathName = usePathname()
     const [expandedItem, setExpandedItem] = useState(null);

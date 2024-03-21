@@ -11,7 +11,7 @@ function LeftDiscover() {
         <Grid item xs={12} md={6} lg={7}>
             <div className="h-100">
                 <FormControl
-                    ariaLabel="State"
+                    aria-label="State"
                     className="font form"
                     sx={{
                         width: "170px",
