@@ -1,17 +1,21 @@
 "use client"
-import { Box, Checkbox, FormControlLabel, FormGroup, Grid, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
-
+import Box from '@mui/material/Box'
+import Checkbox from '@mui/material/Checkbox'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import FormGroup from '@mui/material/FormGroup'
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
+import Typography from '@mui/material/Typography'
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import SearchIcon from '@mui/icons-material/Search';
 import style from "./Left.module.css"
 import Link from 'next/link';
+import React, { useState } from 'react'
 
 function Left() {
 
@@ -24,10 +28,7 @@ function Left() {
     const [material, setMaterial] = useState(true);
     const [country, setCountry] = useState(true);
     const [timePeriod, setTimePeriod] = useState(true);
-
-
     const [range, setRange] = useState(400)
-
 
     return (
         <Grid item xs={11} md={4} lg={3} >
@@ -55,7 +56,7 @@ function Left() {
 
                                 }}
                             >
-                                <TextField  className={style.forInput} sx={{ position: "relative", border: "1px solid white", color: "white" }} fullWidth id="KeywordSearch" />
+                                <TextField className={style.forInput} sx={{ position: "relative", border: "1px solid white", color: "white" }} fullWidth id="KeywordSearch" />
                                 <SearchIcon sx={{ position: "absolute", right: '25px', top: "17px" }} />
                             </Box>
                         </List>

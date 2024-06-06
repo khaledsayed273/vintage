@@ -256,10 +256,7 @@ const HeadExhibitions = () => {
                     </Typography>
                 </SwiperSlide>
 
-
             </Swiper>
-
-
 
         </div>
     )

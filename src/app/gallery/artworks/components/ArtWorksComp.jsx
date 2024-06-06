@@ -11,15 +11,10 @@ import img7 from "../../../../images/all img/Frame 152.png"
 import img8 from "../../../../images/all img/Frame 153.png"
 import img9 from "../../../../images/all img/Frame 154.png"
 import img10 from "../../../../images/all img/Frame 155.png"
-
-// const Left = lazy(() => import("./left/Left"))
-// const Right = lazy(() => import("./right/Right"))
 import Left from "./left/Left"
 import Right from "./right/Right"
 
 function ArtWorksComp({ data }) {
-
-
     const data1 = [
         {
             id: 0,
@@ -182,9 +177,6 @@ function ArtWorksComp({ data }) {
             sold: false
         },
     ]
-
-    
-
     return (
         <Typography variant='div' component="div" className='font text-white mt-5'
             sx={{

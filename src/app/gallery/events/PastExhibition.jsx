@@ -1,18 +1,13 @@
-"use client"
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import React, { useState } from 'react'
+import React from 'react'
 import img from "../../../images/all img/Frame 153.png"
 import img2 from "../../../images/all img/Frame 152.png"
 import img3 from "../../../images/all img/Frame 151.png"
 import Image from 'next/image'
 
 function PastExhibition() {
-
-
-    const [view, setView] = useState(false)
-
 
     const data = [
         {
@@ -52,13 +47,6 @@ function PastExhibition() {
             date: "June 8 – 30, 2023"
         },
     ]
-
-
-    const handleViewMore = () => {
-        setView(true)
-    }
-
-
     return (
         <div>
             <h3
@@ -82,7 +70,7 @@ function PastExhibition() {
 
                 <Grid container spacing={5}>
 
-                    {data.slice(0, view === false ? 6 : data.length).map((item) => (
+                    {data.map((item) => (
                         <Grid key={item.id} item xs={12} md={6} lg={4} >
                             <Typography variant='div' component="div" className='d-flex flex-column justify-content-center align-items-center'>
                                 <Typography variant='div' component="div"
@@ -126,7 +114,7 @@ function PastExhibition() {
 
                     <div className='d-flex justify-content-center w-100 mt-5'>
                         <Button
-                            onClick={handleViewMore}
+                           
                             sx={{
                                 color: "white",
                                 border: "1px solid var(--solid-gold, #D69D66)"

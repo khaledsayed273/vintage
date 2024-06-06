@@ -1,5 +1,3 @@
-"use client"
-
 import { Grid, Typography } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -7,7 +5,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import ContactImg from "../../../images/all img/contact.png"
 import Image from 'next/image';
 import Link from 'next/link';
-
 function Contact() {
 
     const data =
@@ -21,9 +18,7 @@ function Contact() {
         location: "UTC +8 Chengdu",
 
     }
-
-
-
+    
     return (
         <div className='container font text-white mt-5'>
 

@@ -1,6 +1,4 @@
-'use client'
 import React from 'react'
-
 import img1 from "../../../images/all img/Frame 146.png"
 import img2 from "../../../images/all img/Frame 147.png"
 import img3 from "../../../images/all img/Frame 148.png"
@@ -11,7 +9,8 @@ import img7 from "../../../images/all img/Frame 152.png"
 import img8 from "../../../images/all img/Frame 153.png"
 import img9 from "../../../images/all img/Frame 154.png"
 import img10 from "../../../images/all img/Frame 155.png"
-import { Button, Typography } from '@mui/material'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import ArtWorksComp from '../../gallery/artworks/components/ArtWorksComp'
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -19,9 +18,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Link from 'next/link'
 
-function page({params}) {
-
-    console.log(params.artistid)
+function page({ params }) {
 
     const data = {
         artist: {
@@ -130,7 +127,6 @@ function page({params}) {
 
     const dataGalary = data?.artist.artworks
 
-
     return (
         <>
             <div className='container font text-white'>
@@ -174,7 +170,6 @@ function page({params}) {
 
                 </Typography>
 
-
                 <Typography variant='div' component="div">
                     <div className='px-lg-5' style={{
                         padding: "30px 0px 20px",
@@ -205,7 +200,6 @@ function page({params}) {
                     </Typography>
 
                 </Typography>
-
 
                 <Typography variant='div' component="div" className='my-5'>
 
@@ -279,7 +273,7 @@ function page({params}) {
                                         </span>
                                     </Typography>
                                 </Link>
-                            </Typography >
+                            </Typography>
                             <Typography variant='div' component="div" sx={{
                                 "&:hover": {
                                     transform: "scale(1.07)",
@@ -311,8 +305,8 @@ function page({params}) {
                                             artegallery
                                         </span>
                                     </Typography>
-                                </Link >
-                            </Typography >
+                                </Link>
+                            </Typography>
                             <Typography variant='div' component="div" sx={{
                                 "&:hover": {
                                     transform: "scale(1.07)",
@@ -351,7 +345,6 @@ function page({params}) {
 
 
             </div>
-
 
             <ArtWorksComp data={dataGalary} />
 

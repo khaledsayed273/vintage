@@ -8,10 +8,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import Loading from '../../app/gallery/loading';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 function SliderImges({ baseUrl }) {
 
@@ -19,7 +17,6 @@ function SliderImges({ baseUrl }) {
    const [loading, setLoading] = useState(true)
 
    const getData = async () => {
-
       const res = await fetch(`${baseUrl}slider`, { cache: "no-store" }).then((res) => {
          return res.json()
       }).then((data) => {
@@ -29,8 +26,6 @@ function SliderImges({ baseUrl }) {
       });
       setData(res)
       setLoading(false)
-
-
    }
 
    useEffect(() => {

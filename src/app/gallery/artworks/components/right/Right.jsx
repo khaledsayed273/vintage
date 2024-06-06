@@ -2,11 +2,9 @@ import Grid from '@mui/material/Grid'
 import Typography  from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
-
 import Image from 'next/image'
 
 function Right({data}) {
-
     return (
         <Grid item xs={12} md={8}>
             <Typography variant='div' component="div" className='p-4'>

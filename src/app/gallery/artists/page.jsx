@@ -1,4 +1,4 @@
-import  Typography  from '@mui/material/Typography'
+import Typography  from '@mui/material/Typography'
 import React from 'react'
 import img from "../../../images/all img/Frame 152.png"
 import Link from 'next/link'
@@ -356,7 +356,6 @@ function Artists() {
 
     return (
         <div className='container font text-white mt-5'>
-
             <span
                 className='ms-md-5'
                 style={{
@@ -365,7 +364,6 @@ function Artists() {
             >
                 Artists
             </span>
-
             <Typography variant='div' component="div"
                 sx={{
                     background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
