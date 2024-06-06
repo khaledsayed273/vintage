@@ -97,6 +97,12 @@ body {
 
 /*swiper*/
 
+
+.mySwiper .swiper-slide{
+  margin: 20px auto ;
+  margin-right: auto !important;
+}
+
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
   top: 550px !important;

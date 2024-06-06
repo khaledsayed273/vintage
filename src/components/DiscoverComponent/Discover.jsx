@@ -1,6 +1,4 @@
-
 import BaseURL from "../../store/BaseURL";
-
 import dynamic from 'next/dynamic'
 const DiscoverTitle = dynamic(() => import('./DiscoverTitle'), { ssr: false })
 const ParentDiscover = dynamic(() => import('./ParentDiscover'), { ssr: false })
@@ -15,10 +13,12 @@ async function getData() {
 	}
 }
 
+export const revalidate = +process.env.revalidate
+
+
 async function Discover() {
 	const data = await getData()
 
-	console.log(data);
 
 	return (
 		<article

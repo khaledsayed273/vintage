@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'admin.vintage-artgallery.com',
+                hostname: 'dashboard.vintage-artgallery.com',
                 port: '',
                 pathname: '/**',
             },

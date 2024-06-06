@@ -1,6 +1,4 @@
-
 import React, { Suspense } from 'react'
-
 import Head from "./components/Head/Head"
 import Nav from "./components/Head/Nav"
 import Loading from "./loading"

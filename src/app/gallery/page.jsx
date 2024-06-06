@@ -97,7 +97,7 @@ function Page() {
                                         width: { xs: "300px", md: "200px", lg: "300px" },
                                         position: "relative"
                                     }}>
-                                        <Image sizes='(max-width:992px) , 100vw' fill src={item.img} alt="img" />
+                                        <Image sizes='(max-width:992px) 100vw' fill src={item.img} alt="img" />
                                     </Typography>
                                     <div className='my-4' style={{
                                         fontSize: "18px",

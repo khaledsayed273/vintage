@@ -1,34 +1,49 @@
 "use client"
-
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import  Button from '@mui/material/Button';
-import  Typography  from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { useEffect } from 'react';
-// import { AsyncSlider } from '../../store/slices/SliderSlice';
+
 import Loading from '../../app/gallery/loading';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function SliderImges({data}) {
+function SliderImges({ baseUrl }) {
 
-   // const data = useSelector(store => store.SliderSlice)
+   const [data, setData] = useState([])
+   const [loading, setLoading] = useState(true)
 
-   // const dispatch = useDispatch()
+   const getData = async () => {
 
-   // useEffect(() => {
-   //    dispatch(AsyncSlider())
-   // }, [])
+      const res = await fetch(`${baseUrl}slider`, { cache: "no-store" }).then((res) => {
+         return res.json()
+      }).then((data) => {
+         return data
+      }).catch((e) => {
+         return e
+      });
+      setData(res)
+      setLoading(false)
+
+
+   }
+
+   useEffect(() => {
+      getData()
+   }, [])
+
+
 
 
    return (
       <aside className='my-5'>
          <div className='d-flex flex-column align-items-center font text-white'>
-            <Typography variant="div" component="div" sx={{fontSize: {xs: "18px" , md: "20px"}}}>BUY AND SELL ART COMMISSION-FREE</Typography>
+            <Typography variant="div" component="div" sx={{ fontSize: { xs: "18px", md: "20px" } }}>BUY AND SELL ART COMMISSION-FREE</Typography>
             <p className='my-2' style={{
                textTransform: "uppercase",
                fontSize: "18px",
@@ -42,7 +57,7 @@ function SliderImges({data}) {
          }}>
 
             {
-               data?.loading ?
+               loading ?
                   (
                      <Loading />
                   )
@@ -50,7 +65,7 @@ function SliderImges({data}) {
                   (
                      <Swiper
                         slidesPerView={5}
-                        spaceBetween={50}
+                        spaceBetween={0}
                         scrollbar={{
                            hide: false,
                         }}
@@ -66,28 +81,29 @@ function SliderImges({data}) {
                               },
                               580: {
                                  slidesPerView: 2,
-                                 spaceBetween: 15
+
                               },
                               900: {
                                  slidesPerView: 3,
-                                 spaceBetween: 15
+
                               },
                               1200: {
                                  slidesPerView: 4,
-                                 spaceBetween: 30
+
                               },
                               1700: {
                                  slidesPerView: 5,
-                                 spaceBetween: 50
+
                               },
                            }
                         }
                      >
 
 
-                        {data?.data.length > 0 ?
+                        {data?.data?.length > 0 ?
                            data.data.map((item) => (
-                              <SwiperSlide key={item.id} style={{ display: "flex", justifyContent: "center", padding: "0 15px" , height: "405px" }}>
+
+                              <SwiperSlide key={item.id} style={{ display: "flex", justifyContent: "center", padding: "0 15px", height: "405px" }}>
                                  <Typography variant='div' key={item.id} className='font position-relative' sx={{
 
                                     "&:hover": {
@@ -98,7 +114,7 @@ function SliderImges({data}) {
                                     transition: "200ms"
                                  }}>
                                     <div>
-                                       <Link href={`productdetails/${item.id}`} style={{ textDecoration: "none", color: "white" , height: "100%"}}>
+                                       <Link href={`productdetails/${item.id}`} style={{ textDecoration: "none", color: "white", height: "100%" }}>
                                           <div style={{
                                              height: "300px",
                                              width: "230px",
@@ -136,7 +152,6 @@ function SliderImges({data}) {
                            ))
                            : (
                               <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
-
                                  <h1 className='font text-white text-center'>Sorry There is no data</h1>
                               </SwiperSlide>
                            )}

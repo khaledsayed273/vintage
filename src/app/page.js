@@ -1,30 +1,33 @@
-
 import Section from "../components/section/Section";
 import SliderImges from "../components/Slider/SliderImges";
 import Discover from "../components/DiscoverComponent/Discover";
 import Center from "../components/center/Center";
 import Footer from "../components/footer/Footer";
-import BaseURL from "../store/BaseURL";
 
-async function getData() {
-  try {
-    const res = await BaseURL.get("slider");
-    const data = await res.data.data;
-    return data;
-  } catch (e) {
-    console.log(e);
-  }
-}
+// async function getData() {
+//   let loading = true
+//   try {
+//     const res = await BaseURL.get("sliderr");
+//     const data = await res.data;
+//     loading = false
+//     return {data , loading};
+//   } catch (e) {
+//     loading = false
+//     return {e , loading}
+//   }
+// }
+
+// export const revalidate = +process.env.revalidate
 
 export default async function Home() {
-  const data = await getData();
+  // const {data , loading } = await getData();
 
-  console.log(data);
+  const baseUrl = process.env.baseUrl
 
   return (
     <>
       <Section />
-      <SliderImges data={data} />
+      <SliderImges baseUrl={baseUrl} />
       <Discover />
       <Center />
       <Footer />
