@@ -364,8 +364,8 @@ function Artists() {
             >
                 Artists
             </span>
-            <Typography variant='div' component="div"
-                sx={{
+            <div
+                style={{
                     background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                     padding: "35px 20px",
                     margin: "25px 0"
@@ -373,7 +373,7 @@ function Artists() {
             >
                 <div className='d-flex justify-content-between align-items-start flex-column flex-sm-row flex-wrap'>
 
-                    <Typography variant='div' component="div">
+                    <div>
                         {data.slice(0, 14).map((item) => (
                             <Typography key={item.id} variant='div' component="div"
                                 sx={{
@@ -392,8 +392,8 @@ function Artists() {
                                 >
                                     <div className='d-flex align-items-center my-3'>
 
-                                        <Typography variant='div' component="div"
-                                            sx={{
+                                        <div
+                                            style={{
                                                 width: "25.391px",
                                                 height: "25.291px",
                                                 borderRadius: "131px",
@@ -403,29 +403,28 @@ function Artists() {
                                             }}
                                         >
                                             <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
-                                        </Typography>
+                                        </div>
 
-                                        <Typography className='ms-2' variant='div' component="div"
+                                        <span className='ms-2'
 
-                                            sx={{
+                                            style={{
                                                 fontSize: "16px",
                                                 fontWeight: "400",
                                                 lineHeight: "26px"
                                             }}
                                         >
                                             {item.name}
-                                        </Typography>
+                                        </span>
 
                                     </div>
                                 </Link>
                             </Typography>
                         ))}
-                    </Typography>
+                    </div>
 
-                    <Typography variant='div' component="div">
+                    <div >
                         {data.slice(14, 28).map((item) => (
                             <Typography key={item.id} variant='div' component="div"
-
                                 sx={{
                                     "&:hover": {
                                         scale: "1.08",
@@ -442,8 +441,8 @@ function Artists() {
                                 >
                                     <div className='d-flex align-items-center my-3'>
 
-                                        <Typography variant='div' component="div"
-                                            sx={{
+                                        <div
+                                            style={{
                                                 width: "25.391px",
                                                 height: "25.291px",
                                                 borderRadius: "131px",
@@ -453,26 +452,26 @@ function Artists() {
                                             }}
                                         >
                                             <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
-                                        </Typography>
+                                        </div>
 
-                                        <Typography className='ms-2' variant='div' component="div"
+                                        <span className='ms-2'
 
-                                            sx={{
+                                            style={{
                                                 fontSize: "16px",
                                                 fontWeight: "400",
                                                 lineHeight: "26px"
                                             }}
                                         >
                                             {item.name}
-                                        </Typography>
+                                        </span>
 
                                     </div>
                                 </Link>
                             </Typography>
                         ))}
-                    </Typography>
+                    </div>
 
-                    <Typography variant='div' component="div">
+                    <div>
                         {data.slice(28, 42).map((item) => (
                             <Typography key={item.id} variant='div' component="div"
                                 sx={{
@@ -491,8 +490,8 @@ function Artists() {
                                 >
                                     <div className='d-flex align-items-center my-3'>
 
-                                        <Typography variant='div' component="div"
-                                            sx={{
+                                        <div
+                                            style={{
                                                 width: "25.391px",
                                                 height: "25.291px",
                                                 borderRadius: "131px",
@@ -502,26 +501,26 @@ function Artists() {
                                             }}
                                         >
                                             <Image sizes='(max-width:992px) , 100vw' style={{objectFit: "cover"}} fill src={item.img} alt="" />
-                                        </Typography>
+                                        </div>
 
-                                        <Typography className='ms-2' variant='div' component="div"
+                                        <span className='ms-2'
 
-                                            sx={{
+                                            style={{
                                                 fontSize: "16px",
                                                 fontWeight: "400",
                                                 lineHeight: "26px"
                                             }}
                                         >
                                             {item.name}
-                                        </Typography>
+                                        </span>
 
                                     </div>
                                 </Link>
                             </Typography>
                         ))}
-                    </Typography>
+                    </div>
 
-                    <Typography variant='div' component="div">
+                    <div>
                         {data.slice(42, 56).map((item) => (
                             <Typography key={item.id} variant='div' component="div"
                                 sx={{
@@ -540,8 +539,8 @@ function Artists() {
                                 >
                                     <div className='d-flex align-items-center my-3'>
 
-                                        <Typography variant='div' component="div"
-                                            sx={{
+                                        <div
+                                            style={{
                                                 width: "25.391px",
                                                 height: "25.291px",
                                                 borderRadius: "131px",
@@ -550,30 +549,29 @@ function Artists() {
                                                 position: "relative"
                                             }}
                                         >
-                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}}  src={item.img} alt="" />
-                                        </Typography>
+                                            <Image sizes='(max-width:992px) 100vw' fill style={{objectFit: "cover"}}  src={item.img} alt="" />
+                                        </div>
 
-                                        <Typography className='ms-2' variant='div' component="div"
-
-                                            sx={{
+                                        <span className='ms-2'
+                                            style={{
                                                 fontSize: "16px",
                                                 fontWeight: "400",
                                                 lineHeight: "26px"
                                             }}
                                         >
                                             {item.name}
-                                        </Typography>
+                                        </span>
 
                                     </div>
                                 </Link>
                             </Typography>
                         ))}
-                    </Typography>
+                    </div>
 
                 </div>
 
 
-            </Typography>
+            </div>
 
         </div>
     )

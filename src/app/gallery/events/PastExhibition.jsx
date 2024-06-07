@@ -61,8 +61,8 @@ function PastExhibition() {
                 Past Exhibition
             </h3>
 
-            <Typography variant='div' component="div"
-                sx={{
+            <div 
+                style={{
                     background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                     padding: "35px 30px"
                 }}
@@ -72,9 +72,9 @@ function PastExhibition() {
 
                     {data.map((item) => (
                         <Grid key={item.id} item xs={12} md={6} lg={4} >
-                            <Typography variant='div' component="div" className='d-flex flex-column justify-content-center align-items-center'>
-                                <Typography variant='div' component="div"
-                                    sx={{
+                            <div className='d-flex flex-column justify-content-center align-items-center'>
+                                <div 
+                                    style={{
                                         overflow: "hidden",
                                         width: "298.678px",
                                         height: "398.571px",
@@ -83,10 +83,10 @@ function PastExhibition() {
                                         position: "relative"
                                     }}
                                 >
-                                    <Image sizes='(max-width:992px), 100vw' fill src={item.img} alt="" />
-                                </Typography>
+                                    <Image sizes='(max-width:992px) 100vw' fill src={item.img} alt="" />
+                                </div>
 
-                                <div className='mt-3'
+                                <h3 className='mt-3'
                                     style={{
                                         fontSize: "18px",
                                         textTransform: "uppercase",
@@ -95,7 +95,7 @@ function PastExhibition() {
                                 >
                                     {item.title}
 
-                                </div>
+                                </h3>
                                 <div
                                     style={{
                                         fontSize: "18px",
@@ -107,24 +107,24 @@ function PastExhibition() {
 
                                 </div>
 
-                            </Typography>
+                            </div>
 
                         </Grid>
                     ))}
 
                     <div className='d-flex justify-content-center w-100 mt-5'>
                         <Button
-                           
                             sx={{
                                 color: "white",
-                                border: "1px solid var(--solid-gold, #D69D66)"
+                                border: "1px solid var(--solid-gold, #D69D66)",
+                                padding: "8px 19px"
                             }}
                         >View More ...
                         </Button>
                     </div>
                 </Grid>
 
-            </Typography>
+            </div>
 
         </div>
     )

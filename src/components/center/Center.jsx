@@ -15,11 +15,11 @@ function Center() {
                 <Grid container spacing={{ sm: 3, md: 5, lg: 15 }}>
                     <Grid item xs={12} sm={7} md={6}>
                         <Typography variant='div' component="div" className='mb-5'>
-                            <h1 style={{
+                            <h3 style={{
                                 fontSize: "50px",
                                 color: "white"
                             }}>Join in, it’s free.
-                            </h1>
+                            </h3>
 
                             <div className='my-5'>
                                 <p style={{
@@ -115,9 +115,10 @@ function Center() {
                                 // width: "450px",
                                 // height: "595px",
                                 overflow: "hidden",
-                                borderRadius: "224px"
+                                borderRadius: "224px",
+                                position: "relative"
                             }}>
-                                <Image className='w-100 h-100' src={img} alt="" />
+                                <Image sizes='100%' fill  src={img} alt="" />
                             </Typography>
 
                         </Typography>

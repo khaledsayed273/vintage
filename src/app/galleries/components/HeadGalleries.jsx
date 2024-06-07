@@ -6,7 +6,6 @@ import img2 from "../../../images/all img/Frame 148.png"
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -47,9 +46,9 @@ const HeadGalleries = () => {
 
                     </Typography>
 
-                    <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                         <div className='d-flex align-items-center'>
-                            <Typography variant='div' component="div" sx={{
+                            <div style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
@@ -59,10 +58,10 @@ const HeadGalleries = () => {
                             }}>
                                 <Image priority sizes='(max-width:992px) 100vw ' fill src={img} alt="logo" />
 
-                            </Typography>
+                            </div>
 
                             <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography variant='div' component="div"
+                                <Typography className='my-2' variant='h2' component="h2"
                                     sx={{
                                         fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                         letterSpacing: "0.4px",
@@ -70,9 +69,9 @@ const HeadGalleries = () => {
                                     }}>
                                     Arte Contemporary
                                 </Typography>
-                                <p className='text-white'>
+                                <span className='text-white'>
                                     cairo
-                                </p>
+                                </span>
 
                             </Typography>
                         </div>
@@ -98,7 +97,7 @@ const HeadGalleries = () => {
                             </Button>
                         </div>
 
-                    </Typography>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Typography variant='div' component="div"
@@ -122,9 +121,9 @@ const HeadGalleries = () => {
 
                     </Typography>
 
-                    <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                         <div className='d-flex align-items-center'>
-                            <Typography variant='div' component="div" sx={{
+                            <div style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
@@ -132,12 +131,12 @@ const HeadGalleries = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image priority sizes='(max-width:992px) 100vw ' fill src={img} alt="logo" />
+                                <Image priority sizes='(max-width:992px) 100vw ' fill src={img2} alt="logo" />
 
-                            </Typography>
+                            </div>
 
                             <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography variant='div' component="div"
+                                <Typography className='my-2' variant='h2' component="h2"
                                     sx={{
                                         fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                         letterSpacing: "0.4px",
@@ -145,9 +144,9 @@ const HeadGalleries = () => {
                                     }}>
                                     Arte Contemporary
                                 </Typography>
-                                <p className='text-white'>
+                                <span className='text-white'>
                                     cairo
-                                </p>
+                                </span>
 
                             </Typography>
                         </div>
@@ -173,8 +172,9 @@ const HeadGalleries = () => {
                             </Button>
                         </div>
 
-                    </Typography>
+                    </div>
                 </SwiperSlide>
+                
 
             </Swiper>
         </div>

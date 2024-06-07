@@ -38,19 +38,16 @@ function SliderImges({ baseUrl }) {
    return (
       <aside className='my-5'>
          <div className='d-flex flex-column align-items-center font text-white'>
-            <Typography variant="div" component="div" sx={{ fontSize: { xs: "18px", md: "20px" } }}>BUY AND SELL ART COMMISSION-FREE</Typography>
+            <Typography variant="h3" component="h3" sx={{ fontSize: { xs: "18px", md: "20px" } }}>BUY AND SELL ART COMMISSION-FREE</Typography>
             <p className='my-2' style={{
                textTransform: "uppercase",
                fontSize: "18px",
                fontWeight: "400"
             }}>All types of art</p>
          </div>
-
-
          <div style={{
             margin: "50px 0"
          }}>
-
             {
                loading ?
                   (
@@ -122,8 +119,8 @@ function SliderImges({ baseUrl }) {
                                           </div>
 
                                           <div className='text-center'>
-                                             <p style={{ fontSize: "16px" }}>{item.title}</p>
-                                             <p style={{ fontSize: "12px" }}>{item.name}</p>
+                                             <h3 style={{ fontSize: "16px" }}>{item.title}</h3>
+                                             <h4 style={{ fontSize: "12px" }}>{item.name}</h4>
                                              <p style={{ fontSize: "14px" }}>$ {item.price}</p>
                                           </div>
                                           {item.sold && (
@@ -147,7 +144,7 @@ function SliderImges({ baseUrl }) {
                            ))
                            : (
                               <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
-                                 <h1 className='font text-white text-center'>Sorry There is no data</h1>
+                                 <h3 className='font text-white text-center'>Sorry There is no data</h3>
                               </SwiperSlide>
                            )}
 

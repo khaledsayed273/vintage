@@ -1,5 +1,7 @@
 "use client"
-import { Grid, Typography, Button } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import google from "../../images/google.svg"
@@ -16,9 +18,9 @@ function page() {
                 borderRadius: "30px"
 
             }}>
-                <div className='text-center pb-3 pt-4' style={{ fontSize: "24px" }}>
+                <h1 className='text-center pb-3 pt-4' style={{ fontSize: "24px" }}>
                     Sign up
-                </div>
+                </h1>
                 <div className='d-flex  flex-sm-row align-items-center justify-content-center'>
                     <Button sx={{
                         background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -47,7 +49,7 @@ function page() {
                     </Button>
 
                 </div>
-                <Typography className='d-flex justify-content-center align-items-center fw-bold my-4' sx={{
+                <Typography variant='span' component="span" className='d-flex justify-content-center align-items-center fw-bold my-4' sx={{
                     position: "relative",
                     textTransform: "uppercase",
                     color: "rgb(71 70 70)",
@@ -68,7 +70,7 @@ function page() {
                         left: { xs: "10px", md: "5%" }
 
                     },
-                }} variant='div' component="div">
+                }}>
                     or
                 </Typography>
 
@@ -106,11 +108,11 @@ function page() {
                                 </div>
                                 <div className="d-flex justify-content-around my-4">
                                     <div className="d-flex align-items-center">
-                                        <input style={{width: "20px" , height: "20px" , accentColor: "#776041"}}  type="radio" id="html" name="fav_language" value="artist" />
+                                        <input style={{ width: "20px", height: "20px", accentColor: "#776041" }} type="radio" id="html" name="fav_language" value="artist" />
                                         <label className="ms-2" htmlFor="html">Artist</label>
                                     </div>
                                     <div className="d-flex align-items-center">
-                                        <input style={{width: "20px" , height: "20px" , accentColor: "#776041"}} type="radio" id="css" name="fav_language" value="member" />
+                                        <input style={{ width: "20px", height: "20px", accentColor: "#776041" }} type="radio" id="css" name="fav_language" value="member" />
                                         <label className="ms-2" htmlFor="css">Member</label>
                                     </div>
                                 </div>
@@ -118,43 +120,38 @@ function page() {
                         </Grid>
                         <Grid className='pt-3' item xs={12}>
                             <div className="d-flex justify-content-center">
-                            <Button className="w-100" sx={{
-                                background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
-                                color: "white",
-                                padding: "8px",
-                                fontSize: "16px",
-                                borderRadius: "25px",
-                                ":hover":{
-                                    opacity: "0.7"
-                                }
+                                <Button className="w-100" sx={{
+                                    background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
+                                    color: "white",
+                                    padding: "8px",
+                                    fontSize: "16px",
+                                    borderRadius: "25px",
+                                    ":hover": {
+                                        opacity: "0.7"
+                                    }
                                 }}>Sign up</Button>
                             </div>
                         </Grid>
                         <Grid className='pt-3' item xs={12}>
-                            <div style={{fontSize: "17px"}} className="d-flex justify-content-center">
-                            Already have an account? <Link style={{
-                                color: "black" ,
-                                 textDecoration: "none",
-                                 marginLeft: "5px"
-                                 }} href="/login">Log in</Link> 
+                            <div style={{ fontSize: "17px" }} className="d-flex justify-content-center">
+                                Already have an account? <Link style={{
+                                    color: "black",
+                                    textDecoration: "none",
+                                    marginLeft: "5px"
+                                }} href="/login">Log in</Link>
                             </div>
                         </Grid>
                         <Grid className='pt-3' item xs={12}>
-                            <div style={{fontSize: "17px"}} className="d-flex justify-content-center text-center px-4 my-3">
-                            By creating an account, you agree to our
-Terms of use and Privacy Policy 
-                            </div>
+                            <p style={{ fontSize: "17px" }} className="d-flex justify-content-center text-center px-4 my-3">
+                                By creating an account, you agree to our
+                                Terms of use and Privacy Policy
+                            </p>
                         </Grid>
-                        
-
 
                     </Grid>
-
-
-
                 </form>
-            </Typography >
-        </div >
+            </Typography>
+        </div>
     )
 }
 

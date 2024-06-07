@@ -108,7 +108,7 @@ export default function Galleries() {
             <div className="row">
                 {data.map((item) => (
                     <div className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
-                        <Typography variant='div' component="div" className='font position-relative' sx={{
+                        <div className='font position-relative' style={{
                             marginTop: '30px',
                             transition: "200ms",
                             width: "364px",
@@ -127,7 +127,7 @@ export default function Galleries() {
                                 </Typography>
 
                                 <div className='text-center d-flex justify-content-between align-items-center'>
-                                    <p className="ms-3" style={{ fontSize: "16px" }}>{item.title}</p>
+                                    <h3 className="ms-3" style={{ fontSize: "16px" }}>{item.title}</h3>
                                     <Link href={`productdetails/1`}>
                                         <Button className='px-4' sx={{
                                             background: "white",
@@ -145,7 +145,7 @@ export default function Galleries() {
 
 
                             </div>
-                        </Typography>
+                        </div>
                     </div>
 
                 )

@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -33,10 +33,10 @@ function Contact() {
                     }}
                 >CONTACT INFO & SOCIAL MEDIA</span>
 
-                <Typography variant='div' component="div"
+                <div
                     className='mt-3 py-5 px-md-5 px-4 '
 
-                    sx={{
+                    style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
 
                     }}
@@ -54,16 +54,16 @@ function Contact() {
                         </Link>
                     </div>
 
-                    <div style={{
+                    <p style={{
                         fontSize: "18px",
                         margin: "40px 0"
                     }}>
                         Social Media :
-                    </div>
+                    </p>
 
                     <div className='d-flex justify-content-start align-items-center flex-column flex-md-row'>
-                        <Typography variant='div' component="div"
-                            sx={{
+                        <div
+                            style={{
                                 background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                 border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                 padding: "12px 45px 12px 15px",
@@ -84,9 +84,9 @@ function Contact() {
                             }}>
                                 artegallery
                             </span>
-                        </Typography>
-                        <Typography variant='div' component="div"
-                            sx={{
+                        </div>
+                        <div
+                            style={{
                                 background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                 border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                 padding: "12px 45px 12px 15px",
@@ -108,9 +108,9 @@ function Contact() {
                             }}>
                                 artegallery
                             </span>
-                        </Typography>
-                        <Typography variant='div' component="div"
-                            sx={{
+                        </div>
+                        <div
+                            style={{
                                 background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                 border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                 padding: "12px 45px 12px 15px",
@@ -131,9 +131,9 @@ function Contact() {
                             }}>
                                 artegallery
                             </span>
-                        </Typography>
+                        </div>
                     </div>
-                </Typography>
+                </div>
             </div>
 
             <div className='my-5'>
@@ -149,10 +149,10 @@ function Contact() {
                     COMPANY INFO & LOCATION
                 </span>
 
-                <Typography variant='div' component="div"
+                <div
                     className='mt-3 py-5 px-md-5 px-4 '
 
-                    sx={{
+                    style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
 
                     }}
@@ -160,8 +160,8 @@ function Contact() {
 
                     <div className='d-flex justify-content-between align-items-center'>
 
-                        <Typography variant='div' component="div"
-                            sx={{
+                        <div
+                            style={{
                                 fontSize: "18px"
                             }}
                         >
@@ -174,10 +174,10 @@ function Contact() {
                                 {data.city}
                             </span>
 
-                        </Typography>
+                        </div>
 
-                        <Typography variant='div' component="div"
-                            sx={{
+                        <div
+                            style={{
                                 fontSize: "18px",
 
                             }}
@@ -188,10 +188,10 @@ function Contact() {
                             }}>
                                 {data.country}
                             </span>
-                        </Typography>
+                        </div>
 
-                        <Typography variant='div' component="div"
-                            sx={{
+                        <div
+                            style={{
                                 fontSize: "16px",
                                 textAlign: "center",
                                 textTransform: "capitalize"
@@ -208,32 +208,29 @@ function Contact() {
                             <br />
                             street.
 
-                        </Typography>
+                        </div>
 
                     </div>
-
-
-
                     <div className='d-flex justify-content-between align-items-center my-5'>
 
-                        <Typography variant='div' component="div">
+                        <div>
                             Opening hours : {data.time_open} - {data.time_close}
                             <div>
                                 {`(${data.location})`}
                             </div>
 
-                        </Typography>
+                        </div>
 
 
                     </div>
 
-                </Typography>
+                </div>
 
             </div>
 
             <div className='my-5'>
-                <Typography variant='div' component="div"
-                    sx={{
+                <div
+                    style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                         height: "405px"
                     }}
@@ -255,12 +252,12 @@ function Contact() {
                             </div>
                         </Grid>
                         <Grid item xs={12} md={8} sx={{ height: "100%" }}>
-                            <div className='w-100 h-100'>
-                                <Image className='w-100 h-100' src={ContactImg} alt="img" />
+                            <div className='w-100 h-100 position-relative'>
+                                <Image fill src={ContactImg} alt="img" />
                             </div>
                         </Grid>
                     </Grid>
-                </Typography>
+                </div>
             </div>
         </div>
     )

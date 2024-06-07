@@ -1,4 +1,3 @@
-"use client"
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
@@ -6,7 +5,6 @@ import Link from 'next/link';
 import React from 'react'
 
 function RightDiscover({ data }) {
-
     return (
         <Grid item xs={12} md={6} lg={5}>
             <div>

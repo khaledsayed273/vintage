@@ -21,9 +21,9 @@ function Page() {
     }, [image])
     return (
         <div className="container">
-            <Typography variant='div' component="div"
+            <div
 
-                sx={{
+                style={{
                     borderRadius: "250px",
                     border: "1px solid var(--solid-gold, #D69D66)",
                     overflow: "hidden",
@@ -35,8 +35,8 @@ function Page() {
                 {imageToShow ? (
                     <Image
                         alt="image"
-                        className='w-100 h-100'
                         fill
+                        sizes='100%'
                         src={imageToShow}
                         style={{ objectFit: "", transform: "scale(1.01)" }}
                     />
@@ -51,10 +51,10 @@ function Page() {
                 )}
 
 
-            </Typography>
+            </div>
 
             <Typography variant='div' component="div" className="mx-auto" sx={{ width: { md: "90%" } }}>
-                <Typography variant='div' component="div" className=' d-flex flex-column flex-sm-row justify-content-between align-items-center px-5 py-3'>
+                <div className='d-flex flex-column flex-sm-row justify-content-between align-items-center px-5 py-3'>
                     <div className='d-flex'>
                         <div style={{ position: "relative", width: "74px", height: "74px", overflow: "hidden", borderRadius: "50%" }}>
                             <Image fill className='w-100 h-100' alt='profile-image' src={img} />
@@ -80,13 +80,13 @@ function Page() {
                         <Button sx={{ border: "1px solid white", background: "rgba(255, 255, 255, 0.60)", color: "black", borderRadius: "50px", "&:hover": { opacity: "0.7", background: "rgba(255, 255, 255, 0.60)" } }} className="p-1 px-4"><DriveFileRenameOutlineIcon className="me-1" style={{ width: "20px", height: "20px", color: "black" }} /> Edit</Button>
                     </div>
 
-                </Typography>
+                </div>
 
-                <Typography className="d-flex justify-content-between mt-4" variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
+                <div className="d-flex justify-content-between mt-4"  style={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         PROFILE COMPLETENESS
                     </div>
-                </Typography>
+                </div>
 
                 <CardsAdd/>
             </Typography>

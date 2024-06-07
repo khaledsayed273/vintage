@@ -130,8 +130,8 @@ function page({ params }) {
     return (
         <>
             <div className='container font text-white'>
-                <Typography
-                    className='d-flex justify-content-between align-items-center flex-md-row flex-column pb-4' variant='div' component="div" sx={{ borderBottom: '1px solid #d3d3d34d' }}>
+                <div
+                    className='d-flex justify-content-between align-items-center flex-md-row flex-column pb-4' style={{ borderBottom: '1px solid #d3d3d34d' }}>
                     <div className='d-flex'>
                         <div
                             style={{
@@ -145,15 +145,15 @@ function page({ params }) {
                             <Image alt="img" width={59} height={69} src={data.artist.img} />
                         </div>
                         <div style={{ textTransform: "capitalize", fontWeight: "400" }} className='ms-3 text-white'>
-                            <h4 style={
+                            <h1 style={
                                 {
                                     fontSize: "38px",
                                     letterSpacing: "0.4px",
                                 }
                             }>
                                 {data.artist.name}
-                            </h4>
-                            <p style={{ fontSize: "18px" }}>{data.artist.country}</p>
+                            </h1>
+                            <h3 style={{ fontSize: "18px" }}>{data.artist.country}</h3>
                         </div>
                     </div>
 
@@ -168,10 +168,10 @@ function page({ params }) {
                         }
                     }}>Follow</Button>
 
-                </Typography>
+                </div>
 
-                <Typography variant='div' component="div">
-                    <div className='px-lg-5' style={{
+                <div>
+                    <h3 className='px-lg-5' style={{
                         padding: "30px 0px 20px",
                         fontSize: "26px",
                         letterSpacing: "0.26px",
@@ -179,14 +179,12 @@ function page({ params }) {
 
                     }}>
                         About
-                    </div>
+                    </h3>
 
-                    <Typography variant='div' component="div"
-                        sx={{
+                    <div
+                        style={{
                             background: "linear-gradient(0deg, rgba(58, 53, 0, 0.2), rgba(58, 53, 0, 0.2)),linear-gradient(180deg, #242319 0%, #404040 100%)",
                             padding: "40px 45px"
-
-
                         }}
                     >
                         <p style={{ fontSize: "16px", lineHeight: "26px" }}>
@@ -197,11 +195,11 @@ function page({ params }) {
                         <div className='d-flex justify-content-end'>
                             <Link className='text-white' href="/">Show more</Link>
                         </div>
-                    </Typography>
+                    </div>
 
-                </Typography>
+                </div>
 
-                <Typography variant='div' component="div" className='my-5'>
+                <div className='my-5'>
 
                     <span
                         className='ms-md-5 '
@@ -213,10 +211,10 @@ function page({ params }) {
                     >CONTACT INFO & SOCIAL MEDIA
                     </span>
 
-                    <Typography variant='div' component="div"
+                    <div
                         className='mt-3 py-5 px-md-5 px-4 '
 
-                        sx={{
+                        style={{
                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
 
                         }}
@@ -249,8 +247,8 @@ function page({ params }) {
                                 }
                             }}>
                                 <Link className='text-white text-decoration-none' href={data.artist.socialMedia.instagram}>
-                                    <Typography variant='div' component="div"
-                                        sx={{
+                                    <div
+                                        style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                             border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                             padding: "12px 45px 12px 15px",
@@ -271,7 +269,7 @@ function page({ params }) {
                                         }}>
                                             artegallery
                                         </span>
-                                    </Typography>
+                                    </div>
                                 </Link>
                             </Typography>
                             <Typography variant='div' component="div" sx={{
@@ -281,8 +279,8 @@ function page({ params }) {
                                 }
                             }}>
                                 <Link className='text-white text-decoration-none' href={data.artist.socialMedia.facebook}>
-                                    <Typography variant='div' component="div"
-                                        sx={{
+                                    <div
+                                        style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                             border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                             padding: "12px 45px 12px 15px",
@@ -304,7 +302,7 @@ function page({ params }) {
                                         }}>
                                             artegallery
                                         </span>
-                                    </Typography>
+                                    </div>
                                 </Link>
                             </Typography>
                             <Typography variant='div' component="div" sx={{
@@ -314,8 +312,8 @@ function page({ params }) {
                                 }
                             }}>
                                 <Link className='text-white text-decoration-none' href={data.artist.socialMedia.twitter}>
-                                    <Typography variant='div' component="div"
-                                        sx={{
+                                    <div
+                                        style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
                                             border: "1px solid var(--greyd-ark, rgba(58, 53, 0, 0.20))",
                                             padding: "12px 45px 12px 15px",
@@ -336,12 +334,12 @@ function page({ params }) {
                                         }}>
                                             artegallery
                                         </span>
-                                    </Typography>
+                                    </div>
                                 </Link>
                             </Typography>
                         </div>
-                    </Typography>
-                </Typography>
+                    </div>
+                </div>
 
 
             </div>

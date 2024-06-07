@@ -31,18 +31,18 @@ function Right({data}) {
                                         marginBottom: "20px",
                                         position: "relative"
                                     }}>
-                                        <Image style={{ objectFit: "cover" }} fill src={item.img} alt="img" />
+                                        <Image style={{ objectFit: "cover" }} sizes='100%' fill src={item.img} alt="img" />
                                     </div>
 
-                                    <div className='text-center'>
-                                        <p style={{ fontSize: "16px" }}>{item.title}</p>
-                                        <p style={{ fontSize: "12px" }}>{item.name}</p>
-                                        <p style={{ fontSize: "14px" }}>$ {item.price}</p>
+                                    <div className='text-center mb-3'>
+                                        <h3 className='mb-3' style={{ fontSize: "16px" }}>{item.title}</h3>
+                                        <h4 className='mb-3' style={{ fontSize: "12px" }}>{item.name}</h4>
+                                        <span style={{ fontSize: "14px" }}>$ {item.price}</span>
                                     </div>
 
                                 </Link>
                                 {item.sold && (
-                                    <div style={{
+                                    <span style={{
                                         position: "absolute",
                                         background: "#C92222",
                                         top: "40px",
@@ -53,7 +53,7 @@ function Right({data}) {
                                         borderRadius: "15px"
                                     }}>
                                         sold out
-                                    </div>
+                                    </span>
                                 )}
 
                             </Typography>

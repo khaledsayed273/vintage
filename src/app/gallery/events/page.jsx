@@ -35,7 +35,7 @@ function Events() {
         <div className='container font text-white mt-5'>
 
             {data.map((item) => (
-                <Typography key={item.id} variant='div' component="div" sx={{
+                <div key={item.id} style={{
                     margin: "50px 0"
                 }}>
 
@@ -63,36 +63,36 @@ function Events() {
 
                             <Grid item xs={12} md={6} lg={8}>
 
-                                <Typography variant='div' component="div" className='pe-md-5 my-3 my-md-0'>
-                                    <h1 className={style.text}>
+                                <div className='pe-md-5 my-3 my-md-0'>
+                                    <h3 className={style.text}>
                                         {item.titleCard}
-                                    </h1>
+                                    </h3>
 
-                                    <Typography variant='div' component="div" className='mt-5 mb-3'>
-                                        <div
+                                    <div className='mt-5 mb-3'>
+                                        <h3
                                             className={style.text}
                                             style={{
-
                                                 marginTop: "70px"
                                             }}>{item.date}
-                                        </div>
-                                        <div
+                                        </h3>
+                                        <p
                                             className={style.text}
                                             style={{
                                                 marginTop: "5px"
                                             }}
                                         >{item.country}
-                                        </div>
+                                        </p>
 
-                                    </Typography>
+                                    </div>
 
-                                    <div
-                                        className={style.text}
-                                        style={{
-                                            margin: "30px 0"
+                                    <Typography component="p" variant='p'
+                                        
+                                        sx={{
+                                            margin: "30px 0",
+                                            fontSize: {xs: "15px" , md:"18px"}
                                         }}>
                                         {item.discreption}
-                                    </div>
+                                    </Typography>
 
 
                                     <div className='mt-5'>
@@ -101,32 +101,34 @@ function Events() {
                                                 border: '1px solid var(--solid-gold, #D69D66)',
                                                 padding: "8px",
                                                 fontSize: "14px",
-                                                color: "white"
+                                                color: "white",
+                                                padding: "10px 19px"
                                             }}
 
                                         >View More ...
                                         </Button>
                                     </div>
-                                </Typography>
+                                </div>
                             </Grid>
                             <Grid item xs={12} md={6} lg={4}>
-                                <Typography variant='div' component="div" className='d-flex justify-content-lg-end justify-content-center'>
+                                <div variant='div' component="div" className='d-flex justify-content-lg-end justify-content-center'>
                                     <div
                                         style={{
                                             borderRadius: "131px",
                                             overflow: "hidden",
                                             height: "398.571px",
                                             width: "298.678px",
-                                            border: "2px solid var(--solid-gold, #D69D66)"
+                                            border: "2px solid var(--solid-gold, #D69D66)",
+                                            position: "relative"
                                         }}
                                     >
-                                        <Image className='w-100 h-100' src={item.img} alt="" />
+                                        <Image sizes='100%' fill src={item.img} alt="" />
                                     </div>
-                                </Typography>
+                                </div>
                             </Grid>
                         </Grid>
                     </div>
-                </Typography>
+                </div>
             ))}
 
             <PastExhibition />

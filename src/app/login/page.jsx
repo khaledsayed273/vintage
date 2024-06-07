@@ -16,9 +16,9 @@ function page() {
                 borderRadius: "30px"
 
             }}>
-                <div className='text-center pb-3 pt-4' style={{ fontSize: "24px" }}>
+                <h1 className='text-center pb-3 pt-4' style={{ fontSize: "24px" }}>
                     Log in
-                </div>
+                </h1>
                 <div className='text-center pb-3 ' style={{ fontSize: "16px" }}>
                 Don’t have an ccount? <Link style={{color: "black" , textDecoration: "none"}} href="sign-up">Sign up</Link>  
                 </div>
@@ -50,7 +50,7 @@ function page() {
                     </Button>
 
                 </div>
-                <Typography className='d-flex justify-content-center align-items-center fw-bold my-4' sx={{
+                <Typography variant='span' component="span" className='d-flex justify-content-center align-items-center fw-bold my-4' sx={{
                     position: "relative",
                     textTransform: "uppercase",
                     color: "rgb(71 70 70)",
@@ -71,7 +71,7 @@ function page() {
                         left: { xs: "10px", md: "5%" }
 
                     },
-                }} variant='div' component="div">
+                }}>
                     or
                 </Typography>
 
@@ -113,8 +113,8 @@ function page() {
                         </Grid>
                     </Grid>
                 </form>
-            </Typography >
-        </div >
+            </Typography>
+        </div>
     )
 }
 

@@ -40,16 +40,16 @@ const HeadExhibitions = () => {
                     >
                         <Image
                             priority
-                            sizes='(max-width:992px) , 100vw'
+                            sizes='(max-width:992px) 100vw'
                             fill
                             src={img} alt="img_gallery"
                         />
 
                     </Typography>
 
-                    <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                         <div className='d-flex align-items-center'>
-                            <Typography variant='div' component="div" sx={{
+                            <div style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
@@ -57,12 +57,12 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) , 100vw' fill src={img} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img} alt="logo" />
 
-                            </Typography>
+                            </div>
 
-                            <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography variant='div' component="div"
+                            <div className='d-flex flex-column ms-3'>
+                                <Typography className='my-2' variant='h2' component="h2"
                                     sx={{
                                         fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                         letterSpacing: "0.4px",
@@ -74,7 +74,7 @@ const HeadExhibitions = () => {
                                     cairo
                                 </p>
 
-                            </Typography>
+                            </div>
                         </div>
 
                         <div>
@@ -98,12 +98,10 @@ const HeadExhibitions = () => {
                             </Button>
                         </div>
 
-                    </Typography>
+                    </div>
                 </SwiperSlide>
-
                 <SwiperSlide>
                     <Typography variant='div' component="div"
-
                         sx={{
                             borderRadius: "250px",
                             border: "1px solid var(--solid-gold, #D69D66)",
@@ -112,22 +110,20 @@ const HeadExhibitions = () => {
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
 
-
                         }}
                     >
                         <Image
                             priority
-                            sizes='(max-width:992px) , 100vw'
+                            sizes='(max-width:992px) 100vw'
                             fill
                             src={img2} alt="img_gallery"
                         />
 
                     </Typography>
 
-
-                    <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                         <div className='d-flex align-items-center'>
-                            <Typography variant='div' component="div" sx={{
+                            <div style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
@@ -135,24 +131,24 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} fill sizes='(max-width:992px) , 100vw' src={img2} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img2} alt="logo" />
 
-                            </Typography>
+                            </div>
 
-                            <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography variant='div' component="div"
+                            <div className='d-flex flex-column ms-3'>
+                                <Typography className='my-2' variant='h2' component="h2"
                                     sx={{
                                         fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                         letterSpacing: "0.4px",
                                         color: "white"
                                     }}>
-                                    Arte Contemporary 2
+                                    Arte Contemporary
                                 </Typography>
                                 <p className='text-white'>
                                     cairo
                                 </p>
 
-                            </Typography>
+                            </div>
                         </div>
 
                         <div>
@@ -176,12 +172,10 @@ const HeadExhibitions = () => {
                             </Button>
                         </div>
 
-                    </Typography>
+                    </div>
                 </SwiperSlide>
-
                 <SwiperSlide>
                     <Typography variant='div' component="div"
-
                         sx={{
                             borderRadius: "250px",
                             border: "1px solid var(--solid-gold, #D69D66)",
@@ -190,21 +184,20 @@ const HeadExhibitions = () => {
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
 
-
                         }}
                     >
                         <Image
                             priority
+                            sizes='(max-width:992px) 100vw'
                             fill
-                            sizes='(max-width:992px) , 100vw'
                             src={img} alt="img_gallery"
                         />
 
                     </Typography>
 
-                    <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                         <div className='d-flex align-items-center'>
-                            <Typography variant='div' component="div" sx={{
+                            <div style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
@@ -212,24 +205,24 @@ const HeadExhibitions = () => {
                                 overflow: "hidden",
                                 position: "relative"
                             }}>
-                                <Image style={{ objectFit: "cover" }} fill src={img} alt="logo" />
+                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img} alt="logo" />
 
-                            </Typography>
+                            </div>
 
-                            <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography variant='div' component="div"
+                            <div className='d-flex flex-column ms-3'>
+                                <Typography className='my-2' variant='h2' component="h2"
                                     sx={{
                                         fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                         letterSpacing: "0.4px",
                                         color: "white"
                                     }}>
-                                    Arte Contemporary 3
+                                    Arte Contemporary
                                 </Typography>
                                 <p className='text-white'>
                                     cairo
                                 </p>
 
-                            </Typography>
+                            </div>
                         </div>
 
                         <div>
@@ -253,8 +246,10 @@ const HeadExhibitions = () => {
                             </Button>
                         </div>
 
-                    </Typography>
+                    </div>
                 </SwiperSlide>
+
+           
 
             </Swiper>
 

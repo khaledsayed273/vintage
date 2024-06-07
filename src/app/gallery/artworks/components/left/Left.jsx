@@ -5,7 +5,6 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import FormGroup from '@mui/material/FormGroup'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -40,7 +39,7 @@ function Left() {
 
             >
                 {/* Keyword Search */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setKeyWord(!keyWord)}>
 
                         <ListItemText primary="Keyword Search" />
@@ -61,10 +60,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Artists */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setArtist(!artist)}>
                         <ListItemText primary="Artists" />
                         {artist ? <ExpandLess /> : <ExpandMore />}
@@ -84,10 +83,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Genre */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setGenre(!genre)}>
                         <ListItemText primary="Genre" />
                         {genre ? <ExpandLess /> : <ExpandMore />}
@@ -107,10 +106,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Medium */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setMedium(!medium)}>
                         <ListItemText primary="Medium" />
                         {medium ? <ExpandLess /> : <ExpandMore />}
@@ -130,10 +129,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Price */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setPrice(!price)}>
                         <ListItemText primary="Price" />
                         {price ? <ExpandLess /> : <ExpandMore />}
@@ -191,10 +190,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Size */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setSize(!size)}>
                         <ListItemText primary="Size" />
                         {size ? <ExpandLess /> : <ExpandMore />}
@@ -212,10 +211,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Material */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setMaterial(!material)}>
                         <ListItemText primary="Material" />
                         {material ? <ExpandLess /> : <ExpandMore />}
@@ -249,10 +248,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Country */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setCountry(!country)}>
                         <ListItemText primary="Country" />
                         {country ? <ExpandLess /> : <ExpandMore />}
@@ -286,10 +285,10 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
                 {/* Time Period */}
-                <Typography variant='div' component="div" sx={{ borderBottom: "1px solid white", padding: "15px 0" }}>
+                <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
                     <ListItemButton onClick={() => setTimePeriod(!timePeriod)}>
                         <ListItemText primary="Time Period" />
                         {timePeriod ? <ExpandLess /> : <ExpandMore />}
@@ -309,7 +308,7 @@ function Left() {
                             </Box>
                         </List>
                     </Collapse>
-                </Typography>
+                </div>
 
             </List>
         </Grid>

@@ -25,16 +25,16 @@ function Head() {
                 <Image
                     priority
                     fill
-                    sizes='(max-width:992px) , 100vw'
+                    sizes='(max-width:992px) 100vw'
                     src={img} alt="img_gallery"
                     style={{ transform: "scale(1.01)" }}
                 />
 
             </Typography>
 
-            <Typography variant='div' component="div" className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
+            <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
                 <div className='d-flex align-items-center'>
-                    <Typography variant='div' component="div" sx={{
+                    <div style={{
                         border: "1px solid #D29F1B",
                         borderRadius: "131px",
                         height: "70px",
@@ -42,12 +42,12 @@ function Head() {
                         overflow: "hidden",
                         position: "relative"
                     }}>
-                        <Image priority sizes='(max-width:992px), 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
+                        <Image priority sizes='(max-width:992px) 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
 
-                    </Typography>
+                    </div>
 
-                    <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                        <Typography variant='div' component="div"
+                    <div className='d-flex flex-column ms-3'>
+                        <Typography className='mb-2' variant='h1' component="h1"
                             sx={{
                                 fontSize: { xs: "20px", sm: "25px", md: "38px" },
                                 letterSpacing: "0.4px",
@@ -55,11 +55,11 @@ function Head() {
                             }}>
                             Arte Contemporary
                         </Typography>
-                        <p className='text-white'>
+                        <span className='text-white'>
                             cairo
-                        </p>
+                        </span>
 
-                    </Typography>
+                    </div>
                 </div>
 
                 <div>
@@ -83,7 +83,7 @@ function Head() {
                     </Button>
                 </div>
 
-            </Typography>
+            </div>
         </div>
     )
 }

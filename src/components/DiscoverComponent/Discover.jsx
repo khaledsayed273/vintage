@@ -1,7 +1,8 @@
 import BaseURL from "../../store/BaseURL";
-import dynamic from 'next/dynamic'
-const DiscoverTitle = dynamic(() => import('./DiscoverTitle'), { ssr: false })
-const ParentDiscover = dynamic(() => import('./ParentDiscover'), { ssr: false })
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import LeftDiscover from './LeftDiscover';
+import RightDiscover from './RightDiscover';
 
 async function getData() {
 	try {
@@ -19,7 +20,6 @@ export const revalidate = +process.env.revalidate
 async function Discover() {
 	const data = await getData()
 
-
 	return (
 		<article
 			className="font text-white font"
@@ -28,10 +28,22 @@ async function Discover() {
 			}}
 		>
 			<div className="container">
-				<DiscoverTitle />
+				<Typography
+					variant="h3"
+					component="h3"
+					sx={{
+						fontSize: { xs: "16px", md: "20px" },
+						fontWeight: "400",
+					}}
+				>
+					DISCOVER WORLDWIDE EXHIBITIONS
+				</Typography>
 
 				<div className="mt-5 ">
-					<ParentDiscover data={data} />
+					<Grid container spacing={{ lg: 15, md: 5 }}>
+						<LeftDiscover />
+						<RightDiscover data={data} />
+					</Grid>
 				</div>
 			</div>
 		</article>

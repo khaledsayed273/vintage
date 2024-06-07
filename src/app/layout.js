@@ -12,6 +12,7 @@ import ProviderContext from "../store/Context";
 
 const inter = Playfair_Display({
   subsets: ["latin"],
+  weight: ["500"]
 });
 
 export const metadata = {

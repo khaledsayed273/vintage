@@ -16,7 +16,7 @@ function Section() {
                 <Grid className='d-flex justify-content-center' container>
                     <Grid item className='d-flex align-items-flex-start mb-5 mb-lg-0' lg={8} md={7} sx={{ marginTop: { md: "60px" } }} >
                         <Typography variant='div' component="div">
-                            <Typography variant="div" component="div" sx={{
+                            <Typography variant="h1" component="h1" sx={{
                                 fontSize: { xs: "25px", md: "38px", lg: "48px" }, lineHeight: { md: "80px", lg: "106px" }
                             }} className={`font px-3 ${style.title}`}>Art is an expression of the soul.
                             </Typography>
@@ -34,7 +34,7 @@ function Section() {
                                     <Image priority className='w-100 h-100' src={ukLogo} alt="" />
                                 </Typography>
 
-                                <Typography className={`font ${style.uk}`} variant='div' component="div">
+                                <Typography className={`font ${style.uk}`} variant='span' component="span">
                                     English
                                 </Typography>
                             </Typography>

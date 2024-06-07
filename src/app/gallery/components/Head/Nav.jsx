@@ -15,38 +15,33 @@ function Nav() {
             id: "overview",
             name: "overview",
             path: "/gallery",
-            margin: "0 30px 0 0"
         },
         {
             id: "events",
             name: "events",
             path: "/gallery/events",
-            margin: "0 30px 0 0"
         },
         {
             id: "artworks",
             name: "artworks",
             path: "/gallery/artworks",
-            margin: "0 30px 0 0"
         },
         {
             id: "artists",
             name: "artists",
             path: "/gallery/artists",
-            margin: "0 30px 0 0"
         },
         {
             id: "contact",
             name: "contact",
             path: "/gallery/contact",
-            margin: "0 30px 0 0"
         },
     ];
 
 
     return (
         <div className='container'>
-            <Typography variant='div' component="div" className='px-lg-4'>
+            <div className='px-lg-4'>
                 <List className='px-lg-5' sx={{
                     display: "flex",
                     padding: "0",
@@ -62,24 +57,22 @@ function Nav() {
 
                         return (
                             <li key={item.id}>
-                                <Link href={item.path} className={`navlink mx-2 ${isActive && "active"}`}>
-                                    <ListItemButton sx={{
+                                <Link href={item.path} className={`navlink  mx-2 ${isActive && "active"}`}>
+                                    <ListItemButton className='font linkTextGallery' sx={{
                                         padding: "0",
-                                        margin: item.margin ? { md: item.margin } : { md: "10px 0 0 30px" },
+                                        fontSize: { md: "20px" },
                                         "&:hover": {
                                             background: "none"
                                         }
                                     }}>
-                                        <Typography sx={{ fontSize: { md: "20px" } }} className='linkTextGallery font' variant='div' component="div">
-                                            {item.name}
-                                        </Typography>
+                                        {item.name}
                                     </ListItemButton>
                                 </Link>
                             </li>
                         )
                     })}
                 </List>
-            </Typography>
+            </div>
 
 
         </div>
