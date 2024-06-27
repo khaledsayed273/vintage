@@ -4,6 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
 import Header from "../components/Header/Header"
+import Footer from "../components/footer/Footer"
 
 import ProviderContext from "../store/Context";
 
@@ -26,6 +27,8 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <ToastContainer/>
+          <Footer />
+
         </ProviderContext>
       </body>
     </html>

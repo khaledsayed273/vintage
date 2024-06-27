@@ -21,16 +21,16 @@ async function Discover() {
 	const data = await getData()
 
 	return (
-		<article
+		<aside
 			className="font text-white font"
 			style={{
 				margin: "100px 0",
 			}}
 		>
 			<div className="container">
+
+
 				<Typography
-					variant="h3"
-					component="h3"
 					sx={{
 						fontSize: { xs: "16px", md: "20px" },
 						fontWeight: "400",
@@ -39,6 +39,7 @@ async function Discover() {
 					DISCOVER WORLDWIDE EXHIBITIONS
 				</Typography>
 
+
 				<div className="mt-5 ">
 					<Grid container spacing={{ lg: 15, md: 5 }}>
 						<LeftDiscover />
@@ -46,7 +47,7 @@ async function Discover() {
 					</Grid>
 				</div>
 			</div>
-		</article>
+		</aside>
 	);
 }
 

@@ -4,9 +4,11 @@ import Box from '@mui/material/Box';
 
 function Loading() {
   return (
-    <Box sx={{ display: 'flex' , justifyContent: "center" , margin: '100px 0' , alignItems: 'center' }}>
+    <main className='d-flex justify-content-center align-items-center ' style={{height: "100vh"}}>
+    <Box sx={{ display: 'flex', justifyContent: "center", alignItems: 'center' }}>
       <CircularProgress />
     </Box>
+  </main>
   )
 }
 

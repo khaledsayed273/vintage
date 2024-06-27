@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Loading from '../../app/gallery/loading';
 import { useEffect, useState } from 'react';
+import { Box, CircularProgress } from '@mui/material';
 
 function SliderImges({ baseUrl }) {
 
@@ -51,7 +52,9 @@ function SliderImges({ baseUrl }) {
             {
                loading ?
                   (
-                     <Loading />
+                     <Box sx={{ display: 'flex', justifyContent: "center", margin: '100px 0', alignItems: 'center' }}>
+                        <CircularProgress />
+                     </Box>
                   )
                   :
                   (

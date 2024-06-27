@@ -6,7 +6,7 @@ import React from 'react'
 function Footer() {
     return (
         <footer
-            className='font'
+            className='font mt-5'
             style={{
                 background: "#222222",
                 minHeight: "400px"

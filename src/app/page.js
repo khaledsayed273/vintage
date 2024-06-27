@@ -2,7 +2,6 @@ import Section from "../components/section/Section";
 import SliderImges from "../components/Slider/SliderImges";
 import Discover from "../components/DiscoverComponent/Discover";
 import Center from "../components/center/Center";
-import Footer from "../components/footer/Footer";
 
 // async function getData() {
 //   let loading = true
@@ -19,18 +18,17 @@ import Footer from "../components/footer/Footer";
 
 // export const revalidate = +process.env.revalidate
 
-export default async function Home() {
+export default function Home() {
   // const {data , loading } = await getData();
 
   const baseUrl = process.env.baseUrl
 
   return (
-    <>
+    <main style={{minHeight: "100vh"}}>
       <Section />
       <SliderImges baseUrl={baseUrl} />
       <Discover />
       <Center />
-      <Footer />
-    </>
+    </main>
   );
 }

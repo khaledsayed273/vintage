@@ -14,7 +14,7 @@ function Center() {
 
                 <Grid container spacing={{ sm: 3, md: 5, lg: 15 }}>
                     <Grid item xs={12} sm={7} md={6}>
-                        <Typography variant='div' component="div" className='mb-5'>
+                        <div className='mb-5'>
                             <h3 style={{
                                 fontSize: "50px",
                                 color: "white"
@@ -103,12 +103,12 @@ function Center() {
                                 </Button>
                             </Typography>
 
-                        </Typography>
+                        </div>
                     </Grid>
 
 
                     <Grid item xs={12} sm={5} md={6} className='d-flex align-items-center justify-content-end mb-5'>
-                        <Typography variant='div' component="div" className='d-flex justify-content-center'>
+                        <div className='d-flex justify-content-center'>
                             <Typography variant='div' component="div" sx={{
                                 width: { xs: "auto", md: "390px", lg: "450px" },
                                 height: { xs: "auto", md: "550px", lg: "595px" },
@@ -121,7 +121,7 @@ function Center() {
                                 <Image sizes='100%' fill  src={img} alt="" />
                             </Typography>
 
-                        </Typography>
+                        </div>
                     </Grid>
                 </Grid>
 
