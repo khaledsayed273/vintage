@@ -12,7 +12,7 @@ import img10 from "../../../images/all img/Frame 155.png"
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Image from 'next/image'
-import ArtWorksComp from '../../gallery/artworks/components/ArtWorksComp'
+import ArtWorksComp from '../../gallery/artwork/components/ArtWorksComp'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -129,10 +129,10 @@ function page({ params }) {
 
     return (
         <>
-            <div className='container font text-white'>
+            <div className='container mx-auto px-3 md:px-10 font text-white'>
                 <div
-                    className='d-flex justify-content-between align-items-center flex-md-row flex-column pb-4' style={{ borderBottom: '1px solid #d3d3d34d' }}>
-                    <div className='d-flex'>
+                    className='flex justify-between items-center flex-col md:flex-row  pb-4' style={{ borderBottom: '1px solid #d3d3d34d' }}>
+                    <div className='flex'>
                         <div
                             style={{
                                 borderRadius: "131px",
@@ -157,7 +157,7 @@ function page({ params }) {
                         </div>
                     </div>
 
-                    <Button className='mt-5 mt-md-0' sx={{
+                    <Button className='mt-5 md:mt-0 ' sx={{
                         background: 'white', color: "black", fontSize: "16px", fontWeight: "500",
                         textTransform: "capitalize",
                         padding: "5px 50px",
@@ -171,7 +171,7 @@ function page({ params }) {
                 </div>
 
                 <div>
-                    <h3 className='px-lg-5' style={{
+                    <h3 className='lg:px-5' style={{
                         padding: "30px 0px 20px",
                         fontSize: "26px",
                         letterSpacing: "0.26px",
@@ -192,7 +192,7 @@ function page({ params }) {
                         </p>
 
 
-                        <div className='d-flex justify-content-end'>
+                        <div className='flex justify-end'>
                             <Link className='text-white' href="/">Show more</Link>
                         </div>
                     </div>
@@ -202,11 +202,9 @@ function page({ params }) {
                 <div className='my-5'>
 
                     <span
-                        className='ms-md-5 '
+                        className='md:ms-5 uppercase'
                         style={{
                             fontSize: "26px",
-                            textTransform: "uppercase",
-
                         }}
                     >CONTACT INFO & SOCIAL MEDIA
                     </span>
@@ -239,14 +237,14 @@ function page({ params }) {
                             Social Media :
                         </div>
 
-                        <div className='d-flex justify-content-start align-items-center flex-column flex-md-row'>
+                        <div className='flex justify-start items-center flex-col md:flex-row '>
                             <Typography variant='div' component="div" sx={{
                                 "&:hover": {
                                     transform: "scale(1.07)",
                                     transition: "400ms all"
                                 }
                             }}>
-                                <Link className='text-white text-decoration-none' href={data.artist.socialMedia.instagram}>
+                                <Link className='text-white' href={data.artist.socialMedia.instagram}>
                                     <div
                                         style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -278,7 +276,7 @@ function page({ params }) {
                                     transition: "400ms all"
                                 }
                             }}>
-                                <Link className='text-white text-decoration-none' href={data.artist.socialMedia.facebook}>
+                                <Link className='text-white' href={data.artist.socialMedia.facebook}>
                                     <div
                                         style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -311,7 +309,7 @@ function page({ params }) {
                                     transition: "400ms all"
                                 }
                             }}>
-                                <Link className='text-white text-decoration-none' href={data.artist.socialMedia.twitter}>
+                                <Link className='text-white' href={data.artist.socialMedia.twitter}>
                                     <div
                                         style={{
                                             background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
