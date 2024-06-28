@@ -20,12 +20,12 @@ function CardsAdd() {
         <>
             {/* ABOUT */}
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 md:mx-3  flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         ABOUT
                     </div>
                     {showAbout && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 my-sm-0'>
                             <Button onClick={() => setShowAbout(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -52,7 +52,7 @@ function CardsAdd() {
                         <textarea placeholder="Write something about yourself ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea>
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No about text added
                         </div>
@@ -64,12 +64,12 @@ function CardsAdd() {
 
             {/* TECHNIQUE */}
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 md:mx-3  flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         TECHNIQUE
                     </div>
                     {technique && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 sm:my-0 '>
                             <Button onClick={() => setTechnique(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -96,7 +96,7 @@ function CardsAdd() {
                         <textarea placeholder="Insert description about your art technique ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea>
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No techniques found
                         </div>
@@ -109,12 +109,12 @@ function CardsAdd() {
             {/* CONTACT INFO & SOCIAL MEDIA */}
 
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         CONTACT INFO & SOCIAL MEDIA
                     </div>
                     {contactInfo && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 sm:my-0 '>
                             <Button onClick={() => setContactInfo(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -142,7 +142,7 @@ function CardsAdd() {
                         {/* <textarea placeholder="Insert description about your art technique ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea> */}
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No contact information added
                         </div>
@@ -155,12 +155,12 @@ function CardsAdd() {
             {/* AWARDS */}
 
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3 ">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         AWARDS
                     </div>
                     {awards && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 my-sm-0'>
                             <Button onClick={() => setAwards(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -185,18 +185,18 @@ function CardsAdd() {
                 {awards ? (
                     <div className="p-3 mt-3">
                         <textarea placeholder="Insert description about your art awards ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea>
-                        <div className="my-4 d-flex align-items-center justify-content-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
+                        <div className="my-4 flex items-center justify-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
 
-                            <label htmlFor="uploadImage" className="d-flex flex-column align-items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
+                            <label htmlFor="uploadImage" className="flex flex-col items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
                                 <AddAPhotoIcon style={{ width: "50px", height: "50px" }} />
                                 <span className="mt-3">Add images</span>
                             </label>
-                            <input onChange={(e) => setImageAwards(e.target.files[0])} className="d-none" id="uploadImage" type="file" />
+                            <input onChange={(e) => setImageAwards(e.target.files[0])} className="hidden" id="uploadImage" type="file" />
 
                         </div>
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No awards added
                         </div>
@@ -209,12 +209,12 @@ function CardsAdd() {
             {/* PAST EXHIBITIONS */}
 
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         PAST EXHIBITIONS
                     </div>
                     {pastExhibitions && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 my-sm-0'>
                             <Button onClick={() => setPastExhibitions(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -239,18 +239,18 @@ function CardsAdd() {
                 {pastExhibitions ? (
                     <div className="p-3 mt-3">
                         <textarea placeholder="Insert description of your past exhibitionss ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea>
-                        <div className="my-4 d-flex align-items-center justify-content-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
+                        <div className="my-4 flex items-center justify-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
 
-                            <label htmlFor="uploadImage" className="d-flex flex-column align-items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
+                            <label htmlFor="uploadImage" className="flex flex-col items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
                                 <AddAPhotoIcon style={{ width: "50px", height: "50px" }} />
                                 <span className="mt-3">Add images</span>
                             </label>
-                            <input onChange={(e) => setPastExhibitions(e.target.files[0])} className="d-none" id="uploadImage" type="file" />
+                            <input onChange={(e) => setPastExhibitions(e.target.files[0])} className="hidden" id="uploadImage" type="file" />
 
                         </div>
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No past exhibitions found
                         </div>
@@ -263,12 +263,12 @@ function CardsAdd() {
             {/* Artworks */}
 
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         Artworks
                     </div>
                     {artworks && (
-                        <div className='d-flex my-4 my-sm-0'>
+                        <div className='flex my-4 my-sm-0'>
                             <Button onClick={() => setArtworks(false)} sx={{
                                 border: "1px solid white",
                                 background: "rgba(255, 255, 255, 0.60)",
@@ -293,18 +293,18 @@ function CardsAdd() {
                 {artworks ? (
                     <div className="p-3 mt-3">
                         <textarea placeholder="Insert description about your artworks ..." className="p-3" style={{ minWidth: "100%", maxWidth: "100%", minHeight: "200px", maxHeight: "200px", border: "1px solid #D69D66", background: "transparent", color: "white" }}></textarea>
-                        <div className="my-4 d-flex align-items-center justify-content-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
+                        <div className="my-4 flex items-center justify-center" style={{ border: "1px solid #D69D66", height: "170px" }}>
 
-                            <label htmlFor="uploadImage" className="d-flex flex-column align-items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
+                            <label htmlFor="uploadImage" className="flex flex-col items-center" style={{ background: "transparent", border: "0", color: "white", cursor: "pointer" }}>
                                 <AddAPhotoIcon style={{ width: "50px", height: "50px" }} />
                                 <span className="mt-3">Add images</span>
                             </label>
-                            <input onChange={(e) => setArtworks(e.target.files[0])} className="d-none" id="uploadImage" type="file" />
+                            <input onChange={(e) => setArtworks(e.target.files[0])} className="hidden" id="uploadImage" type="file" />
 
                         </div>
                     </div>
                 ) : (
-                    <div className="mt-3 p-3 d-flex justify-content-between align-items-center">
+                    <div className="mt-3 p-3 flex justify-between items-center">
                         <div className="text-white">
                             No artworks added
                         </div>
@@ -316,11 +316,11 @@ function CardsAdd() {
             {/* PERSONAL INFO */}
 
             <Typography variant='div' component="div" sx={{ background: "var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))" }}>
-                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 pe-sm-3">
+                <div style={{ borderBottom: "1px solid white" }} className="mx-1 mx-md-3 flex flex-col sm:flex-row justify-between items-center mt-4 sm:pe-3">
                     <div className="p-3 py-4" style={{ color: "white" }}>
                         PERSONAL INFO
                     </div>
-                    <div className='d-flex my-4 my-sm-0'>
+                    <div className='flex my-4 my-sm-0'>
                         <Button sx={{
                             border: "1px solid white",
                             background: "rgba(255, 255, 255, 0.60)",

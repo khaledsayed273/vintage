@@ -9,7 +9,6 @@ import Link from 'next/link'
 
 function Suggest() {
 
-
     const data = [
         {
             id: 0,
@@ -37,14 +36,7 @@ function Suggest() {
 
     return (
         <Typography variant='div' component="div"
-            className='justify-content-center justify-content-lg-start'
-            sx={{
-                display: "flex",
-                alignItems: 'center',
-                margin: "40px 0",
-                flexWrap: "wrap"
-            }}
-        >
+            className='flex my-10 flex-wrap items-center justify-center lg:justify-start'>
             {data.map((item) => (
                 <Link className='m-3' style={{textDecoration: "none" , color: "white"}} key={item.id} href={`${item.id}`} >
                     <Typography variant='div' component="div" className='font position-relative'
@@ -64,7 +56,7 @@ function Suggest() {
                             position: "relative"
 
                         }}>
-                            <Image sizes='(max-width:992px) , 100vw' style={{ objectFit: "cover" }} fill src={item.img} alt="img" />
+                            <Image sizes='(max-width:992px) 100vw' style={{ objectFit: "cover" }} fill src={item.img} alt="img" />
                         </div>
 
                         <div className='text-center'>

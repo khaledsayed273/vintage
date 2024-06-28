@@ -23,7 +23,7 @@ function Products() {
   return (
     <div className="mt-5">
       {data.map((item) => (
-        <div style={{ borderRadius: "40px" }} key={item.id} className='cart-payment p-3 pt-5 mb-5 text-white'>
+        <div style={{ borderRadius: "40px" }} key={item.id} className='cart-payment p-7  mb-5 text-white'>
           <div style={{borderBottom: "1px solid white"}}>
             <div>
               <Image alt={`${item.name}`} height={56} width={48} src={item.img} />

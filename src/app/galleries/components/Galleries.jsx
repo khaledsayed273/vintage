@@ -101,14 +101,12 @@ export default function Galleries() {
 
     ]
 
-
     return (
-        <div className='container my-5'>
-
-            <div className="row">
+        <div className='my-5'>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3">
                 {data.map((item) => (
-                    <div className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
-                        <div className='font position-relative' style={{
+                    <div className='flex justify-center items-center' key={item.id} >
+                        <div className='font relative' style={{
                             marginTop: '30px',
                             transition: "200ms",
                             width: "364px",
@@ -126,7 +124,7 @@ export default function Galleries() {
                                     <Image style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw" priority fill src={item.image} alt="img" />
                                 </Typography>
 
-                                <div className='text-center d-flex justify-content-between align-items-center'>
+                                <div className='text-center flex justify-between items-center'>
                                     <h3 className="ms-3" style={{ fontSize: "16px" }}>{item.title}</h3>
                                     <Link href={`productdetails/1`}>
                                         <Button className='px-4' sx={{
@@ -140,7 +138,6 @@ export default function Galleries() {
                                             }
                                         }}>Follow</Button>
                                     </Link>
-
                                 </div>
 
 

@@ -39,10 +39,8 @@ function Checkout() {
   };
 
   const container = (
-    <Container component="main" maxWidth="sm pe-0" sx={{ mb: 4 }}>
-      <Paper variant="outlined" sx={{ border: "0",  color: "white", my: { xs: 3, md: 6 },  background: 'transparent' }}>
-        
-
+    <Container className='mt-4' component="main" maxWidth="sm pe-0" sx={{ mb: 4 }}>
+      <Paper variant="outlined" sx={{ border: "0", color: "white",  background: 'transparent' }}>
         {activeStep === steps.length ? (
           <React.Fragment>
             <Typography variant="h5" gutterBottom>
@@ -57,7 +55,6 @@ function Checkout() {
         ) : (
           <React.Fragment>
             {GetStepContent({ step: activeStep, handleNext, handleBack })}
-            
           </React.Fragment>
         )}
       </Paper>
@@ -75,14 +72,10 @@ function Checkout() {
           ))}
         </Stepper>
       </Container>
-        <div className="row p-0 m-auto">
-          <div className='col-12 col-md-6'>
-            {container}
-          </div>
-          <div className='col-12 col-md-6'>
-            <Products/>
-          </div>
-        </div>
+      <div className="grid md:grid-cols-2 gap-5 p-0 m-auto">
+        {container}
+        <Products />
+      </div>
     </React.Fragment>
   );
 }

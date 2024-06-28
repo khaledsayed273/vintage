@@ -1,88 +1,45 @@
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import img from "../../../../images/all img/GalleryImg.png"
 import img2 from "../../../../images/all img/Frame 148.png"
 import Image from 'next/image'
 
 function Head() {
     return (
-        <div className='container font' style={{
+        <div className='font' style={{
             borderBottom: "1px solid rgba(255, 255, 255, 0.25)"
         }}>
-
-            <Typography variant='div' component="div"
-
-                sx={{
-                    borderRadius: "250px",
+            <div className='relative rounded-[250px] overflow-hidden h-[250px] sm:h-[240px] md:h-[320px] lg:h-[400px] '
+                style={{
                     border: "1px solid var(--solid-gold, #D69D66)",
-                    overflow: "hidden",
-                    maxHeight: '389px',
-                    position: "relative",
-                    height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                 }}
             >
                 <Image
-                    priority
                     fill
                     sizes='(max-width:992px) 100vw'
                     src={img} alt="img_gallery"
                     style={{ transform: "scale(1.01)" }}
                 />
-
-            </Typography>
-
-            <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                <div className='d-flex align-items-center'>
-                    <div style={{
+            </div>
+            <div className='flex justify-between my-10 flex-wrap lg:px-5 '>
+                <div className='flex items-center'>
+                    <div className='rounded-[131px] h-[70px] w-[60px] overflow-hidden relative' style={{
                         border: "1px solid #D29F1B",
-                        borderRadius: "131px",
-                        height: "70px",
-                        width: '60px',
-                        overflow: "hidden",
-                        position: "relative"
                     }}>
                         <Image priority sizes='(max-width:992px) 100vw' style={{ objectFit: "cover" }} fill src={img2} alt="logo" />
-
                     </div>
-
-                    <div className='d-flex flex-column ms-3'>
-                        <Typography className='mb-2' variant='h1' component="h1"
-                            sx={{
-                                fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                letterSpacing: "0.4px",
-                                color: "white"
-                            }}>
+                    <div className='flex flex-col ms-3'>
+                        <div className='mb-2 text-white text-xl sm:text-2xl md:text-4xl'>
                             Arte Contemporary
-                        </Typography>
+                        </div>
                         <span className='text-white'>
                             cairo
                         </span>
-
                     </div>
                 </div>
-
                 <div>
-                    <Button
-                        sx={{
-                            background: "white",
-                            color: "black",
-                            border: "1px solid white",
-                            padding: { xs: "4px 30px", md: "8px 50px" },
-                            borderRadius: "50px",
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            textTransform: "capitalize",
-                            marginTop: "12px",
-                            "&:hover": {
-                                color: "white"
-                            }
-                        }}
-                    >
+                    <button className='bg-white border py-1	md:py-2	px-8 md:px-12 rounded-xl font-medium capitalize mt-5 hover:opacity-80'>
                         Follow
-                    </Button>
+                    </button>
                 </div>
-
             </div>
         </div>
     )

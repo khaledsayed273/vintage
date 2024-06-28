@@ -1,37 +1,20 @@
 "use client"
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
-import Typography from '@mui/material/Typography'
-import Collapse from '@mui/material/Collapse'
-import Button from '@mui/material/Button'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
 import logo from "../../images/logo.png"
 import artWorksIcon from "../../images/artworks.png"
 import moreIcon from "../../images/more.png"
 import arrowIcon from "../../images/arrow.png"
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect, useContext } from 'react'
-import TableRowsIcon from '@mui/icons-material/TableRows';
-import CloseIcon from '@mui/icons-material/Close';
+import React, { useState, useEffect, useContext } from 'react'
 import galaryImage from "../../images/all img/Frame 149.png"
-import DeleteIcon from '@mui/icons-material/Delete';
-import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { usePathname } from 'next/navigation'
 import { Context } from '../../store/Context'
-
 function Header() {
-
     const { deleteFromCart, cartsData } = useContext(Context)
-
     const pathName = usePathname()
     const [expandedItem, setExpandedItem] = useState(null);
-
     const [showNav, setShowNav] = useState(false);
-
     const handleItemClick = (itemId) => {
         setExpandedItem((prevExpandedItem) => (prevExpandedItem === itemId ? null : itemId));
     };
@@ -40,11 +23,11 @@ function Header() {
         if (showNav) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             if (typeof window !== 'undefined' && window.document && window.document.body) {
-                window.document.body.style.overflow = 'hidden';
+                window.document.body.style.overflowY = 'hidden';
             }
         } else {
             if (typeof window !== 'undefined' && window.document && window.document.body) {
-                window.document.body.style.overflow = 'auto';
+                window.document.body.style.overflowY = 'auto';
             }
         }
     }, [showNav])
@@ -85,44 +68,30 @@ function Header() {
             id: "home",
             name: "home",
             path: "/",
-            margin: "0 30px 0 0",
         },
         {
-            id: "signin",
-            name: "sign Up",
-            path: "/sign-up",
-            margin: "0 30px ",
-        },
-        {
-            id: "login",
-            name: "log In",
-            path: "/login",
-            margin: "0 30px",
-
+            id: "gallery",
+            name: "gallery",
+            path: "/gallery",
+            icon: artWorksIcon,
         },
         {
             id: "artworks",
             name: "artworks",
-            path: "/gallery/artworks",
+            path: "/artworks",
             icon: artWorksIcon,
-            margin: "10px 30px 0"
         },
         {
             id: "cart",
-            name: <div className='mx-2'>
-                carts
-                <span className='ms-2 '>
-                    <Image src={arrowIcon} alt='logo' />
-                </span>
-            </div>,
-            cart: cartsData,
+            name: "carts",
+            cart: carts,
         },
         {
             id: "more",
             name:
-                <div className='ms-3 '>
+                <div className='flex items-center'>
                     more
-                    <span className='ms-2 '>
+                    <span className='ms-2'>
                         <Image src={arrowIcon} alt='logo' />
                     </span>
                 </div>,
@@ -131,187 +100,167 @@ function Header() {
                 {
                     id: "about",
                     name: "about",
-                    path: "barChart",
+                    path: "/about",
+                },
+                {
+                    id: "signin",
+                    name: "sign Up",
+                    path: "/sign-up",
+                },
+                {
+                    id: "login",
+                    name: "log In",
+                    path: "/login",
                 },
             ]
         },
-    ];
-
-    // console.log(expandedItem);
+    ]
 
     return (
-        <Typography variant='nav' component="nav" className='container mx-auto'>
-            <Typography variant='div' component="div" sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                flexWrap: "wrap",
-            }}>
-                <Typography variant='div' component="div">
-                    <Link href="/">
-                        <Typography variant='div' component="div" sx={{
-
-                            /* **********************************************/
-
-                            height: { xs: "110px", sm: "155px" }
-                            /* **********************************************/
-
-                        }}>
-                            <Image className='w-100 h-100' src={logo} priority alt="logo" />
-                        </Typography>
-                    </Link>
-                </Typography>
-                <Typography variant='div' component="div" sx={{
-                    borderBottom: { lg: "1px solid white" },
-                    height: { lg: "105px" },
-                    /* **********************************************/
-                    alignSelf: { lg: "flex-start" },
-                    /* **********************************************/
-                }}
-
-                >
-                    <List sx={{
-                        transition: "600ms",
-                        display: "flex",
-                        flexDirection: { xs: "column", lg: "row" },
-                        alignItems: { xs: "center" },
-                        padding: "0",
-                        position: { xs: "absolute", lg: "relative" },
-                        bottom: "0",
-                        top: "0",
-                        left: { xs: showNav ? "0" : "100%", lg: "0" },
-                        right: "0",
-                        background: { xs: "#1f1913", lg: "transparent" },
-                        borderBottom: { lg: "1px solid white" },
-                        height: { lg: "105px" },
-                        zIndex: "999",
-                        overflow: showNav ? { xs: "auto", lg: "visible" } : { xs: "hidden", lg: "visible" },
-
-                    }
-                    }>
-                        <Button onClick={() => setShowNav(false)} sx={{ display: { xs: "flex", lg: "none" }, margin: "20px auto 0 0" }}><CloseIcon /></Button>
+        <nav className='container px-3 md:px-10 mx-auto select-none'>
+            <div className='flex justify-between items-center flex-wrap'>
+                <Link href="/">
+                    <div className='h-28 sm:h-40'>
+                        <Image className='w-full h-full' src={logo} priority alt="logo" />
+                    </div>
+                </Link>
+                <div className='md:border-b md:h-[105px] md:self-start'>
+                    <ul className={`w-full z-40 md:h-[105px] duration-500 transition-all flex flex-col md:flex-row items-center p-0 absolute md:relative bottom-0 top-0 right-0 ${showNav ? "left-0" : "left-full md:left-0"} bg-[#1f1913] md:bg-transparent md:border-b-2`}>
+                        <button className='flex md:hidden me-auto mt-7 hover:opacity-80 p-2 text-white text-xl ms-2' onClick={() => setShowNav(false)}>X</button>
                         {navItems.map(item =>
                             item.path ? (
-                                <li key={item.id} data-bs-toggle="collapse" data-bs-target={`#${item.id}`}>
-                                    <Link onClick={() => setShowNav(false)} href={`${item.path}`} className={`${item.path === pathName && "active"} navlink mx-2`} >
-                                        <ListItemButton onClick={() => handleItemClick(item.id)} sx={{
-                                            padding: "0",
-                                            margin: { lg: item.margin ? item.margin : "10px 0 0 30px" },
-                                            "&:hover": {
-                                                background: "none"
-                                            }
-                                        }}>
-                                            <Typography variant='div' component="div" sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                                <Typography variant='div' component="div">
-
-                                                    {item.icon && <Image src={item.icon} alt={"logo"} />}
-
-                                                </Typography>
-                                                <Typography className={`linkText font ${item.icon ? "" : "mt-4"}`} variant='div' component="div">
-                                                    {item.name}
-                                                </Typography>
-                                            </Typography>
-                                        </ListItemButton>
+                                <li key={item.id} className='md:me-8'>
+                                    <Link onClick={() => setShowNav(false)} href={item.path} className={`${item.path === pathName && "active"} navlink flex mx-2`}>
+                                        <span className='p-0 flex flex-col items-center mb-10 md:mb-0' onClick={() => handleItemClick(item.id)}>
+                                            {item.icon && <Image src={item.icon} alt="icon" />}
+                                            <span className={`linkText font ${item.icon ? "" : "mt-4"}`}>
+                                                {item.name}
+                                            </span>
+                                        </span>
                                     </Link>
                                 </li>
                             ) : (
-                                (
-                                    <li className='d-flex justify-content-center align-items-center mt-2 mx-2 user-select-none position-relative' style={{ cursor: "pointer" }} key={item.id}>
-                                        <>
-                                            <Typography onClick={() => handleItemClick(item.id)} variant='span' sx={{ display: { xs: item.id === "more" ? "none" : "flex", lg: "flex" } }}>
-                                                <Typography className='navlink' variant='div' component="div" sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                                    <Typography variant='div' component="div">
-                                                        {item.id === "cart" ? (
-                                                            <Badge color="error" badgeContent={cartsData.length} >
-                                                                <ShoppingCartIcon />
-                                                            </Badge>
-                                                        ) : (
-                                                            <Image src={item.icon} alt={item.icon ? "logo" : ""} />
-                                                        )}
-                                                    </Typography>
-                                                    <Typography className='linkText font' variant='div' component="div">
-                                                        {item.name}
-                                                    </Typography>
-                                                </Typography>
-                                            </Typography>
-
-                                            <Collapse in={expandedItem === item.id} sx={{
-                                                position: "absolute",
-                                                background: 'var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))',
-                                                width: { xs: "290px", sm: "390px" },
-                                                flexDirection: "column",
-                                                alignItems: "center",
-                                                borderRadius: "15px",
-                                                top: "80px",
-                                                boxShadow: "0px 0px 1px 1px #3A350033",
-                                                display: cartsData.length > 0 ? "flex" : "none",
-                                                right: { lg: "-50px" },
-                                                bottom: 0,
-
-                                            }}>
-                                                <List className={`${expandedItem != "cart" && "p-0"}`} sx={{ userSelect: "text", cursor: "auto", overflow: "auto", maxHeight: "250px", width: '100%', background: 'var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))', borderRadius: "15px" }}>
-                                                    {item?.cart?.map((item) => (
-                                                        <ListItem className='d-flex justify-content-between' key={item.id}>
-                                                            <div className='d-flex align-items-center'>
-                                                                <ListItemAvatar>
-                                                                    <Image style={{ borderRadius: "50%", border: "1px solid #D29F1B" }} src={item.img} width={50} height={60} alt='' />
-                                                                </ListItemAvatar>
-                                                                <div className='d-flex flex-column text-white'>
-                                                                    <span>{item.artist}.</span>
-                                                                    <span style={{ fontSize: "16px" }}>“{item.name}”</span>
-                                                                    <span>price: {item.price}$</span>
+                                item.more ? (
+                                    <React.Fragment key={item.id}>
+                                        <li className='hidden md:block relative'>
+                                            <div onClick={() => handleItemClick(item.id)} className='navlink flex flex-col items-center cursor-pointer'>
+                                                <Image src={item.icon} alt="icon" />
+                                                <span className='linkText font'>
+                                                    {item.name}
+                                                </span>
+                                            </div>
+                                            <div className={`absolute bg-cartColor right-0 w-40 flex flex-col items-center top-20 rounded-lg shadow-lg ${expandedItem === item.id ? 'block' : 'hidden'}`}>
+                                                {item.more.map(subItem => (
+                                                    <Link key={subItem.id} href={subItem.path} className="block text-xl capitalize mt-2 px-4 py-2 text-white">
+                                                        {subItem.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </li>
+                                        {item.more.map(subItem => (
+                                            <li className='mt-5 capitalize md:hidden' key={subItem.id}>
+                                                <Link onClick={() => setShowNav(false)} href={subItem.path} className={`block text-xl px-4 py-2  ${subItem.path === pathName ? "active" : "text-white"}`}>
+                                                    {subItem.name}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </React.Fragment>
+                                ) : (
+                                    <li key={item.id} className='relative cursor-pointer md:me-8'>
+                                        <div onClick={() => handleItemClick(item.id)} >
+                                            <div className='navlink flex flex-col items-center'>
+                                                <div>
+                                                    {item.id === "cart" && (
+                                                        <div className="relative">
+                                                            <div className="absolute left-4 -top-2 right-0 w-6 h-6 bg-red-500 text-white text-sm flex items-center justify-center rounded-full">
+                                                                {carts.length}
+                                                            </div>
+                                                            <ShoppingCartIcon className="w-6 h-6" />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <div className='linkText font flex items-center'>
+                                                    <span className='me-2'>{item.name}</span>
+                                                    <Image height={15} width={15} src={arrowIcon} alt='logo' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {expandedItem === item.id && (
+                                            <div className={`absolute ${carts.length > 0 ? 'flex' : 'hidden'} flex-col items-center w-[320px] -translate-x-1/2 top-20 md:right-10 md:left-0 left-1/2 right-1/2 bg-cartColor rounded-lg shadow-lg`}>
+                                                <div className="overflow-auto max-h-64 w-full bg-cartColor rounded-lg">
+                                                    {item.cart.map((cartItem) => (
+                                                        <div className="flex justify-between p-2" key={cartItem.id}>
+                                                            <div className="flex items-center">
+                                                                <div className="rounded-full border border-yellow-500">
+                                                                    <Image className="rounded-full" src={cartItem.img} width={50} height={60} alt='' />
+                                                                </div>
+                                                                <div className="flex flex-col text-white ml-2">
+                                                                    <span>{cartItem.artist}</span>
+                                                                    <span className="text-sm">“{cartItem.name}”</span>
+                                                                    <span>price: {cartItem.price}$</span>
                                                                 </div>
                                                             </div>
-                                                            <div onClick={() => deleteFromCart(item)} style={{ cursor: "pointer" }} className='ms-4'>
-                                                                <DeleteIcon />
+                                                            <div onClick={() => deleteFromCart(cartItem)} className="ml-4 cursor-pointer">
+                                                                <svg className="w-6 h-6 text-red-600 hover:text-red-800">
+                                                                    <path fill="currentColor" d="M3 6h18v2H3V6zm2 4h14v10c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V10zm6 2v6h2v-6h-2zm-4 0v6h2v-6H7zm8 0v6h2v-6h-2z" />
+                                                                </svg>
                                                             </div>
-                                                        </ListItem>
+                                                        </div>
                                                     ))}
-                                                </List>
-                                            </Collapse>
-
-                                            <Collapse in={expandedItem === item.id} sx={{
-                                                position: "absolute",
-                                                background: '#3A350033',
-                                                width: "120px",
-                                                flexDirection: "column",
-                                                alignItems: "center",
-                                                borderRadius: "15px",
-                                                top: "90px",
-                                                boxShadow: "0px 0px 1px 1px #3A350033",
-                                                display: "flex"
-
-                                            }}>
-                                                {item?.more?.map((item) => (
-                                                    <List key={item.id}>
-                                                        <Link href={item.path} style={{ textDecoration: "none", color: "white" }}>
-                                                            <ListItem disablePadding>
-                                                                <ListItemButton>
-                                                                    <ListItemText primary={item.name} />
-                                                                </ListItemButton>
-                                                            </ListItem>
-                                                        </Link>
-                                                    </List>
-                                                ))}
-                                            </Collapse>
-
-                                        </>
-
+                                                </div>
+                                            </div>
+                                        )}
                                     </li>
                                 )
                             )
                         )}
-
-                    </List>
-
-                    <Button onClick={() => setShowNav(true)} sx={{ display: { xs: "block", lg: "none" }, border: "1px solid white", paddingRight: "0", paddingLeft: "0", minWidth: "43px", marginRight: "8px" }}><TableRowsIcon /></Button>
-                </Typography>
-            </Typography>
-        </Typography>
-    );
+                    </ul>
+                    <button className='block md:hidden text-2xl border py-1 px-2 text-white' onClick={() => setShowNav(true)}>☰</button>
+                </div>
+            </div>
+        </nav>
+    )
+    
 }
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

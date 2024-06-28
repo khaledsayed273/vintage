@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 
 const HeadExhibitions = () => {
     return (
-        <div className='container font mb-5'>
+        <div className=' font mb-5'>
             <Swiper
                 spaceBetween={30}
                 effect={'fade'}
@@ -35,48 +35,36 @@ const HeadExhibitions = () => {
                             maxHeight: '389px',
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                         }}
                     >
                         <Image
+                        sizes='(max-width:992px) 100vw '
                             priority
-                            sizes='(max-width:992px) 100vw'
                             fill
                             src={img} alt="img_gallery"
+                            style={{ transform: "scale(1.01)" }}
                         />
-
                     </Typography>
-
-                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                        <div className='d-flex align-items-center'>
-                            <div style={{
+                    <div className='flex justify-between my-6 flex-wrap lg:px-20 '>
+                        <div className='flex items-center'>
+                            <div className='relative overflow-hidden' style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
                                 width: '60px',
-                                overflow: "hidden",
-                                position: "relative"
+                                
                             }}>
-                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img} alt="logo" />
-
+                                <Image priority sizes='(max-width:992px) 100vw ' fill src={img} alt="logo" />
                             </div>
-
-                            <div className='d-flex flex-column ms-3'>
-                                <Typography className='my-2' variant='h2' component="h2"
-                                    sx={{
-                                        fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                        letterSpacing: "0.4px",
-                                        color: "white"
-                                    }}>
+                            <div className='flex flex-col ms-3'>
+                                <h3 className='my-2 text-white text-xl sm:text-2xl md:text-4xl'>
                                     Arte Contemporary
-                                </Typography>
-                                <p className='text-white'>
+                                </h3>
+                                <span className='text-white'>
                                     cairo
-                                </p>
-
+                                </span>
                             </div>
                         </div>
-
                         <div>
                             <Button
                                 sx={{
@@ -97,7 +85,6 @@ const HeadExhibitions = () => {
                                 Follow
                             </Button>
                         </div>
-
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -109,48 +96,36 @@ const HeadExhibitions = () => {
                             maxHeight: '389px',
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                         }}
                     >
                         <Image
+                        sizes='(max-width:992px) 100vw '
                             priority
-                            sizes='(max-width:992px) 100vw'
                             fill
                             src={img2} alt="img_gallery"
+                            style={{ transform: "scale(1.01)" }}
                         />
-
                     </Typography>
-
-                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                        <div className='d-flex align-items-center'>
-                            <div style={{
+                    <div className='flex justify-between my-6 flex-wrap lg:px-20 '>
+                        <div className='flex items-center'>
+                            <div className='relative overflow-hidden' style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
                                 width: '60px',
-                                overflow: "hidden",
-                                position: "relative"
+                                
                             }}>
-                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img2} alt="logo" />
-
+                                <Image priority sizes='(max-width:992px) 100vw ' fill src={img2} alt="logo" />
                             </div>
-
-                            <div className='d-flex flex-column ms-3'>
-                                <Typography className='my-2' variant='h2' component="h2"
-                                    sx={{
-                                        fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                        letterSpacing: "0.4px",
-                                        color: "white"
-                                    }}>
+                            <div className='flex flex-col ms-3'>
+                                <h3 className='my-2 text-white text-xl sm:text-2xl md:text-4xl'>
                                     Arte Contemporary
-                                </Typography>
-                                <p className='text-white'>
+                                </h3>
+                                <span className='text-white'>
                                     cairo
-                                </p>
-
+                                </span>
                             </div>
                         </div>
-
                         <div>
                             <Button
                                 sx={{
@@ -171,7 +146,6 @@ const HeadExhibitions = () => {
                                 Follow
                             </Button>
                         </div>
-
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -183,48 +157,36 @@ const HeadExhibitions = () => {
                             maxHeight: '389px',
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                         }}
                     >
                         <Image
+                        sizes='(max-width:992px) 100vw '
                             priority
-                            sizes='(max-width:992px) 100vw'
                             fill
                             src={img} alt="img_gallery"
+                            style={{ transform: "scale(1.01)" }}
                         />
-
                     </Typography>
-
-                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                        <div className='d-flex align-items-center'>
-                            <div style={{
+                    <div className='flex justify-between my-6 flex-wrap lg:px-20 '>
+                        <div className='flex items-center'>
+                            <div className='relative overflow-hidden' style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
                                 width: '60px',
-                                overflow: "hidden",
-                                position: "relative"
+                                
                             }}>
-                                <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={img} alt="logo" />
-
+                                <Image priority sizes='(max-width:992px) 100vw ' fill src={img} alt="logo" />
                             </div>
-
-                            <div className='d-flex flex-column ms-3'>
-                                <Typography className='my-2' variant='h2' component="h2"
-                                    sx={{
-                                        fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                        letterSpacing: "0.4px",
-                                        color: "white"
-                                    }}>
+                            <div className='flex flex-col ms-3'>
+                                <h3 className='my-2 text-white text-xl sm:text-2xl md:text-4xl'>
                                     Arte Contemporary
-                                </Typography>
-                                <p className='text-white'>
+                                </h3>
+                                <span className='text-white'>
                                     cairo
-                                </p>
-
+                                </span>
                             </div>
                         </div>
-
                         <div>
                             <Button
                                 sx={{
@@ -245,12 +207,8 @@ const HeadExhibitions = () => {
                                 Follow
                             </Button>
                         </div>
-
                     </div>
                 </SwiperSlide>
-
-           
-
             </Swiper>
 
         </div>

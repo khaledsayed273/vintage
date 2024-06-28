@@ -1,7 +1,5 @@
 "use client"
-import List from '@mui/material/List'
 import ListItemButton from '@mui/material/ListItemButton'
-import Typography from '@mui/material/Typography'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -22,9 +20,9 @@ function Nav() {
             path: "/gallery/events",
         },
         {
-            id: "artworks",
-            name: "artworks",
-            path: "/gallery/artworks",
+            id: "artwork",
+            name: "artwork",
+            path: "/gallery/artwork",
         },
         {
             id: "artists",
@@ -40,42 +38,24 @@ function Nav() {
 
 
     return (
-        <div className='container'>
-            <div className='px-lg-4'>
-                <List className='px-lg-5' sx={{
-                    display: "flex",
-                    padding: "0",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    borderBottom: "1px solid white",
-                    flexDirection: { xs: "column", md: "row" }
-
-                }}>
+            <div className='lg:px-8 '>
+                <ul className='lg:px-5  flex justify-between items-center flex-col md:flex-row border-b py-8'>
                     {navItems.map((item) => {
-
                         const isActive = pathName === item.path
-
                         return (
-                            <li key={item.id}>
+                            <li className='py-7 md:py-0' key={item.id}>
                                 <Link href={item.path} className={`navlink  mx-2 ${isActive && "active"}`}>
-                                    <ListItemButton className='font linkTextGallery' sx={{
-                                        padding: "0",
-                                        fontSize: { md: "20px" },
-                                        "&:hover": {
-                                            background: "none"
-                                        }
-                                    }}>
+                                    <span className='font linkTextGallery md:text-xl' >
                                         {item.name}
-                                    </ListItemButton>
+                                    </span>
                                 </Link>
                             </li>
                         )
                     })}
-                </List>
+                </ul>
             </div>
 
 
-        </div>
     )
 }
 

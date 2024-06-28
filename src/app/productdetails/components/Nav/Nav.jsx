@@ -7,23 +7,19 @@ function Nav() {
         <Typography variant='div' component="div" sx={{
             borderBottom: "1px solid white",
             paddingBottom: "1px",
-
             display: "flex",
-            // flexDirection: {xs: "column" , md: "row"}
         }}>
 
 
             <Typography variant="div" component="div">
                 <Link
                     className="px-2 py-1"
-
                     href="/"
                     variant='div'
                     component="div"
                     style={{
                         background: "linear-gradient(0deg, rgba(58, 53, 0, 0.2), rgba(58, 53, 0, 0.2)),linear-gradient(180deg, #242319 0%, #404040 100%)",
                         color: "white",
-                        // padding: '10px 15px 7px ',
                         textDecoration: "none",
                         width: "100%",
                         height: "100%",
@@ -72,7 +68,6 @@ function Nav() {
                     style={{
                         background: "white",
                         color: "black",
-                        // padding: '10px 10px 7px ',
                         textDecoration: "none",
                         fontSize: "14px",
                         borderLeft: "1px solid black",

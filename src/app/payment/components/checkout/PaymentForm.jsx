@@ -51,12 +51,12 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
 
   return (
     <React.Fragment>
-      <Grid sx={{ borderRadius: "25px" }} className='cart-payment mt-2 px-2' container spacing={3}>
+      <Grid sx={{ borderRadius: "25px" }} className='cart-payment mt-2 p-5' container spacing={3}>
         <Typography className='p-3' variant="h6" gutterBottom>
           Payment method
         </Typography>
         <Grid item xs={12} >
-          <div className="d-flex align-items-start">
+          <div className="flex items-start">
             <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Pay on Delivery" name="Payment method" value="Pay on Delivery" defaultChecked />
             <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Pay on Delivery" >
               Pay on Delivery
@@ -66,15 +66,15 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         </Grid>
 
         <Grid item xs={12} >
-          <div className='d-flex justify-content-between align-items-center'>
-            <div className="d-flex align-items-start">
+          <div className='flex justify-between items-center'>
+            <div className="flex items-start">
               <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Credit/Debit Cards" name="Payment method" value={showCardPayment} />
               <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Credit/Debit Cards" >
                 Credit/Debit Cards
                 <div>Pay with cash on delivery</div>
               </label>
             </div>
-            <div className='d-flex'>
+            <div className='flex'>
               <Image className="mx-1" priority="true" alt="visa" width={20} height={20} src={visaImg} />
               <Image className="mx-1" priority="true" alt="mastercard" width={20} height={20} src={mastercard} />
               <Image className="mx-1" priority="true" alt="payment3" width={20} height={20} src={payment3} />
@@ -82,7 +82,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
           </div>
           {showCardPayment && (
             <div>
-              <div className='d-flex my-4'>
+              <div className='flex my-4'>
                 <Input
                   placeholder='Card number'
                   className='my-2 py-1 px-2 input-payment'
@@ -156,7 +156,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         </Grid>
 
         <Grid item xs={12} >
-          <div className="d-flex align-items-start">
+          <div className="flex items-start">
             <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Direct Bank Transfer" name="Payment method" value="Direct Bank Transfer" />
             <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Direct Bank Transfer" >
               Direct Bank Transfer
@@ -166,22 +166,22 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
         </Grid>
 
         <Grid item xs={12} >
-          <div className='d-flex justify-content-between align-items-center'>
-            <div className="d-flex align-items-start">
+          <div className='flex justify-between items-center'>
+            <div className="flex items-start">
               <input onChange={(e) => handlePaymentCard(e)} className='mt-1 me-2' type="radio" id="Other Payment Methods" name="Payment method" value="Other Payment Methods" />
               <label style={{ fontSize: "13px", userSelect: "none", cursor: "pointer" }} htmlFor="Other Payment Methods" >
                 Other Payment Methods
                 <div>Make payment through Gpay, Paypal, Paytm etc</div>
               </label>
             </div>
-            <div className='d-flex'>
+            <div className='flex'>
               <Image className="mx-1" priority="true" alt="visa" width={90} height={20} src={Group} />
 
             </div>
           </div>
         </Grid>
 
-        <div className='mt-4 w-100 ms-auto me-md-4 d-flex justify-content-center flex-row-reverse'>
+        <div className='mt-4 w-full ms-auto md:me-4 flex justify-center flex-row-reverse'>
           <Button
             variant="contained"
             onClick={handleNext}
@@ -214,7 +214,7 @@ export default function PaymentForm({ handleNext, activeStep, steps, handleBack 
 
 
 
-      <Grid sx={{ borderRadius: "25px", marginTop: "50px" }} className='cart-payment' container spacing={3}>
+      <Grid sx={{ borderRadius: "25px", marginTop: "50px" }} className='cart-payment p-5' container spacing={3}>
         <Typography className='p-3' variant="h6" gutterBottom>
           Payment Details
         </Typography>

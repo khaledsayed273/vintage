@@ -27,23 +27,15 @@ function Page() {
     ]
 
     return (
-        <div className='container font text-white'>
+        <div className='font text-white'>
             <div>
-                <h3 className='px-lg-5' style={{
-                    padding: "30px 0px 20px",
-                    fontSize: "26px",
-                    letterSpacing: "0.26px"
-
-                }}>
+                <h3 className='lg:px-5 pt-9 pb-6 text-2xl' >
                     About
                 </h3>
 
-                <div
+                <div className='py-10 px-11'
                     style={{
                         background: "linear-gradient(0deg, rgba(58, 53, 0, 0.2), rgba(58, 53, 0, 0.2)),linear-gradient(180deg, #242319 0%, #404040 100%)",
-                        padding: "40px 45px"
-
-
                     }}
                 >
                     <p style={{ fontSize: "16px", lineHeight: "26px" }}>
@@ -54,51 +46,34 @@ function Page() {
                         Akio Tamura, moved to Tokyo in 1991 and started an art gallery. He has two galleries in Japan and has also
                     </p>
                     <span>https://arte-contemporary.gallery</span>
-
                 </div>
-
             </div>
 
-            <div className='mt-5 px-lg-5'>
-                <div className='d-flex justify-content-between align-items-center'>
+            <div className='mt-10 lg:px-5 '>
+                <div className='flex justify-between  items-center'>
 
-                    <h3 style={{
-                        fontSize: "26px",
-                        textTransform: "uppercase"
-                    }}>
+                    <h3 className='text-2xl uppercase'>
                         Articles
                     </h3>
 
-                    <Link href="/" style={{
-                        fontSize: "16px",
-                        textTransform: "uppercase",
-                        fontWeight: "500",
-                        color: "white",
-                        textDecoration: "none"
-                    }}>
+                    <Link className='text-white uppercase' href="/" >
                         View all ...
                     </Link>
 
                 </div>
 
 
-                <div className='mt-5'>
+                <div className='mt-10'>
 
-                    <Grid container spacing={{ md: 5, lg: 10 }}>
+                    <div className='grid md:grid-cols-3 gap-5 md:gap-10'>
                         {data.map((item) => (
 
-                            <Grid key={item.id} item xs={12} md={4} className='my-3 d-flex justify-content-center'>
-                                <div className='d-flex align-items-center flex-column justify-content-center' key={item.id} >
+                            <Link href={"/"} key={item.id} className='mt-7 mb-16 flex justify-center hover:scale-110 transition-all duration-300'>
+                                <div className='flex items-center flex-col justify-center'>
 
-                                    <Typography variant='div' component="div" sx={{
-                                        overflow: "hidden",
-                                        borderRadius: "80px",
-                                        height: "200px",
-                                        width: { xs: "300px", md: "200px", lg: "300px" },
-                                        position: "relative"
-                                    }}>
+                                    <div className='overflow-hidden rounded-[80px] h-[200px] relative w-[300px] md:w-[200px] lg:w-[300px]'>
                                         <Image sizes='(max-width:992px) 100vw' fill src={item.img} alt="img" />
-                                    </Typography>
+                                    </div>
                                     <Typography variant='h3' component="h3" className='my-4' sx={{
                                         fontSize: {xs:"16px", lg:"18px"},
                                         textTransform: "uppercase",
@@ -110,10 +85,10 @@ function Page() {
                                     </Typography>
                                 </div>
 
-                            </Grid>
+                            </Link>
 
                         ))}
-                    </Grid>
+                    </div>
 
                 </div>
 

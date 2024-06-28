@@ -1,4 +1,3 @@
-import Typography  from '@mui/material/Typography'
 import React from 'react'
 import img from "../../../images/all img/Frame 152.png"
 import Link from 'next/link'
@@ -355,7 +354,7 @@ function Artists() {
 
 
     return (
-        <div className='container font text-white mt-5'>
+        <div className='font text-white mt-5'>
             <span
                 className='ms-md-5'
                 style={{
@@ -371,202 +370,33 @@ function Artists() {
                     margin: "25px 0"
                 }}
             >
-                <div className='d-flex justify-content-between align-items-start flex-column flex-sm-row flex-wrap'>
-
-                    <div>
-                        {data.slice(0, 14).map((item) => (
-                            <Typography key={item.id} variant='div' component="div"
-                                sx={{
-                                    "&:hover": {
-                                        scale: "1.08",
-                                        transition: "300ms"
-                                    }
-                                }}
-                            >
-                                <Link
-                                    href={`/artist/${item.id}`}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: "white"
-                                    }}
-                                >
-                                    <div className='d-flex align-items-center my-3'>
-
-                                        <div
-                                            style={{
-                                                width: "25.391px",
-                                                height: "25.291px",
-                                                borderRadius: "131px",
-                                                border: "1px solid #D29F1B",
-                                                overflow: "hidden",
-                                                position: "relative"
-                                            }}
-                                        >
-                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
-                                        </div>
-
-                                        <span className='ms-2'
-
-                                            style={{
-                                                fontSize: "16px",
-                                                fontWeight: "400",
-                                                lineHeight: "26px"
-                                            }}
-                                        >
-                                            {item.name}
-                                        </span>
-
+                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-5'>
+                    {data.map(item => (
+                        
+                            <Link key={item.id} className='text-white hover:scale-105 transition-all  duration-200' href={`/artist/${item.id}`}>
+                                <div className='flex items-center my-3'>
+                                    <div className='relative overflow-hidden'
+                                        style={{
+                                            width: "25.391px",
+                                            height: "25.291px",
+                                            borderRadius: "131px",
+                                            border: "1px solid #D29F1B",
+                                        }}
+                                    >
+                                        <Image sizes='(max-width:992px) 100vw' fill style={{ objectFit: "cover" }} src={item.img} alt="" />
                                     </div>
-                                </Link>
-                            </Typography>
-                        ))}
-                    </div>
-
-                    <div >
-                        {data.slice(14, 28).map((item) => (
-                            <Typography key={item.id} variant='div' component="div"
-                                sx={{
-                                    "&:hover": {
-                                        scale: "1.08",
-                                        transition: "300ms"
-                                    }
-                                }}
-                            >
-                                <Link
-                                    href={`/artist/${item.id}`}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: "white"
-                                    }}
-                                >
-                                    <div className='d-flex align-items-center my-3'>
-
-                                        <div
-                                            style={{
-                                                width: "25.391px",
-                                                height: "25.291px",
-                                                borderRadius: "131px",
-                                                border: "1px solid #D29F1B",
-                                                overflow: "hidden",
-                                                position: "relative"
-                                            }}
-                                        >
-                                            <Image sizes='(max-width:992px) , 100vw' fill style={{objectFit: "cover"}} src={item.img} alt="" />
-                                        </div>
-
-                                        <span className='ms-2'
-
-                                            style={{
-                                                fontSize: "16px",
-                                                fontWeight: "400",
-                                                lineHeight: "26px"
-                                            }}
-                                        >
-                                            {item.name}
-                                        </span>
-
-                                    </div>
-                                </Link>
-                            </Typography>
-                        ))}
-                    </div>
-
-                    <div>
-                        {data.slice(28, 42).map((item) => (
-                            <Typography key={item.id} variant='div' component="div"
-                                sx={{
-                                    "&:hover": {
-                                        scale: "1.08",
-                                        transition: "300ms"
-                                    }
-                                }}
-                            >
-                                <Link
-                                    href={`/artist/${item.id}`}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: "white"
-                                    }}
-                                >
-                                    <div className='d-flex align-items-center my-3'>
-
-                                        <div
-                                            style={{
-                                                width: "25.391px",
-                                                height: "25.291px",
-                                                borderRadius: "131px",
-                                                border: "1px solid #D29F1B",
-                                                overflow: "hidden",
-                                                position: "relative"
-                                            }}
-                                        >
-                                            <Image sizes='(max-width:992px) , 100vw' style={{objectFit: "cover"}} fill src={item.img} alt="" />
-                                        </div>
-
-                                        <span className='ms-2'
-
-                                            style={{
-                                                fontSize: "16px",
-                                                fontWeight: "400",
-                                                lineHeight: "26px"
-                                            }}
-                                        >
-                                            {item.name}
-                                        </span>
-
-                                    </div>
-                                </Link>
-                            </Typography>
-                        ))}
-                    </div>
-
-                    <div>
-                        {data.slice(42, 56).map((item) => (
-                            <Typography key={item.id} variant='div' component="div"
-                                sx={{
-                                    "&:hover": {
-                                        scale: "1.08",
-                                        transition: "300ms"
-                                    }
-                                }}
-                            >
-                                <Link
-                                    href={`/artist/${item.id}`}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: "white"
-                                    }}
-                                >
-                                    <div className='d-flex align-items-center my-3'>
-
-                                        <div
-                                            style={{
-                                                width: "25.391px",
-                                                height: "25.291px",
-                                                borderRadius: "131px",
-                                                border: "1px solid #D29F1B",
-                                                overflow: "hidden",
-                                                position: "relative"
-                                            }}
-                                        >
-                                            <Image sizes='(max-width:992px) 100vw' fill style={{objectFit: "cover"}}  src={item.img} alt="" />
-                                        </div>
-
-                                        <span className='ms-2'
-                                            style={{
-                                                fontSize: "16px",
-                                                fontWeight: "400",
-                                                lineHeight: "26px"
-                                            }}
-                                        >
-                                            {item.name}
-                                        </span>
-
-                                    </div>
-                                </Link>
-                            </Typography>
-                        ))}
-                    </div>
+                                    <span className='ms-2'
+                                        style={{
+                                            fontSize: "16px",
+                                            fontWeight: "400",
+                                            lineHeight: "26px"
+                                        }}
+                                    >
+                                        {item.name}
+                                    </span>
+                                </div>
+                            </Link>
+                    ))}
 
                 </div>
 

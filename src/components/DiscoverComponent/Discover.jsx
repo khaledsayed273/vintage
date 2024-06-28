@@ -1,9 +1,6 @@
 import BaseURL from "../../store/BaseURL";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import LeftDiscover from './LeftDiscover';
 import RightDiscover from './RightDiscover';
-
 async function getData() {
 	try {
 		const res = await BaseURL.get("discover");
@@ -16,38 +13,25 @@ async function getData() {
 
 export const revalidate = +process.env.revalidate
 
-
 async function Discover() {
 	const data = await getData()
-
 	return (
-		<aside
+		<div
 			className="font text-white font"
-			style={{
-				margin: "100px 0",
-			}}
+			
 		>
 			<div className="container">
-
-
-				<Typography
-					sx={{
-						fontSize: { xs: "16px", md: "20px" },
-						fontWeight: "400",
-					}}
-				>
+				<h3 className="md:text-xl">
 					DISCOVER WORLDWIDE EXHIBITIONS
-				</Typography>
-
-
+				</h3>
 				<div className="mt-5 ">
-					<Grid container spacing={{ lg: 15, md: 5 }}>
+					<div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5">
 						<LeftDiscover />
 						<RightDiscover data={data} />
-					</Grid>
+					</div>
 				</div>
 			</div>
-		</aside>
+		</div>
 	);
 }
 

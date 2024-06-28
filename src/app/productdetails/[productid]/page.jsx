@@ -30,7 +30,7 @@ function Page() {
   return (
 
     <>
-      <div className='container font text-white'>
+      <div className='container mx-auto px-3 md:px-10 font text-white'>
         <Details data={data} />
         <CardMore data={data} />
         <Nav />

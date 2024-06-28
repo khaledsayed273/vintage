@@ -55,16 +55,16 @@ function Exhibitions() {
     ]
 
     return (
-        <div className='container my-5'>
-            <div className='row'>
+        <div className='my-5'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3'>
                 {data.map((item) => (
-                    <div className='col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-ceter' key={item.id} >
+                    <div className='flex justify-center items-center' key={item.id} >
                         <div className='font position-relative' style={{
                             marginTop: '30px',
                             transition: "200ms",
                             width: "320px"
                         }}>
-                            <div style={{ textDecoration: "none", color: "white", height: "100%" }}>
+                            <Link href={`productdetails/1`} className='h-full block hover:scale-105 transition-all duration-300 text-white'>
                                 <div style={{
                                     height: "210px",
                                     width: "100%",
@@ -73,15 +73,15 @@ function Exhibitions() {
                                     marginBottom: "20px",
                                     position: "relative"
                                 }}>
-                                    <Image style={{ objectFit: "cover" }} sizes='(max-width:992px)  100vw' fill src={item.image} alt="img" />
+                                    <Image style={{ objectFit: "cover" }} sizes='(max-width:992px) 100vw' fill src={item.image} alt="img" />
                                 </div>
                                 <div className='text-center '>
                                     <h3 className='mx-auto' style={{ fontSize: "16px", width: "50%" , lineHeight: "30px" }}>{item.title}</h3>
-                                    <Link className="text-white" href={`productdetails/1`}>
+                                    <span className="text-white mt-5 block" href={`productdetails/1`}>
                                         See more
-                                    </Link>
+                                    </span>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 )

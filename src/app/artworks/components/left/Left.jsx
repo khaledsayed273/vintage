@@ -3,7 +3,6 @@ import Box from '@mui/material/Box'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormGroup from '@mui/material/FormGroup'
-import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -30,13 +29,11 @@ function Left() {
     const [range, setRange] = useState(400)
 
     return (
-        <Grid item xs={11} md={4} lg={3} >
-
+        <div>
             <List
                 sx={{ width: '100%', }}
                 component="nav"
                 aria-labelledby="nested-list-subheader"
-
             >
                 {/* Keyword Search */}
                 <div style={{ borderBottom: "1px solid white", padding: "15px 0" }}>
@@ -141,7 +138,7 @@ function Left() {
                         <List component="div" disablePadding>
                             <Box sx={{ width: '100%', padding: "10px 15px" }}>
                                 <FormGroup sx={{ userSelect: "none" }}>
-                                    <div style={{ gap: "15px" }} className='w-100 d-flex flex-column flex-md-row justify-content-center justify-content-between align-items-center mb-3'>
+                                    <div style={{ gap: "15px" }} className='w-full flex flex-col md:flex-row r justify-between items-center mb-3'>
 
                                         <div>
                                             <label className='mb-2' htmlFor="min">Min</label>
@@ -153,7 +150,7 @@ function Left() {
                                                     border: "1px solid white",
                                                     borderRadius: "8px"
                                                 }
-                                            } className='w-100' type="number" id="min" />
+                                            } className='w-full' type="number" id="min" />
                                         </div>
 
                                         <div>
@@ -166,20 +163,20 @@ function Left() {
                                                     border: "1px solid white",
                                                     borderRadius: "8px"
                                                 }
-                                            } className='w-100' type="number" id="max" />
+                                            } className='w-full' type="number" id="max" />
                                         </div>
 
 
                                     </div>
 
-                                    <div className='mt-3 w-100'>
+                                    <div className='mt-3 w-full'>
                                         <input style={{
                                             cursor: "pointer",
                                             background: "#3D6D79",
                                             "WebkitAppearance": "none",
                                             height: "3px"
-                                        }} className='w-100' onChange={(e) => setRange(e.target.value)} type="range" value={range} min="0" max="5000" />
-                                        <div className='d-flex justify-content-between'>
+                                        }} className='w-full' onChange={(e) => setRange(e.target.value)} type="range" value={range} min="0" max="5000" />
+                                        <div className='flex justify-between'>
                                             <p>${range}</p>
                                             <p>$5000</p>
                                         </div>
@@ -309,9 +306,8 @@ function Left() {
                         </List>
                     </Collapse>
                 </div>
-
             </List>
-        </Grid>
+        </div>
     )
 }
 

@@ -12,14 +12,14 @@ export const metadata = {
 export default function layout({ children }) {
     
     return (
-        <>
+        <div className='container px-3 md:px-10 mx-auto'>
             <Head />
             <Nav />
             <Suspense fallback={<Loading />}>
                 {children}
             </Suspense>
 
-        </>
+        </div>
     )
 }
 

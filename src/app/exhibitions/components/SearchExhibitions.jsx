@@ -29,9 +29,9 @@ export default function SearchExhibitions() {
     };
 
     return (
-        <div className="container px-md-5">
-            <div className='row px-3'>
-                <div className='col-12 col-sm-7 col-md-8 col-lg-9'>
+        <div>
+            <div className='grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5'>
+                <div className='sm:col-span-2 md:col-span-3 lg:col-span-4'>
                     <Paper
                         component="form"
                         sx={{
@@ -50,9 +50,9 @@ export default function SearchExhibitions() {
                         <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
                     </Paper>
                 </div>
-                <div className='col-12 col-sm-5 col-md-4 col-lg-3 d-flex align-items-center mt-3 mt-sm-0'>
-                    <div className="d-flex align-items-center">
-                        <Button className="px-4" sx={{
+                <div className='flex items-center my-3 sm:my-0'>
+                    <div className="flex items-center">
+                        <Button className="px-6 py-2.5" sx={{
                             background: "white",
                             color: "black",
                             border: "1px solid white",
@@ -62,7 +62,7 @@ export default function SearchExhibitions() {
                         >
                             Reset
                         </Button>
-                        <Button className="px-4 inputBg" sx={{
+                        <Button className="px-6 py-2.5 inputBg" sx={{
                             color: "white",
                             "&:hover": { opacity: "0.5" },
                             textTransform: "capitalize"
@@ -72,60 +72,60 @@ export default function SearchExhibitions() {
                         </Button>
                     </div>
                 </div>
-                <div className="col-12">
-                    <div className="row">
-                        <div className="col-12 col-md-4 mt-3">
-                            <FormControl sx={{ width: "100%" }}>
-                                <Select
-                                    className='inputBg text-white'
-                                    value={country}
-                                    onChange={handleCountry}
-                                    displayEmpty
-                                    inputProps={{ 'aria-label': 'Without label' }}
-                                >
-                                    <MenuItem value="">
-                                        <em>Country</em>
-                                    </MenuItem>
-                                    <MenuItem value={"Egypt"}>Egypt</MenuItem>
-                                    <MenuItem value={"Egypt2"}>Egypt2</MenuItem>
-                                    <MenuItem value={"Egypt3"}>Egypt3</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </div>
-                        <div className="col-12 col-md-4 mt-3">
-                            <FormControl sx={{ width: "100%" }}>
-                                <Select
-                                    className='inputBg text-white'
-                                    value={city}
-                                    onChange={handleCity}
-                                    displayEmpty
-                                    inputProps={{ 'aria-label': 'Without label' }}
-                                >
-                                    <MenuItem value="">
-                                        <em>City</em>
-                                    </MenuItem>
-                                    <MenuItem value={"cairo"}>cairo</MenuItem>
-                                    <MenuItem value={"alex"}>alex</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </div>
-                        <div className="col-12 col-md-4 mt-3">
-                            <FormControl sx={{ width: "100%" }}>
-                                <Select
-                                    className='inputBg text-white'
-                                    value={showAll}
-                                    onChange={handleShowAll}
-                                    displayEmpty
-                                    inputProps={{ 'aria-label': 'Without label' }}
-                                >
-                                    <MenuItem value="">
-                                        <em>show All</em>
-                                    </MenuItem>
-                                    <MenuItem value={"black"}>black</MenuItem>
-                                    <MenuItem value={"white"}>white</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </div>
+            </div>
+            <div>
+                <div className="grid md:grid-cols-3 gap-5">
+                    <div className="mt-3">
+                        <FormControl sx={{ width: "100%" }}>
+                            <Select
+                                className='inputBg text-white'
+                                value={country}
+                                onChange={handleCountry}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Without label' }}
+                            >
+                                <MenuItem value="">
+                                    <em>Country</em>
+                                </MenuItem>
+                                <MenuItem value={"Egypt"}>Egypt</MenuItem>
+                                <MenuItem value={"Egypt2"}>Egypt2</MenuItem>
+                                <MenuItem value={"Egypt3"}>Egypt3</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                    <div className="mt-3">
+                        <FormControl sx={{ width: "100%" }}>
+                            <Select
+                                className='inputBg text-white'
+                                value={city}
+                                onChange={handleCity}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Without label' }}
+                            >
+                                <MenuItem value="">
+                                    <em>City</em>
+                                </MenuItem>
+                                <MenuItem value={"cairo"}>cairo</MenuItem>
+                                <MenuItem value={"alex"}>alex</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                    <div className="mt-3">
+                        <FormControl sx={{ width: "100%" }}>
+                            <Select
+                                className='inputBg text-white'
+                                value={showAll}
+                                onChange={handleShowAll}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Without label' }}
+                            >
+                                <MenuItem value="">
+                                    <em>show All</em>
+                                </MenuItem>
+                                <MenuItem value={"black"}>black</MenuItem>
+                                <MenuItem value={"white"}>white</MenuItem>
+                            </Select>
+                        </FormControl>
                     </div>
                 </div>
             </div>

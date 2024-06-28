@@ -18,9 +18,9 @@ function Contact() {
         location: "UTC +8 Chengdu",
 
     }
-    
+
     return (
-        <div className='container font text-white mt-5'>
+        <div className='font text-white mt-5'>
 
             <div className='my-5'>
 
@@ -31,10 +31,12 @@ function Contact() {
                         textTransform: "uppercase",
 
                     }}
-                >CONTACT INFO & SOCIAL MEDIA</span>
+                >CONTACT INFO & SOCIAL MEDIA
+
+                </span>
 
                 <div
-                    className='mt-3 py-5 px-md-5 px-4 '
+                    className='mt-3 py-7 px-4 md:px-10  '
 
                     style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -61,7 +63,7 @@ function Contact() {
                         Social Media :
                     </p>
 
-                    <div className='d-flex justify-content-start align-items-center flex-column flex-md-row'>
+                    <div className='flex justify-start items-center flex-col md:flex-row '>
                         <div
                             style={{
                                 background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -139,18 +141,16 @@ function Contact() {
             <div className='my-5'>
 
                 <span
-                    className='ms-md-5 '
+                    className='md:ms-5 uppercase'
                     style={{
                         fontSize: "26px",
-                        textTransform: "uppercase",
-
                     }}
                 >
                     COMPANY INFO & LOCATION
                 </span>
 
                 <div
-                    className='mt-3 py-5 px-md-5 px-4 '
+                    className='mt-3 py-7 px-4 md:px-10  '
 
                     style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
@@ -158,70 +158,38 @@ function Contact() {
                     }}
                 >
 
-                    <div className='d-flex justify-content-between align-items-center'>
+                    <div className='flex justify-between items-center'>
 
-                        <div
-                            style={{
-                                fontSize: "18px"
-                            }}
-                        >
+                        <div>
                             City :
-
-                            <span style={{
-                                textTransform: "capitalize"
-                            }}>
-
+                            <span className='capitalize' >
                                 {data.city}
                             </span>
-
                         </div>
 
-                        <div
-                            style={{
-                                fontSize: "18px",
-
-                            }}
-                        >
+                        <div className='text-lg'>
                             Country :
-                            <span style={{
-                                textTransform: "capitalize"
-                            }}>
+                            <span className='capitalize' >
                                 {data.country}
                             </span>
                         </div>
 
-                        <div
-                            style={{
-                                fontSize: "16px",
-                                textAlign: "center",
-                                textTransform: "capitalize"
-                            }}
-                        >
+                        <div className='capitalize text-center'>
                             Address :
-                            <span
-                                style={{
-                                    textTransform: "uppercase"
-                                }}>
+                            <span className='uppercase'>
                                 {data.address}
                             </span>
-
                             <br />
                             street.
-
                         </div>
-
                     </div>
-                    <div className='d-flex justify-content-between align-items-center my-5'>
-
+                    <div className='flex justify-between items-center my-5'>
                         <div>
                             Opening hours : {data.time_open} - {data.time_close}
                             <div>
                                 {`(${data.location})`}
                             </div>
-
                         </div>
-
-
                     </div>
 
                 </div>
@@ -232,11 +200,10 @@ function Contact() {
                 <div
                     style={{
                         background: "var(--greyd-ark, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%))",
-                        height: "405px"
                     }}
                 >
-                    <Grid container sx={{ height: "100%" }}>
-                        <Grid item xs={12} md={4} sx={{ height: "100%" }}>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3'>
+                        <div >
                             <div style={{
                                 fontSize: "40px",
                                 textAlign: "center",
@@ -250,13 +217,13 @@ function Contact() {
                             }}>
                                 Meet your new art advisor.
                             </div>
-                        </Grid>
-                        <Grid item xs={12} md={8} sx={{ height: "100%" }}>
-                            <div className='w-100 h-100 position-relative'>
+                        </div>
+                        <div className='lg:col-span-2'>
+                            <div className='w-full h-[350px] relative'>
                                 <Image fill src={ContactImg} alt="img" />
                             </div>
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

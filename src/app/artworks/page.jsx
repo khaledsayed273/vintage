@@ -4,7 +4,7 @@ import ArtWorksComp from "./components/ArtWorksComp"
 function page() {
 
     return (
-        <ArtWorksComp />
+            <ArtWorksComp />
     )
 }
 

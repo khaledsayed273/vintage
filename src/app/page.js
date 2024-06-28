@@ -25,10 +25,12 @@ export default function Home() {
 
   return (
     <main style={{minHeight: "100vh"}}>
-      <Section />
-      <SliderImges baseUrl={baseUrl} />
-      <Discover />
-      <Center />
+      <div className="container px-3 md:px-10 mx-auto">
+        <Section />
+        <SliderImges baseUrl={baseUrl} />
+        <Discover />
+        <Center />
+      </div>
     </main>
   );
 }

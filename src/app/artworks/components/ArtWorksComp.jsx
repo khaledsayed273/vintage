@@ -1,5 +1,3 @@
-import Grid from '@mui/material/Grid'
-import Typography  from '@mui/material/Typography'
 import img1 from "../../../images/all img/Frame 146.png"
 import img2 from "../../../images/all img/Frame 147.png"
 import img3 from "../../../images/all img/Frame 148.png"
@@ -177,16 +175,12 @@ function ArtWorksComp({ data }) {
         },
     ]
     return (
-        <Typography variant='div' component="div" className='font text-white mt-5'
-            sx={{
-                padding: { md: "0 40px", lg: "0 30px", xl: "0 170px" }
-            }}
-        >
-            <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+        <div className='font container mx-auto px-0 text-white'>
+            <div className='grid lg:grid-cols-3 xl:grid-cols-4' >
                 <Left />
-                <Right data={data? data :data1} />
-            </Grid>
-        </Typography>
+                <Right data={data ? data : data1} />
+            </div>
+        </div>
     )
 }
 

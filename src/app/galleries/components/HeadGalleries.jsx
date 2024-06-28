@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 
 const HeadGalleries = () => {
     return (
-        <div className='container font mb-5'>
+        <div className='font mb-5 '>
             <Swiper
                 spaceBetween={30}
                 effect={'fade'}
@@ -33,7 +33,6 @@ const HeadGalleries = () => {
                             maxHeight: '389px',
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                         }}
                     >
                         <Image
@@ -43,39 +42,27 @@ const HeadGalleries = () => {
                             src={img} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />
-
                     </Typography>
-
-                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                        <div className='d-flex align-items-center'>
-                            <div style={{
+                    <div className='flex justify-between my-6 flex-wrap lg:px-20 '>
+                        <div className='flex items-center'>
+                            <div className='relative overflow-hidden' style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
                                 width: '60px',
-                                overflow: "hidden",
-                                position: "relative"
+                                
                             }}>
                                 <Image priority sizes='(max-width:992px) 100vw ' fill src={img} alt="logo" />
-
                             </div>
-
-                            <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography className='my-2' variant='h2' component="h2"
-                                    sx={{
-                                        fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                        letterSpacing: "0.4px",
-                                        color: "white"
-                                    }}>
+                            <div className='flex flex-col ms-3'>
+                                <h3 className='my-2 text-white text-xl sm:text-2xl md:text-4xl'>
                                     Arte Contemporary
-                                </Typography>
+                                </h3>
                                 <span className='text-white'>
                                     cairo
                                 </span>
-
-                            </Typography>
+                            </div>
                         </div>
-
                         <div>
                             <Button
                                 sx={{
@@ -96,9 +83,9 @@ const HeadGalleries = () => {
                                 Follow
                             </Button>
                         </div>
-
                     </div>
                 </SwiperSlide>
+
                 <SwiperSlide>
                     <Typography variant='div' component="div"
                         sx={{
@@ -108,7 +95,6 @@ const HeadGalleries = () => {
                             maxHeight: '389px',
                             position: "relative",
                             height: { xs: "250px", sm: "240px", md: "320px", lg: "400px" }
-
                         }}
                     >
                         <Image
@@ -118,39 +104,27 @@ const HeadGalleries = () => {
                             src={img2} alt="img_gallery"
                             style={{ transform: "scale(1.01)" }}
                         />
-
                     </Typography>
-
-                    <div className='d-flex justify-content-between my-4 flex-wrap px-lg-5'>
-                        <div className='d-flex align-items-center'>
-                            <div style={{
+                    <div className='flex justify-between my-6 flex-wrap lg:px-20 '>
+                        <div className='flex items-center'>
+                            <div className='relative overflow-hidden' style={{
                                 border: "1px solid #D29F1B",
                                 borderRadius: "131px",
                                 height: "70px",
                                 width: '60px',
-                                overflow: "hidden",
-                                position: "relative"
+                                
                             }}>
                                 <Image priority sizes='(max-width:992px) 100vw ' fill src={img2} alt="logo" />
-
                             </div>
-
-                            <Typography variant='div' component="div" className='d-flex flex-column ms-3'>
-                                <Typography className='my-2' variant='h2' component="h2"
-                                    sx={{
-                                        fontSize: { xs: "20px", sm: "25px", md: "38px" },
-                                        letterSpacing: "0.4px",
-                                        color: "white"
-                                    }}>
-                                    Arte Contemporary
-                                </Typography>
+                            <div className='flex flex-col ms-3'>
+                                <h3 className='my-2 text-white text-xl sm:text-2xl md:text-4xl'>
+                                    Arte Contemporary 2
+                                </h3>
                                 <span className='text-white'>
                                     cairo
                                 </span>
-
-                            </Typography>
+                            </div>
                         </div>
-
                         <div>
                             <Button
                                 sx={{
@@ -171,9 +145,12 @@ const HeadGalleries = () => {
                                 Follow
                             </Button>
                         </div>
-
                     </div>
                 </SwiperSlide>
+
+               
+
+                
                 
 
             </Swiper>

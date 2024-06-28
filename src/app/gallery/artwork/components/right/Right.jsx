@@ -1,17 +1,15 @@
-import Grid from '@mui/material/Grid'
-import Typography  from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 
-function Right({data}) {
+function Right({ data }) {
     return (
-        <Grid item xs={12} md={8}>
-            <Typography variant='div' component="div" className='p-4'>
-                <Grid container>
+        <div className='lg:col-span-2 xl:col-span-3'>
+            <div className='py-4'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
                     {data?.map((item) => (
-                        <Grid key={item.id} className='d-flex  justify-content-center ' item xs={12} sm={6} md={6} lg={4}>
-                            <Typography variant='div' component="div" key={item.id} className='font position-relative' sx={{
+                        <div key={item.id} className='flex justify-center '  >
+                            <div key={item.id} className='font relative' style={{
                                 "&:hover": {
                                     transform: "scale(1.1)"
                                 }
@@ -21,7 +19,7 @@ function Right({data}) {
                                 width: "230px"
 
                             }}>
-                                <Link href={`/productdetails/${item.id}`} style={{ textDecoration: "none", color: "white", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                <Link className='hover:scale-110 transition-all duration-300' href={`/productdetails/${item.id}`} style={{ textDecoration: "none", color: "white", display: "flex", flexDirection: "column", alignItems: "center" }}>
                                     <div style={{
                                         height: "300px",
                                         width: "100%",
@@ -56,12 +54,12 @@ function Right({data}) {
                                     </span>
                                 )}
 
-                            </Typography>
-                        </Grid>
+                            </div>
+                        </div>
                     ))}
-                </Grid>
-            </Typography>
-        </Grid>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,8 +1,6 @@
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import React from 'react'
-
 function Footer() {
     return (
         <footer
@@ -12,12 +10,11 @@ function Footer() {
                 minHeight: "400px"
             }}
         >
-            <div className="container  p-3">
-                <Grid container>
-
-                    <Grid item xs={12} sm={6} md={3} lg={2} className='d-flex justify-content-md-center justify-content-lg-start'>
-                        <Typography component="div" variant='div'>
-                            <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
+            <div className="container mx-auto p-3">
+                <div className='grid sm:grid-cols-2 md:grid-cols-4'>
+                    <div className='flex md:justify-center lg:justify-start'>
+                        <div>
+                            <ul className='flex flex-col  text-white items-start md:items-center my-3'>
                                 <h3 style={{
                                     color: "#FFFCF7",
                                     fontSize: "36px",
@@ -28,21 +25,20 @@ function Footer() {
                                     <Link href="/">Home</Link>
                                 </li>
                                 <li>
-                                    <Link href="galleries">Galleries</Link>
+                                    <Link href="/galleries">Galleries</Link>
                                 </li>
                                 <li>
-                                    <Link href="artworks">artworks</Link>
+                                    <Link href="/artworks">artworks</Link>
                                 </li>
                                 <li>
-                                    <Link href="exhibitions">exhibitions</Link>
+                                    <Link href="/exhibitions">exhibitions</Link>
                                 </li>
                             </ul>
-                        </Typography>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} md={3} lg={4} className='d-flex justify-content-md-center'>
-                        <Typography component="div" variant='div'>
-                            <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
+                        </div>
+                    </div>
+                    <div className='flex md:justify-center'>
+                        <div>
+                            <ul className='flex flex-col  text-white items-start md:items-center my-3'>
                                 <h3 style={{
                                     color: "#FFFCF7",
                                     fontSize: "36px",
@@ -53,21 +49,20 @@ function Footer() {
                                     <Link href="/">Home</Link>
                                 </li>
                                 <li>
-                                    <Link href="galleries">Galleries</Link>
+                                    <Link href="/galleries">Galleries</Link>
                                 </li>
                                 <li>
-                                    <Link href="artworks">artworks</Link>
+                                    <Link href="/artworks">artworks</Link>
                                 </li>
                                 <li>
-                                    <Link href="exhibitions">exhibitions</Link>
+                                    <Link href="/exhibitions">exhibitions</Link>
                                 </li>
                             </ul>
-                        </Typography>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} md={3} lg={3} className='d-flex justify-content-md-center'>
-                        <Typography component="div" variant='div'>
-                            <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
+                        </div>
+                    </div>
+                    <div className='flex md:justify-center'>
+                        <div>
+                            <ul className='flex flex-col  text-white items-start md:items-center my-3'>
                                 <h3 style={{
                                     color: "#FFFCF7",
                                     fontSize: "36px",
@@ -79,16 +74,15 @@ function Footer() {
                                     <Link href="mail">mail</Link>
                                 </li>
                                 <li>
-                                    <Link href="mail">whatsapp</Link>
+                                    <Link href="whatsapp">whatsapp</Link>
                                 </li>
 
                             </ul>
-                        </Typography>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} md={3} lg={3} className='d-flex justify-content-md-center justify-content-lg-end'>
-                        <Typography variant='div'>
-                            <ul className='d-flex flex-column  text-white align-items-start align-items-md-center my-3'>
+                        </div>
+                    </div>
+                    <div className='flex md:justify-center   justify-content-lg-end'>
+                        <div>
+                            <ul className='flex flex-col  text-white items-start md:items-center  my-3'>
                                 <h3 style={{
                                     color: "#FFFCF7",
                                     fontSize: "36px",
@@ -103,10 +97,9 @@ function Footer() {
                                     <Link href="facebook">Facebook</Link>
                                 </li>
                             </ul>
-                        </Typography>
-                    </Grid>
-
-                </Grid>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     )

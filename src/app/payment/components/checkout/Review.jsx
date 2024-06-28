@@ -28,8 +28,8 @@ export default function Review() {
         </Grid>
 
         <Grid sx={{ borderBottom: "1px solid rgba(255, 255, 255, 0.25)" }} item xs={12}>
-          <h5 className="mb-3">Shipping</h5>
-          <div className="mb-3">
+          <h5 className="mb-4">Shipping</h5>
+          <div className="mb-4">
             Saver delivery ($670.26)
           </div>
         </Grid>
@@ -48,8 +48,8 @@ export default function Review() {
         </Grid>
       </Grid>
 
-      <div className='d-flex flex-column justify-content-center align-items-center mt-4'>
-        <Button className="px-5 font" sx={{ border: "1px solid white", background: "white", color: "black" ,fontSize: "16px" ,  letterSpacing: "2px" , textTransform: 'capitalize' , "&:hover":{
+      <div className='flex flex-col justify-center items-center mt-4'>
+        <Button className="px-10 font" sx={{ border: "1px solid white", background: "white", color: "black" ,fontSize: "16px" ,  letterSpacing: "2px" , textTransform: 'capitalize' , "&:hover":{
           background: "#5d5d5d99",
           color: "white"
         } }}>Submit
