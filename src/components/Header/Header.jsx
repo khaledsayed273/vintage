@@ -117,8 +117,8 @@ function Header() {
     ]
 
     return (
-        <nav className='container px-3 md:px-10 mx-auto select-none'>
-            <div className='flex justify-between items-center flex-wrap'>
+        <nav >
+            <div className='flex container mx-auto px-3 md:px-10 justify-between items-center flex-wrap'>
                 <Link href="/">
                     <div className='h-28 sm:h-40'>
                         <Image className='w-full h-full' src={logo} priority alt="logo" />
@@ -129,7 +129,7 @@ function Header() {
                         <button className='flex md:hidden me-auto mt-7 hover:opacity-80 p-2 text-white text-xl ms-2' onClick={() => setShowNav(false)}>X</button>
                         {navItems.map(item =>
                             item.path ? (
-                                <li key={item.id} className='md:me-8'>
+                                <li key={item.id} className='md:me-8 select-none'>
                                     <Link onClick={() => setShowNav(false)} href={item.path} className={`${item.path === pathName && "active"} navlink flex mx-2`}>
                                         <span className='p-0 flex flex-col items-center mb-10 md:mb-0' onClick={() => handleItemClick(item.id)}>
                                             {item.icon && <Image src={item.icon} alt="icon" />}
@@ -142,7 +142,7 @@ function Header() {
                             ) : (
                                 item.more ? (
                                     <React.Fragment key={item.id}>
-                                        <li className='hidden md:block relative'>
+                                        <li className='hidden md:block relative select-none'>
                                             <div onClick={() => handleItemClick(item.id)} className='navlink flex flex-col items-center cursor-pointer'>
                                                 <Image src={item.icon} alt="icon" />
                                                 <span className='linkText font'>

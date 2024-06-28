@@ -7,12 +7,22 @@
   background: var(--GreydARK, linear-gradient(0deg, rgba(58, 53, 0, 0.20) 0%, rgba(58, 53, 0, 0.20) 100%), linear-gradient(180deg, #242319 0%, #404040 100%));
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   background: linear-gradient(90.37deg, #444436 -27.95%, #1A1615 132.36%);
+
+}
+
+body {
   min-height: 100vh;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (max-width:889px) {
